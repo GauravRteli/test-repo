@@ -71,7 +71,6 @@ export default function ContactPage() {
                 >
                   <div>
                     <svg width="48" height="48" fill="none">
-                      paddingTop: "70px"
                       <rect width="47" height="47" rx="4" fill="#6ED4DD" />
                       <path
                         d="M21.7 18.4c-.3-2.8-3.3-4.2-3.4-4.2-.1-.1-.3-.1-.4-.1-3.4.6-3.9 2.6-3.9 2.7 0 .1 0 .2 0 .3 4.1 12.7 12.6 15.1 15.4 15.9.2 0 .4.1.5.1.2.1.4.1.6 0 .1-.1 2.1-1.1 2.6-4.2 0-.1 0-.2 0-.3 0-.1-1-2-3.9-2.7-.1 0-.2 0-.3 0s-.2.1-.2.1c-.9.8-2.2 1.7-2.8 1.8-3.7-1.8-5.8-5.3-5.9-5.9-.1-.4.8-1.7 1.8-2.8.1-.1.1-.2.2-.3 0-.1.1-.2.1-.3z"
@@ -169,7 +168,8 @@ export default function ContactPage() {
                   productivity, and more.
                 </li>
                 <li>
-                  Get your "Earnings on Demand" questions answered 1-on-1.
+                  Get your &ldquo;Earnings on Demand&rdquo; questions answered
+                  1-on-1.
                 </li>
               </ul>
               {submitted ? (

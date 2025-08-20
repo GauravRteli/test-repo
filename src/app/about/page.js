@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const AboutPage = () => {
   useEffect(() => {
@@ -46,7 +47,7 @@ const AboutPage = () => {
         <div className="w-full">
           <div className="flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 h-full flex items-center justify-center">
-              <img
+              <Image
                 src="/assets/images/pro/16.png"
                 alt="Floating"
                 className="floating w-5/6  object-contain max-w-none"
@@ -459,7 +460,7 @@ const AboutPage = () => {
           <div className="container mx-auto max-w-7xl">
             <div className="flex flex-col lg:flex-row gap-8 items-center">
               <div className="lg:w-1/2">
-                <img
+                <Image
                   src="/assets/images/4.png"
                   alt="Mission"
                   className="w-full max-w-lg mx-auto"
@@ -569,7 +570,7 @@ const AboutPage = () => {
               >
                 <SwiperSlide>
                   <div className="bg-gray-100 rounded-lg p-6 text-center">
-                    <img
+                    <Image
                       src="/assets/images/pro/7.1.png"
                       alt="Sharad Agiwal"
                       className="mx-auto mb-6 zoom transition-transform duration-300 hover:scale-110"
@@ -598,7 +599,7 @@ const AboutPage = () => {
 
                 <SwiperSlide>
                   <div className="bg-gray-100 rounded-lg p-6 text-center">
-                    <img
+                    <Image
                       src="/assets/images/pro/7.2.png"
                       alt="Sangeeta Agiwal"
                       className="mx-auto mb-6 zoom transition-transform duration-300 hover:scale-110"
@@ -626,7 +627,7 @@ const AboutPage = () => {
 
                 <SwiperSlide>
                   <div className="bg-gray-100 rounded-lg p-6 text-center">
-                    <img
+                    <Image
                       src="/assets/images/pro/7.3.png"
                       alt="Sumit Pareek"
                       className="mx-auto mb-6 zoom transition-transform duration-300 hover:scale-110"
@@ -656,7 +657,7 @@ const AboutPage = () => {
 
                 <SwiperSlide>
                   <div className="bg-gray-100 rounded-lg p-6 text-center">
-                    <img
+                    <Image
                       src="/assets/images/pro/7.4.png"
                       alt="Deepak Rawat"
                       className="mx-auto mb-6 zoom transition-transform duration-300 hover:scale-110"

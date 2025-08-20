@@ -9,6 +9,7 @@ import {
   Phone,
 } from "lucide-react";
 import Banner from "./Banner";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -22,7 +23,7 @@ const Footer = () => {
           {/* Logo + Partner Info Column */}
           <div className="flex flex-col gap-4">
             <div className="mb-5">
-              <img
+              <Image
                 src="/assets/images/Frame 6.png"
                 alt="AGI Money"
                 className="w-38 h-auto"
