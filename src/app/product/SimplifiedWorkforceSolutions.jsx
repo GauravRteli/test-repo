@@ -4,55 +4,52 @@ import Image from "next/image";
 
 const SimplifiedWorkforceSolutions = () => {
   return (
-    <div className="">
+    <div className="w-full">
       <section
-        className="p-8 sm:p-6 md:p-8 lg:p-12 xl:p-16"
+        className="py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20"
         style={{
-          background: "#ffe4b961",
+          background: "linear-gradient(135deg, #ffe4b961 0%, #fff2d461 100%)",
         }}
       >
-        <div className="max-w-full sm:max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
+        <div className="max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 items-center lg:items-start">
             {/* Left Side - Image */}
-            <div className="flex justify-center items-center max-h-[400px] overflow-hidden order-2 lg:order-1">
-              <Image
-                src="/assets/images/pro/Frame 1171276628.png"
-                className="mt-40"
-                width={450}
-                height={400}
-                alt="Workforce Solutions"
-                priority
-                style={{
-                  width: "100%",
-                  maxWidth: "450px",
-                  height: "auto",
-                }}
-                sizes="(max-width: 640px) 250px, (max-width: 768px) 300px, (max-width: 1024px) 350px, (max-width: 1280px) 400px, 450px"
-              />
+            <div className="flex justify-center items-center order-2 lg:order-1 relative">
+              <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+                <Image
+                  src="/assets/images/pro/Frame 1171276628.png"
+                  className="floating w-full h-auto drop-shadow-lg"
+                  width={450}
+                  height={400}
+                  alt="Workforce Solutions - AGI Moneey Platform"
+                  priority
+                  sizes="(max-width: 640px) 280px, (max-width: 768px) 320px, (max-width: 1024px) 380px, (max-width: 1280px) 420px, 450px"
+                />
+              </div>
             </div>
 
             {/* Right Side - Content */}
-            <div className="flex flex-col justify-center order-1 lg:order-2">
+            <div className="flex flex-col justify-center order-1 lg:order-2 text-center lg:text-left">
               {/* Subheading */}
-              <h4 className="text-orange-400 uppercase tracking-wide font-semibold mb-2 text-xs sm:text-sm md:text-base">
+              <h4 className="text-orange-400 uppercase tracking-wider font-semibold mb-2 sm:mb-3 md:mb-4 text-xs sm:text-sm md:text-base lg:text-lg">
                 Simplified Workforce Solutions
               </h4>
 
-              {/* Heading */}
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
-                What We <span className="text-orange-400">Offers</span>?
+              {/* Main Heading */}
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 lg:mb-8 leading-tight text-gray-900">
+                What We <span className="text-orange-400">Offer</span>?
               </h2>
 
               {/* Description */}
-              <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8 lg:mb-10 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 AGI Moneey simplifies payroll, boosts workforce visibility, and
                 enhances employee financial wellness
               </p>
 
               {/* Feature List */}
-              <div className="space-y-4 sm:space-y-6 lg:space-y-8">
+              <div className="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8 xl:space-y-10">
                 {/* Feature 1 */}
-                <div className="flex items-start gap-3 sm:gap-4">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 group hover:transform hover:scale-105 transition-all duration-300">
                   <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 rounded-full bg-orange-50 flex items-center justify-center">
                     <svg
                       width="90"
@@ -166,11 +163,12 @@ const SimplifiedWorkforceSolutions = () => {
                       </defs>
                     </svg>
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <h5 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-900 mb-1 leading-tight">
+
+                  <div className="flex-1 min-w-0 text-center sm:text-left">
+                    <h5 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold text-gray-900 mb-1 sm:mb-2 leading-tight">
                       Earning on Demand Platform
                     </h5>
-                    <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 leading-relaxed">
                       Instant salary access for employees, seamless payroll
                       integration
                     </p>
@@ -178,7 +176,7 @@ const SimplifiedWorkforceSolutions = () => {
                 </div>
 
                 {/* Feature 2 */}
-                <div className="flex items-start gap-3 sm:gap-4">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 group hover:transform hover:scale-105 transition-all duration-300">
                   <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 rounded-full bg-orange-50 flex items-center justify-center">
                     <svg
                       width="90"
@@ -292,11 +290,12 @@ const SimplifiedWorkforceSolutions = () => {
                       </defs>
                     </svg>
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <h5 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-gray-900 mb-1 leading-tight">
+
+                  <div className="flex-1 min-w-0 text-center sm:text-left">
+                    <h5 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold text-gray-900 mb-1 sm:mb-2 leading-tight">
                       Fully Automated Payroll Module
                     </h5>
-                    <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 leading-relaxed">
                       Platform that automates attendance, payroll, and employee
                       management - saving time and reducing errors
                     </p>
@@ -307,27 +306,56 @@ const SimplifiedWorkforceSolutions = () => {
           </div>
         </div>
 
-        {/* Animations */}
+        {/* Enhanced Animations */}
         <style jsx>{`
           .floating {
-            animation: floating 5s ease-in-out infinite;
+            animation: floating 6s ease-in-out infinite;
+            transform-origin: center center;
           }
+
           @keyframes floating {
-            0% {
-              transform: translate(0, 0px);
-            }
-            50% {
-              transform: translate(0, 15px);
-            }
+            0%,
             100% {
-              transform: translate(0, 0px);
+              transform: translateY(0px) rotate(0deg);
+            }
+            33% {
+              transform: translateY(-8px) rotate(1deg);
+            }
+            66% {
+              transform: translateY(8px) rotate(-1deg);
             }
           }
 
-          /* Mobile optimizations */
+          /* Responsive animation adjustments */
           @media (max-width: 640px) {
             .floating {
               animation-duration: 4s;
+            }
+
+            @keyframes floating {
+              0%,
+              100% {
+                transform: translateY(0px);
+              }
+              50% {
+                transform: translateY(-6px);
+              }
+            }
+          }
+
+          @media (max-width: 480px) {
+            .floating {
+              animation-duration: 3s;
+            }
+
+            @keyframes floating {
+              0%,
+              100% {
+                transform: translateY(0px);
+              }
+              50% {
+                transform: translateY(-4px);
+              }
             }
           }
 
@@ -336,6 +364,42 @@ const SimplifiedWorkforceSolutions = () => {
             .floating {
               animation: none;
             }
+
+            .group:hover {
+              transform: none !important;
+            }
+          }
+
+          /* Enhanced hover effects */
+          .group:hover svg {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+          }
+
+          /* Background pattern enhancement */
+          section {
+            position: relative;
+            overflow: hidden;
+          }
+
+          section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(
+                circle at 20% 20%,
+                rgba(242, 171, 60, 0.1) 0%,
+                transparent 50%
+              ),
+              radial-gradient(
+                circle at 80% 80%,
+                rgba(242, 171, 60, 0.05) 0%,
+                transparent 50%
+              );
+            pointer-events: none;
           }
         `}</style>
       </section>

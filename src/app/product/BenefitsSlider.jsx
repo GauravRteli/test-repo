@@ -326,179 +326,389 @@ const BenefitsSlider = () => {
   const sliderRef = React.useRef(null);
 
   return (
-    <div className="max-w-full px-10 md:px-3 md:max-w-3xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto m-auto bg-gray-50 mt-[23rem] sm:mt-[27rem] md:mt-[34rem] lg:mt-[38rem]">
+    <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-0 max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto mt-16 sm:mt-20 md:mt-24 lg:mt-28 xl:mt-32 2xl:mt-64">
       <style jsx>{`
-        /* card hover-lift + bottom shadow */
+        /* Responsive card styling with consistent height */
         .benefit-card {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          height: 100%;
-          min-height: 280px; /* Reduced from 350px */
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          height: 280px;
+          min-height: 280px;
+          max-height: 280px;
           display: flex;
           flex-direction: column;
-        }
-        .benefit-card:hover {
-          transform: translateY(-10px);
-          /* bottom-biased shadow */
-          box-shadow: 0 6px 12px -6px rgba(0, 0, 0, 0.25);
+          transform-origin: center bottom;
+          will-change: transform, box-shadow;
         }
 
-        /* Make slick slides equal height */
+        /* Responsive heights for different screen sizes */
+        @media (min-width: 640px) {
+          .benefit-card {
+            height: 300px;
+            min-height: 300px;
+            max-height: 300px;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .benefit-card {
+            height: 320px;
+            min-height: 320px;
+            max-height: 320px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .benefit-card {
+            height: 340px;
+            min-height: 340px;
+            max-height: 340px;
+          }
+        }
+
+        @media (min-width: 1280px) {
+          .benefit-card {
+            height: 360px;
+            min-height: 360px;
+            max-height: 360px;
+          }
+        }
+
+        .benefit-card:hover {
+          transform: translateY(-8px) scale(1.02);
+          box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+            0 20px 40px -10px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Enhanced Slick slider fixes */
         .slick-track {
           display: flex !important;
-        }
-        .slick-slide {
-          height: inherit !important;
-        }
-        .slick-slide > div {
-          height: 100%;
+          align-items: stretch;
         }
 
-        /* ring-pulse around the icon */
+        .slick-slide {
+          height: inherit !important;
+          display: flex !important;
+        }
+
+        .slick-slide > div {
+          height: 100%;
+          width: 100%;
+          display: flex;
+        }
+
+        /* Subtle pulse ring animation */
         .icon-pulse {
           position: relative;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
         }
+
+        .icon-pulse::before,
         .icon-pulse::after {
           content: "";
           position: absolute;
-          inset: -6px;
-          border-radius: 9999px;
-          border: 2px solid currentColor;
-          animation: ring 2s ease-out infinite;
+          border-radius: 50%;
+          border: 1.5px solid currentColor;
+          pointer-events: none;
+          opacity: 0.4;
         }
-        @keyframes ring {
+
+        .icon-pulse::before {
+          width: calc(100% + 4px);
+          height: calc(100% + 4px);
+          animation: ring-pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation-delay: 0s;
+        }
+
+        .icon-pulse::after {
+          width: calc(100% + 8px);
+          height: calc(100% + 8px);
+          animation: ring-pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation-delay: 0.5s;
+        }
+
+        @keyframes ring-pulse {
           0% {
-            transform: scale(0.6);
-            opacity: 0.6;
+            transform: scale(0.95);
+            opacity: 0.5;
+            border-width: 2px;
+          }
+          50% {
+            opacity: 0.2;
+            border-width: 1.5px;
           }
           100% {
-            transform: scale(0.8);
+            transform: scale(1.03);
             opacity: 0;
+            border-width: 1px;
           }
         }
 
+        /* Card content structure with proper spacing */
         .card-content {
           display: flex;
           flex-direction: column;
           height: 100%;
-          min-height: 200px; /* Reduced from 250px */
-        }
-
-        /* Title wrapping and spacing */
-        .card-content h4 {
-          word-wrap: break-word;
-          overflow-wrap: break-word;
-          hyphens: auto;
-          flex-shrink: 0;
-        }
-
-        /* Description positioning */
-        .card-content p {
-          margin-top: auto; /* Pushes description to bottom */
-          word-wrap: break-word;
-          overflow-wrap: break-word;
-        }
-
-        /* Ensure consistent spacing regardless of title length */
-        .card-content > div:last-child {
-          display: flex;
-          flex-direction: column;
+          position: relative;
+          padding: 0;
           justify-content: space-between;
         }
 
-        /* slick fixes */
-        .slick-slide svg {
-          display: inline-block !important;
-          max-width: 100%;
-          height: auto;
+        /* Responsive icon container */
+        .icon-container {
+          width: 44px;
+          height: 44px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto;
+          background: rgba(249, 249, 249, 0.8);
+          border-radius: 50%;
+          flex-shrink: 0;
         }
+
+        @media (min-width: 640px) {
+          .icon-container {
+            width: 48px;
+            height: 48px;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .icon-container {
+            width: 52px;
+            height: 52px;
+            margin: 0;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .icon-container {
+            width: 56px;
+            height: 56px;
+          }
+        }
+
+        @media (min-width: 1280px) {
+          .icon-container {
+            width: 60px;
+            height: 60px;
+          }
+        }
+
+        /* Content section with proper spacing */
+        .content-section {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          justify-content: space-between;
+          min-height: 0;
+          gap: 12px;
+        }
+
+        @media (min-width: 640px) {
+          .content-section {
+            gap: 16px;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .content-section {
+            gap: 20px;
+          }
+        }
+
+        /* Title styling with consistent spacing */
+        .card-title {
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          hyphens: auto;
+          line-height: 1.3;
+          font-weight: 600;
+          margin: 0;
+          text-align: center;
+          flex-shrink: 0;
+          display: block;
+          min-height: auto;
+        }
+
+        @media (min-width: 768px) {
+          .card-title {
+            text-align: left;
+          }
+        }
+
+        /* Description with proper alignment */
+        .card-description {
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          line-height: 1.5;
+          margin: 0;
+          text-align: center;
+          flex-grow: 1;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+        }
+
+        @media (min-width: 768px) {
+          .card-description {
+            text-align: left;
+            justify-content: flex-start;
+          }
+        }
+
+        .card-description p {
+          margin: 0;
+          width: 100%;
+        }
+
+        /* Responsive slider spacing */
+        .slick-slide {
+          padding: 0 4px;
+          box-sizing: border-box;
+        }
+
+        @media (min-width: 640px) {
+          .slick-slide {
+            padding: 0 6px;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .slick-slide {
+            padding: 0 8px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .slick-slide {
+            padding: 0 10px;
+          }
+        }
+
+        @media (min-width: 1280px) {
+          .slick-slide {
+            padding: 0 12px;
+          }
+        }
+
+        /* Remove default slick arrows */
         .slick-prev:before,
         .slick-next:before {
           display: none;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 1200px) {
+        /* Hover effects */
+        .benefit-card:hover .icon-pulse::before,
+        .benefit-card:hover .icon-pulse::after {
+          animation-play-state: paused;
+          opacity: 0.6;
+          transform: scale(1.01);
+        }
+
+        /* Accessibility */
+        .benefit-card:focus-within {
+          outline: 2px solid currentColor;
+          outline-offset: 4px;
+          transform: translateY(-4px);
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
           .benefit-card {
-            min-height: 260px; /* Reduced from 320px */
+            transition: box-shadow 0.3s ease;
+          }
+          .benefit-card:hover {
+            transform: none;
+          }
+          .icon-pulse::before,
+          .icon-pulse::after {
+            animation: none;
           }
         }
-        @media (max-width: 768px) {
-          .benefit-card {
-            min-height: 240px; /* Reduced from 300px */
-          }
-          .slick-slide {
-            padding: 0 8px;
-          }
-        }
-        @media (max-width: 640px) {
-          .benefit-card {
-            min-height: 220px; /* Reduced from 280px */
-          }
-          .slick-slide {
-            padding: 0 6px;
-          }
-        }
+
+        /* Responsive typography scaling */
         @media (max-width: 480px) {
-          .benefit-card {
-            min-height: 250px; /* Reduced from 320px */
+          .card-title {
+            font-size: 0.875rem;
+            line-height: 1.25;
           }
-          .slick-slide {
-            padding: 0 4px;
+          .card-description p {
+            font-size: 0.75rem;
+            line-height: 1.4;
           }
         }
       `}</style>
 
-      <div className="mx-auto">
-        {/* Header Section with Navigation Buttons */}
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end mb-8 lg:mb-12">
-          <div className="lg:flex-1 mb-6 self-start lg:mb-0">
-            <h3 className="text-orange-400 text-xs sm:text-lg uppercase tracking-wide mb-2">
+      <div className="w-full">
+        {/* Header Section with Navigation */}
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16">
+          <div className="w-full lg:flex-1 mb-6 lg:mb-0 lg:pr-6 xl:pr-8">
+            <h3 className="text-orange-400 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider font-medium mb-2 sm:mb-3 md:mb-4">
               BENEFITS
             </h3>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-3 lg:mb-4">
-              Everything You Need to
-              <br className="mb-2" />
-              Support Your Team Efficiently
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6 leading-tight">
+              <span className="block">Everything You Need to</span>
+              <span className="block mt-1 sm:mt-2">
+                Support Your Team Efficiently
+              </span>
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base lg:text-lg">
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed max-w-2xl">
               From earned wage access to HRMS tools, AGI Moneey does it all.
             </p>
           </div>
 
-          {/* Navigation Buttons positioned in header (matching your image) */}
-          <div className="flex gap-3 lg:gap-4">
-            <PrevArrow onClick={() => sliderRef.current?.slickPrev()} />
-            <NextArrow onClick={() => sliderRef.current?.slickNext()} />
+          {/* Navigation Buttons */}
+          <div className="flex gap-2 sm:gap-3 md:gap-4 self-end lg:self-auto flex-shrink-0">
+            <PrevArrow
+              onClick={() => sliderRef.current?.slickPrev()}
+              className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
+            />
+            <NextArrow
+              onClick={() => sliderRef.current?.slickNext()}
+              className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
+            />
           </div>
         </div>
 
-        {/* React-Slick Slider */}
-        <div className="relative pb-10">
+        {/* Enhanced React-Slick Slider */}
+        <div className="relative pb-6 sm:pb-8 md:pb-10 lg:pb-12">
           <Slider ref={sliderRef} {...settings}>
             {benefits.map((benefit) => (
-              <div key={benefit.id} className="px-1 sm:px-2 lg:px-3">
-                <div className="benefit-card bg-white rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 border border-transparent">
+              <div key={benefit.id} className="h-full">
+                <div
+                  className="benefit-card bg-white rounded-xl sm:rounded-2xl lg:rounded-3xl p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 border border-gray-100 hover:border-gray-200 group"
+                  tabIndex={0}
+                  role="article"
+                  aria-label={`Benefit: ${benefit.title}`}
+                >
                   <div className="card-content">
-                    {/* Icon section */}
-                    <div className="flex flex-col items-center md:items-start text-center mb-3">
+                    {/* Icon Section */}
+                    <div className="flex justify-center md:justify-start mb-3 sm:mb-4 md:mb-5 lg:mb-6 flex-shrink-0">
                       <div
-                        className="mb-3 flex justify-center items-center icon-pulse"
+                        className="icon-container icon-pulse group-hover:scale-110 transition-transform duration-300"
                         style={{ color: benefit.color }}
+                        aria-hidden="true"
                       >
-                        <div className="scale-65 sm:scale-75 lg:scale-85">
+                        <div className="w-full h-full flex items-center justify-center">
                           {benefit.icon}
                         </div>
                       </div>
                     </div>
 
-                    {/* Title and Description container with proper flex layout */}
-                    <div className="flex flex-col gap-4 h-full justify-between flex-grow min-w-0">
-                      <h4 className="text-sm text-center md:text-left sm:text-base lg:text-lg font-semibold text-gray-900">
+                    {/* Content Section with proper spacing */}
+                    <div className="content-section">
+                      <h4 className="card-title text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-900">
                         {benefit.title}
                       </h4>
-                      <p className="text-gray-600 text-center md:text-left text-xs sm:text-xs leading-relaxed">
-                        {benefit.description}
-                      </p>
+
+                      <div className="card-description">
+                        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600">
+                          {benefit.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
