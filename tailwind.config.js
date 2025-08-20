@@ -28,7 +28,7 @@ module.exports = {
         },
       },
       animation: {
-        floating: "floating 1s ease-in-out infinite",
+        floating: "floating 0.1s ease-in-out infinite",
         fadeUp: "fadeUp 0.6s ease-out forwards",
         pulse: "pulse 2s infinite",
       },

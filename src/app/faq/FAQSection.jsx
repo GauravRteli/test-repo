@@ -122,12 +122,10 @@ const FAQSection = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-16">
+    <div className="bg-gray-50 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20">
       <div className="max-w-full mx-auto">
-        {/* Header Section */}
-
-        {/* FAQ Items */}
-        <div className="space-y-4 px-4 max-w-4xl mx-auto mb-20">
+        {/* FAQ Items Container */}
+        <div className="space-y-3 sm:space-y-4 md:space-y-5 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0 max-w-5xl mx-auto mb-12 sm:mb-16 md:mb-20 lg:mb-24">
           <FAQHeader />
           {faqData.map((item, index) => (
             <FAQItem
@@ -149,56 +147,65 @@ const FAQSection = () => {
 
 // Header Component
 const FAQHeader = () => (
-  <div className="mb-8">
-    <p className="text-[#f2ab3c] text-md mb-1">Frequently Asked Questions</p>
-    <h2 className="text-3xl font-bold text-gray-900 mb-2">
+  <div className="mb-6 sm:mb-8 md:mb-10 lg:mb-12 text-center sm:text-left">
+    <p className="text-[#f2ab3c] text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider font-medium mb-2 sm:mb-3">
+      Frequently Asked Questions
+    </p>
+    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6 leading-tight">
       Do You Have Questions?
     </h2>
-    <p className="text-gray-600 text-md">
-      We have answers (well most of the times)
+    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto sm:mx-0">
+      We have answers (well most of the times!)
     </p>
   </div>
 );
 
 // Individual FAQ Item Component
 const FAQItem = ({ question, answer, isOpen, onClick }) => (
-  <div className="border border-gray-300 rounded-md bg-white overflow-hidden">
+  <div className="border border-gray-200 hover:border-[#f2ab3c]/30 rounded-lg sm:rounded-xl lg:rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
     <button
-      className="w-full px-6 py-3 text-left flex items-center justify-between hover:text-[#f2ab3c] transition-colors duration-300 group"
+      className="w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-left flex items-start sm:items-center justify-between hover:bg-gray-50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#f2ab3c]/20 focus:ring-inset"
       onClick={onClick}
+      aria-expanded={isOpen}
+      aria-controls={`faq-answer-${question
+        .replace(/\s+/g, "-")
+        .toLowerCase()}`}
     >
-      <span className="font-semibold text-sm text-gray-700 group-hover:text-[#f2ab3c] transition-colors duration-300">
+      <span className="font-semibold text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 group-hover:text-[#f2ab3c] transition-colors duration-300 pr-4 leading-relaxed flex-1">
         {question}
       </span>
-      <div className="ml-4 flex-shrink-0">
+      <div className="ml-4 flex-shrink-0 self-start sm:self-center pt-1 sm:pt-0">
         <div
-          className={`transform transition-transform duration-500 ease-in-out ${
+          className={`transform transition-all duration-500 ease-in-out p-1 rounded-full hover:bg-[#f2ab3c]/10 ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
         >
           {isOpen ? (
             <MinusIcon
-              className="w-3 h-3 text-[#f2ab3c] transition-all duration-700 ease-in-out"
-              strokeWidth={4}
+              className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#f2ab3c] transition-all duration-300"
+              strokeWidth={2.5}
             />
           ) : (
             <PlusIcon
-              className="w-3 h-3 text-[#f2ab3c] transition-all duration-700 ease-in-out"
-              strokeWidth={4}
+              className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#f2ab3c] transition-all duration-300"
+              strokeWidth={2.5}
             />
           )}
         </div>
       </div>
     </button>
 
-    {/* Only outer component slides up - no text animation */}
+    {/* Expandable Answer Section */}
     <div
       className={`transition-all duration-700 ease-in-out overflow-hidden ${
-        isOpen ? "max-h-96" : "max-h-0"
+        isOpen ? "max-h-[500px] sm:max-h-96" : "max-h-0"
       }`}
+      id={`faq-answer-${question.replace(/\s+/g, "-").toLowerCase()}`}
     >
-      <div className="px-6 pb-5 border-t border-gray-100 pt-4">
-        <p className="text-gray-600 text-xs">{answer}</p>
+      <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-5 lg:pb-6 border-t border-gray-100 pt-4 sm:pt-5 lg:pt-6 bg-gray-50/50">
+        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed">
+          {answer}
+        </p>
       </div>
     </div>
   </div>
@@ -206,25 +213,30 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => (
 
 // Call to Action Component
 const FAQCallToAction = () => (
-  <section className="bg-black text-white py-10 px-4">
-    <div className="container mx-auto max-w-6xl">
+  <section className="bg-[#222222] text-white py-8 sm:py-10 md:py-12 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0 relative overflow-hidden">
+    <div className="container mx-auto max-w-6xl relative z-10">
       <div className="flex justify-center">
-        <div className="w-full">
+        <div className="w-full max-w-4xl">
           <div className="text-center">
-            <h1 className="text-xl md:text-2xl lg:text-4xl font-bold mb-2">
-              Have Something not being
-              <br />
-              answered?
-            </h1>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8 text-white leading-tight">
+              <span className="block sm:inline">Have Something not being</span>
+              <br className="hidden sm:block" />
+              <span className="block sm:inline"> answered?</span>
+            </h2>
 
-            <div className="mt-8">
+            <p className="text-sm sm:text-base text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
+              Can't find what you're looking for? We're here to help!
+            </p>
+
+            <div className="flex justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center px-6 py-2 bg-transparent border-2 border-[#f2ab3c] text-[#f2ab3c] font-semibold rounded-full hover:bg-[#f2ab3c] hover:text-black transition-all duration-300 group"
+                className="group inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 md:px-8 lg:px-10 py-2 sm:py-3 bg-transparent border-2 border-[#f2ab3c] text-[#f2ab3c] font-semibold text-sm sm:text-base md:text-lg lg:text-xl rounded-full hover:bg-[#f2ab3c] hover:text-black transition-all duration-300 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-[#f2ab3c]/20 active:scale-95"
+                aria-label="Get in touch with AGI Moneey support"
               >
-                Get In Touch
+                <span>Get In Touch</span>
                 <svg
-                  className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
+                  className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 transform group-hover:translate-x-1 transition-transform duration-300"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   aria-hidden="true"
@@ -236,6 +248,40 @@ const FAQCallToAction = () => (
                   />
                 </svg>
               </Link>
+            </div>
+
+            {/* Optional Contact Methods */}
+            <div className="mt-8">
+              <p className="text-xs sm:text-sm md:text-base text-gray-400 mb-4">
+                Or reach us directly:
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-xs sm:text-sm md:text-base text-gray-300">
+                <a
+                  href="mailto:support@agimoneey.com"
+                  className="hover:text-[#f2ab3c] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <svg
+                    className="w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
+                  support@agimoneey.com
+                </a>
+                <span className="hidden sm:block text-gray-500">|</span>
+                <span className="flex items-center gap-2">
+                  <svg
+                    className="w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                  </svg>
+                  24×7 In-app Support
+                </span>
+              </div>
             </div>
           </div>
         </div>

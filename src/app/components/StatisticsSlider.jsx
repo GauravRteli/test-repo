@@ -89,7 +89,7 @@ const StatisticsSlider = () => {
             }}
             speed={1200}
             loop={true}
-            loopedSlides={statisticsData.length}
+            // loopedSlides={statisticsData.length}
             className="statistics-swiper"
           >
             {statisticsData.map((stat, index) => (
