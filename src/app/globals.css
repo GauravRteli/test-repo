@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Add this to your global CSS or component styles */
+.shadow-inner-left {
+  box-shadow: inset 8px 0 8px -6px rgba(0, 0, 0, 0.15);
+}
+
+.working-process-box {
+  transition: all 0.4s ease;
+}
+
+.working-process-box:hover {
+  transform: translateX(-2px);
+}
+
