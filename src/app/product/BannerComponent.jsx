@@ -7,7 +7,7 @@ const HeroBanner = () => {
     <section className="relative w-full overflow-visible">
       {/* Main Banner Section */}
       <div
-        className="relative h-auto min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] lg:min-h-[85vh] xl:min-h-[90vh] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pb-16 sm:pb-20 md:pb-24 lg:pb-28 xl:pb-32"
+        className="relative h-auto min-h-[40vh] sm:min-h-[50vh] md:min-h-[60vh] lg:min-h-[70vh] xl:min-h-[80vh] 2xl:min-h-[85vh] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24"
         style={{
           backgroundImage: `url('/assets/images/pro/Component 7.png')`,
           backgroundSize: "cover",
@@ -18,7 +18,7 @@ const HeroBanner = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-white/5"></div>
 
         <div className="container mx-auto px-2 sm:px-4 relative z-10 h-full">
-          <div className="flex justify-center items-center h-full min-h-[50vh] sm:min-h-[55vh] md:min-h-[60vh] lg:min-h-[65vh] pt-6 sm:pt-8 md:pt-12 lg:pt-16">
+          <div className="flex justify-center items-center h-full min-h-[30vh] sm:min-h-[35vh] md:min-h-[45vh] lg:min-h-[55vh] pt-4 sm:pt-6 md:pt-8 lg:pt-12">
             <div className="text-center max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl">
               <div className="space-y-2 sm:space-y-3 md:space-y-4 lg:space-y-6">
                 <h1
@@ -47,15 +47,15 @@ const HeroBanner = () => {
           </div>
         </div>
 
-        {/* Phone Image positioned to extend outside component (2/3 outside, 1/3 inside) */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2/3 w-full flex flex-col items-center justify-center">
+        {/* Phone Image positioned with responsive translation */}
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 sm:translate-y-3/5 md:translate-y-2/3 lg:translate-y-2/3 xl:translate-y-2/3 w-full flex flex-col items-center justify-center">
           <div className="relative w-full flex justify-center">
             <Image
               src="/assets/images/pro/1.2. banner phones.png"
               alt="Mobile phones showing app interface"
               width={1200}
               height={800}
-              className={`w-[300px] sm:w-[400px] md:w-[500px] lg:w-[650px] xl:w-[800px] 2xl:w-[1000px] h-auto ${styles.float} max-w-none`}
+              className={`w-[250px] sm:w-[300px] md:w-[400px] lg:w-[550px] xl:w-[700px] 2xl:w-[900px] h-auto ${styles.float} max-w-none`}
               priority
               style={{
                 filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.15))",
@@ -64,7 +64,7 @@ const HeroBanner = () => {
           </div>
 
           {/* App Store Links positioned below phones */}
-          <div className="relative">
+          <div className="relative mt-2 sm:mt-3 md:mt-4">
             <ul
               className="flex justify-center items-center space-x-2 sm:space-x-3 md:space-x-4 lg:space-x-6"
               style={{ listStyle: "none", padding: 0, margin: 0 }}
@@ -76,7 +76,7 @@ const HeroBanner = () => {
                     alt="Download from Play Store"
                     width={160}
                     height={60}
-                    className="w-20 sm:w-24 md:w-28 lg:w-32 xl:w-36 2xl:w-40 h-auto hover:scale-105 group-hover:shadow-lg transition-all duration-300"
+                    className="w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-36 h-auto hover:scale-105 group-hover:shadow-lg transition-all duration-300"
                   />
                 </Link>
               </li>
@@ -87,7 +87,7 @@ const HeroBanner = () => {
                     alt="Download from App Store"
                     width={160}
                     height={60}
-                    className="w-20 sm:w-24 md:w-28 lg:w-32 xl:w-36 2xl:w-40 h-auto hover:scale-105 group-hover:shadow-lg transition-all duration-300"
+                    className="w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-36 h-auto hover:scale-105 group-hover:shadow-lg transition-all duration-300"
                   />
                 </Link>
               </li>
@@ -96,8 +96,8 @@ const HeroBanner = () => {
         </div>
       </div>
 
-      {/* Spacer div to accommodate the 2/3 of phone image that extends outside */}
-      <div className="h-32 sm:h-48 md:h-64 lg:h-80 xl:h-96 2xl:h-96 bg-transparent pointer-events-none"></div>
+      {/* Responsive spacer div */}
+      <div className="h-20 sm:h-28 md:h-40 lg:h-56 xl:h-72 2xl:h-80 bg-transparent pointer-events-none"></div>
     </section>
   );
 };

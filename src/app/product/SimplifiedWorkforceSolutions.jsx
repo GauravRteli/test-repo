@@ -12,13 +12,13 @@ const SimplifiedWorkforceSolutions = () => {
         }}
       >
         <div className="max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 items-center lg:items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 items-start">
             {/* Left Side - Image */}
-            <div className="flex justify-center items-center order-2 lg:order-1 relative">
-              <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+            <div className="flex justify-center items-start order-2 lg:order-1 relative min-h-[300px] sm:min-h-[350px] md:min-h-[400px] lg:min-h-[450px] xl:min-h-[500px]">
+              <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl flex items-center justify-center">
                 <Image
                   src="/assets/images/pro/Frame 1171276628.png"
-                  className="floating w-full h-auto drop-shadow-lg"
+                  className="floating w-full h-auto drop-shadow-lg object-contain"
                   width={450}
                   height={400}
                   alt="Workforce Solutions - AGI Moneey Platform"
@@ -49,12 +49,12 @@ const SimplifiedWorkforceSolutions = () => {
               {/* Feature List */}
               <div className="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8 xl:space-y-10">
                 {/* Feature 1 */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 group hover:transform hover:scale-105 transition-all duration-300">
+                <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 group hover:transform hover:scale-105 transition-all duration-300">
                   <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 rounded-full bg-orange-50 flex items-center justify-center">
                     <svg
                       width="90"
                       height="70"
-                      viewBox="0 0 75 100"
+                      viewBox="0 0 100 85"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -176,12 +176,12 @@ const SimplifiedWorkforceSolutions = () => {
                 </div>
 
                 {/* Feature 2 */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 group hover:transform hover:scale-105 transition-all duration-300">
-                  <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 rounded-full bg-orange-50 flex items-center justify-center">
+                <div className="flex flex-col sm:flex-row items-center sm:items-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 group hover:transform hover:scale-105 transition-all duration-300">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 rounded-full flex items-center justify-center">
                     <svg
                       width="90"
                       height="70"
-                      viewBox="0 0 75 100"
+                      viewBox="0 0 100 85"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >

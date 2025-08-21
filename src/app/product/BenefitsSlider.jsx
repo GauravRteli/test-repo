@@ -1,18 +1,18 @@
 "use client";
 
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 
-// Custom arrow components with reduced size
-const PrevArrow = (props) => {
-  const { className, style, onClick } = props;
+// Custom arrow components
+const PrevArrow = ({ onClick, disabled }) => {
   return (
     <button
-      className="w-10 h-10 rounded-full bg-black hover:bg-gray-800 flex items-center justify-center transition-colors duration-200"
-      style={{ ...style, position: "relative", display: "inline-flex" }}
+      className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200 ${
+        disabled
+          ? "bg-gray-300 cursor-not-allowed"
+          : "bg-black hover:bg-gray-800"
+      }`}
       onClick={onClick}
+      disabled={disabled}
       aria-label="Previous slide"
     >
       <svg
@@ -33,13 +33,16 @@ const PrevArrow = (props) => {
   );
 };
 
-const NextArrow = (props) => {
-  const { className, style, onClick } = props;
+const NextArrow = ({ onClick, disabled }) => {
   return (
     <button
-      className="w-10 h-10 rounded-full bg-orange-400 hover:bg-orange-500 flex items-center justify-center transition-colors duration-200"
-      style={{ ...style, position: "relative", display: "inline-flex" }}
+      className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200 ${
+        disabled
+          ? "bg-gray-300 cursor-not-allowed"
+          : "bg-orange-400 hover:bg-orange-500"
+      }`}
       onClick={onClick}
+      disabled={disabled}
       aria-label="Next slide"
     >
       <svg
@@ -294,356 +297,246 @@ const BenefitsSlider = () => {
     },
   ];
 
-  // Settings without arrows (we'll place them manually in header)
-  const settings = {
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: false, // Disable default arrows
-    dots: false,
-    speed: 300,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: { slidesToShow: 4, slidesToScroll: 1 },
-      },
-      {
-        breakpoint: 1000,
-        settings: { slidesToShow: 3, slidesToScroll: 1 },
-      },
-      {
-        breakpoint: 640,
-        settings: { slidesToShow: 2, slidesToScroll: 1 },
-      },
-      {
-        breakpoint: 480,
-        settings: { slidesToShow: 1, slidesToScroll: 1 },
-      },
-    ],
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [slidesToShow, setSlidesToShow] = useState(1);
+  const [isTransitioning, setIsTransitioning] = useState(false); // ADD THIS LINE
+  const trackRef = useRef(null);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+  const maxIndex = Math.max(0, benefits.length - slidesToShow);
+  const isDragging = useRef(false);
+
+  // Responsive slidesToShow
+  const updateSlidesToShow = useCallback(() => {
+    const width = window.innerWidth;
+    if (width >= 1200) setSlidesToShow(4);
+    else if (width >= 1000) setSlidesToShow(3);
+    else if (width >= 640) setSlidesToShow(2);
+    else setSlidesToShow(1);
+  }, []);
+
+  useEffect(() => {
+    updateSlidesToShow();
+    window.addEventListener("resize", updateSlidesToShow);
+    return () => window.removeEventListener("resize", updateSlidesToShow);
+  }, [updateSlidesToShow]);
+
+  // Reset current index when slidesToShow changes
+  useEffect(() => {
+    // Snap to last allowed index in case the count changed
+    if (currentIndex > maxIndex) setCurrentIndex(maxIndex);
+  }, [slidesToShow, benefits.length, currentIndex, maxIndex]);
+
+  const goToSlide = useCallback(
+    (index) => {
+      if (isTransitioning) return;
+
+      const clampedIndex = Math.max(0, Math.min(index, maxIndex));
+      if (clampedIndex !== currentIndex) {
+        setIsTransitioning(true);
+        setCurrentIndex(clampedIndex);
+        setTimeout(() => setIsTransitioning(false), 300);
+      }
+    },
+    [currentIndex, maxIndex, isTransitioning]
+  );
+
+  const nextSlide = useCallback(() => {
+    goToSlide(currentIndex + 1);
+  }, [currentIndex, goToSlide]);
+
+  const prevSlide = useCallback(() => {
+    goToSlide(currentIndex - 1);
+  }, [currentIndex, goToSlide]);
+
+  // Touch swipe handlers - FIXED
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
   };
 
-  // Ref to control slider programmatically
-  const sliderRef = React.useRef(null);
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches.clientX; // FIXED: was e.touches.clientX
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const diff = touchStartX.current - touchEndX.current;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        nextSlide(); // Use nextSlide for consistency
+      } else {
+        prevSlide(); // Use prevSlide for consistency
+      }
+    }
+    touchStartX.current = 0;
+    touchEndX.current = 0;
+  };
+
+  // Auto-slide functionality (optional)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (currentIndex < maxIndex) {
+        nextSlide();
+      } else {
+        setCurrentIndex(0);
+      }
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex, maxIndex, nextSlide]);
+
+  if (!benefits.length) {
+    return (
+      <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-0 max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto mt-16 sm:mt-20 md:mt-24 lg:mt-28 xl:mt-32 2xl:mt-64">
+        <p className="text-center text-gray-500">No benefits to display</p>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-0 max-w-sm sm:max-w-2xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto mt-16 sm:mt-20 md:mt-24 lg:mt-28 xl:mt-32 2xl:mt-64">
       <style jsx>{`
-        /* Responsive card styling with consistent height */
-        .benefit-card {
-          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          height: 280px;
-          min-height: 280px;
-          max-height: 280px;
-          display: flex;
-          flex-direction: column;
-          transform-origin: center bottom;
-          will-change: transform, box-shadow;
-        }
-
-        /* Responsive heights for different screen sizes */
-        @media (min-width: 640px) {
-          .benefit-card {
-            height: 300px;
-            min-height: 300px;
-            max-height: 300px;
-          }
-        }
-
-        @media (min-width: 768px) {
-          .benefit-card {
-            height: 320px;
-            min-height: 320px;
-            max-height: 320px;
-          }
-        }
-
-        @media (min-width: 1024px) {
-          .benefit-card {
-            height: 340px;
-            min-height: 340px;
-            max-height: 340px;
-          }
-        }
-
-        @media (min-width: 1280px) {
-          .benefit-card {
-            height: 360px;
-            min-height: 360px;
-            max-height: 360px;
-          }
-        }
-
-        .benefit-card:hover {
-          transform: translateY(-8px) scale(1.02);
-          box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
-            0 20px 40px -10px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Enhanced Slick slider fixes */
-        .slick-track {
-          display: flex !important;
-          align-items: stretch;
-        }
-
-        .slick-slide {
-          height: inherit !important;
-          display: flex !important;
-        }
-
-        .slick-slide > div {
-          height: 100%;
-          width: 100%;
-          display: flex;
-        }
-
-        /* Subtle pulse ring animation */
-        .icon-pulse {
+        .slider-container {
+          overflow: hidden;
           position: relative;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
         }
-
-        .icon-pulse::before,
-        .icon-pulse::after {
-          content: "";
-          position: absolute;
-          border-radius: 50%;
-          border: 1.5px solid currentColor;
-          pointer-events: none;
-          opacity: 0.4;
-        }
-
-        .icon-pulse::before {
-          width: calc(100% + 4px);
-          height: calc(100% + 4px);
-          animation: ring-pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-          animation-delay: 0s;
-        }
-
-        .icon-pulse::after {
-          width: calc(100% + 8px);
-          height: calc(100% + 8px);
-          animation: ring-pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-          animation-delay: 0.5s;
-        }
-
-        @keyframes ring-pulse {
-          0% {
-            transform: scale(0.95);
-            opacity: 0.5;
-            border-width: 2px;
-          }
-          50% {
-            opacity: 0.2;
-            border-width: 1.5px;
-          }
-          100% {
-            transform: scale(1.03);
-            opacity: 0;
-            border-width: 1px;
-          }
-        }
-
-        /* Card content structure with proper spacing */
-        .card-content {
+        .slider-track {
           display: flex;
-          flex-direction: column;
-          height: 100%;
-          position: relative;
-          padding: 0;
-          justify-content: space-between;
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
-        /* Responsive icon container */
-        .icon-container {
-          width: 44px;
-          height: 44px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto;
-          background: rgba(249, 249, 249, 0.8);
-          border-radius: 50%;
+        .slider-slide {
           flex-shrink: 0;
-        }
-
-        @media (min-width: 640px) {
-          .icon-container {
-            width: 48px;
-            height: 48px;
-          }
-        }
-
-        @media (min-width: 768px) {
-          .icon-container {
-            width: 52px;
-            height: 52px;
-            margin: 0;
-          }
-        }
-
-        @media (min-width: 1024px) {
-          .icon-container {
-            width: 56px;
-            height: 56px;
-          }
-        }
-
-        @media (min-width: 1280px) {
-          .icon-container {
-            width: 60px;
-            height: 60px;
-          }
-        }
-
-        /* Content section with proper spacing */
-        .content-section {
-          display: flex;
-          flex-direction: column;
-          flex-grow: 1;
-          justify-content: space-between;
-          min-height: 0;
-          gap: 12px;
-        }
-
-        @media (min-width: 640px) {
-          .content-section {
-            gap: 16px;
-          }
-        }
-
-        @media (min-width: 768px) {
-          .content-section {
-            gap: 20px;
-          }
-        }
-
-        /* Title styling with consistent spacing */
-        .card-title {
-          word-wrap: break-word;
-          overflow-wrap: break-word;
-          hyphens: auto;
-          line-height: 1.3;
-          font-weight: 600;
-          margin: 0;
-          text-align: center;
-          flex-shrink: 0;
-          display: block;
-          min-height: auto;
-        }
-
-        @media (min-width: 768px) {
-          .card-title {
-            text-align: left;
-          }
-        }
-
-        /* Description with proper alignment */
-        .card-description {
-          word-wrap: break-word;
-          overflow-wrap: break-word;
-          line-height: 1.5;
-          margin: 0;
-          text-align: center;
-          flex-grow: 1;
-          display: flex;
-          align-items: flex-start;
-          justify-content: center;
-        }
-
-        @media (min-width: 768px) {
-          .card-description {
-            text-align: left;
-            justify-content: flex-start;
-          }
-        }
-
-        .card-description p {
-          margin: 0;
-          width: 100%;
-        }
-
-        /* Responsive slider spacing */
-        .slick-slide {
-          padding: 0 4px;
+          width: calc(100% / var(--slides-to-show));
+          padding: 0 6px;
           box-sizing: border-box;
         }
+        .card-grid {
+          display: grid;
+          grid-template-rows: auto auto 1fr;
+          grid-gap: 0.75em;
+          height: 100%;
+          min-height: 220px;
+          background: #fff;
+          border-radius: 1.25rem;
+          border: 1px solid #f3f4f6;
+          box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.04);
+          padding: 1.4em 1em 1.2em 1em;
+          transition: all 0.3s ease;
+        }
 
+        .card-grid:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+          border-color: #e5e7eb;
+        }
+
+        /* Responsive grid spacings and card min-heights */
         @media (min-width: 640px) {
-          .slick-slide {
-            padding: 0 6px;
+          .card-grid {
+            min-height: 260px;
+            padding: 1.6em 1.2em 1.4em 1.2em;
           }
         }
-
-        @media (min-width: 768px) {
-          .slick-slide {
-            padding: 0 8px;
-          }
-        }
-
         @media (min-width: 1024px) {
-          .slick-slide {
-            padding: 0 10px;
+          .card-grid {
+            min-height: 320px;
+            padding: 2em 1.4em 1.9em 1.4em;
           }
         }
-
         @media (min-width: 1280px) {
-          .slick-slide {
+          .slider-slide {
             padding: 0 12px;
           }
         }
 
-        /* Remove default slick arrows */
-        .slick-prev:before,
-        .slick-next:before {
-          display: none;
+        /* Icon alignment and size */
+        .icon-block {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .icon-container {
+          width: 48px;
+          height: 48px;
+          border-radius: 9999px;
+          background: rgba(249, 249, 249, 0.8);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: transform 0.3s ease;
         }
 
-        /* Hover effects */
-        .benefit-card:hover .icon-pulse::before,
-        .benefit-card:hover .icon-pulse::after {
-          animation-play-state: paused;
-          opacity: 0.6;
-          transform: scale(1.01);
+        .card-grid:hover .icon-container {
+          transform: scale(1.1);
         }
 
-        /* Accessibility */
-        .benefit-card:focus-within {
-          outline: 2px solid currentColor;
+        /* Title and description alignment */
+        .card-title {
+          font-weight: 600;
+          font-size: 1.15rem;
+          line-height: 1.28;
+          text-align: center;
+          margin-bottom: 0.1em;
+          word-break: break-word;
+          color: #1f2937;
+        }
+        .card-description {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          font-size: 1em;
+          line-height: 1.6;
+          color: #475569;
+          text-align: center;
+          min-height: 2.8em;
+        }
+        @media (min-width: 768px) {
+          .card-title {
+            font-size: 1.25rem;
+            text-align: left;
+          }
+          .card-description {
+            font-size: 1.01rem;
+            text-align: left;
+            justify-content: flex-start;
+          }
+          .icon-block {
+            justify-content: flex-start;
+          }
+        }
+
+        /* Responsive font on mobile */
+        @media (max-width: 480px) {
+          .card-title {
+            font-size: 1rem;
+          }
+          .card-description {
+            font-size: 0.89em;
+          }
+        }
+
+        /* Focus accessibility */
+        .card-grid:focus-within {
+          outline: 2px solid #f97316;
           outline-offset: 4px;
-          transform: translateY(-4px);
         }
 
         /* Reduced motion support */
         @media (prefers-reduced-motion: reduce) {
-          .benefit-card {
+          .card-grid {
             transition: box-shadow 0.3s ease;
           }
-          .benefit-card:hover {
+          .card-grid:hover {
             transform: none;
           }
-          .icon-pulse::before,
-          .icon-pulse::after {
-            animation: none;
-          }
-        }
-
-        /* Responsive typography scaling */
-        @media (max-width: 480px) {
-          .card-title {
-            font-size: 0.875rem;
-            line-height: 1.25;
-          }
-          .card-description p {
-            font-size: 0.75rem;
-            line-height: 1.4;
+          .slider-track {
+            transition: none;
           }
         }
       `}</style>
 
       <div className="w-full">
-        {/* Header Section with Navigation */}
+        {/* Header */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16">
           <div className="w-full lg:flex-1 mb-6 lg:mb-0 lg:pr-6 xl:pr-8">
             <h3 className="text-orange-400 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider font-medium mb-2 sm:mb-3 md:mb-4">
@@ -659,62 +552,59 @@ const BenefitsSlider = () => {
               From earned wage access to HRMS tools, AGI Moneey does it all.
             </p>
           </div>
-
-          {/* Navigation Buttons */}
           <div className="flex gap-2 sm:gap-3 md:gap-4 self-end lg:self-auto flex-shrink-0">
-            <PrevArrow
-              onClick={() => sliderRef.current?.slickPrev()}
-              className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
-            />
+            <PrevArrow onClick={prevSlide} disabled={currentIndex === 0} />
             <NextArrow
-              onClick={() => sliderRef.current?.slickNext()}
-              className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
+              onClick={nextSlide}
+              disabled={currentIndex >= maxIndex}
             />
           </div>
         </div>
-
-        {/* Enhanced React-Slick Slider */}
+        {/* Grid-based Custom Slider */}
         <div className="relative pb-6 sm:pb-8 md:pb-10 lg:pb-12">
-          <Slider ref={sliderRef} {...settings}>
-            {benefits.map((benefit) => (
-              <div key={benefit.id} className="h-full">
-                <div
-                  className="benefit-card bg-white rounded-xl sm:rounded-2xl lg:rounded-3xl p-3 sm:p-4 md:p-5 lg:p-6 xl:p-8 border border-gray-100 hover:border-gray-200 group"
-                  tabIndex={0}
-                  role="article"
-                  aria-label={`Benefit: ${benefit.title}`}
-                >
-                  <div className="card-content">
-                    {/* Icon Section */}
-                    <div className="flex justify-center md:justify-start mb-3 sm:mb-4 md:mb-5 lg:mb-6 flex-shrink-0">
+          <div
+            className="slider-container"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div
+              ref={trackRef}
+              className="slider-track"
+              style={{
+                "--slides-to-show": slidesToShow,
+                transform: `translateX(-${
+                  (currentIndex * 100) / slidesToShow
+                }%)`,
+              }}
+            >
+              {benefits.map((benefit) => (
+                <div key={benefit.id} className="slider-slide">
+                  <article
+                    tabIndex={0}
+                    className="card-grid group"
+                    aria-label={`Benefit: ${benefit.title}`}
+                  >
+                    {/* Icon */}
+                    <div className="icon-block">
                       <div
-                        className="icon-container icon-pulse group-hover:scale-110 transition-transform duration-300"
+                        className="icon-container"
                         style={{ color: benefit.color }}
-                        aria-hidden="true"
                       >
-                        <div className="w-full h-full flex items-center justify-center">
-                          {benefit.icon}
-                        </div>
+                        {benefit.icon}
                       </div>
                     </div>
-
-                    {/* Content Section with proper spacing */}
-                    <div className="content-section">
-                      <h4 className="card-title text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-900">
-                        {benefit.title}
-                      </h4>
-
-                      <div className="card-description">
-                        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-600">
-                          {benefit.description}
-                        </p>
-                      </div>
+                    {/* Title */}
+                    <h4 className="card-title">{benefit.title}</h4>
+                    {/* Description */}
+                    <div className="card-description">
+                      <p>{benefit.description}</p>
                     </div>
-                  </div>
+                  </article>
                 </div>
-              </div>
-            ))}
-          </Slider>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

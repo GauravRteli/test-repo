@@ -163,7 +163,7 @@ export default function ContactPage() {
                       key={index}
                       href={social.href}
                       aria-label={social.label}
-                      className={`group flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 border-2 border-gray-200 rounded-full text-[#f2ab3c] bg-gray-50 hover:border-transparent hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg ${social.color}`}
+                      className={`group flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 border-2 border-gray-200 rounded-full text-[#f2ab3c] hover:border-transparent hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg ${social.color}`}
                     >
                       <FontAwesomeIcon
                         icon={social.icon}

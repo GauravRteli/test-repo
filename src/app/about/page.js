@@ -300,7 +300,7 @@ const AboutPage = () => {
               <div className="process-card rounded-xl lg:rounded-2xl border border-gray-200 hover:shadow-xl hover:border-orange-200 transition-all duration-300 group relative overflow-hidden bg-white">
                 <div className="relative h-full">
                   {/* Header Icon */}
-                  <div className="absolute top-0 left-0 z-10">
+                  <div className="absolute top-0 left-0 scale-105 z-10">
                     <svg
                       className="w-20 h-16 sm:w-24 sm:h-20 md:w-28 md:h-24 lg:w-[118px] lg:h-[99px] group-hover:scale-105 transition-transform duration-300"
                       viewBox="0 0 118 99"
@@ -347,7 +347,7 @@ const AboutPage = () => {
               <div className="process-card rounded-xl lg:rounded-2xl border border-gray-200 hover:shadow-xl hover:border-green-200 transition-all duration-300 group relative overflow-hidden bg-white">
                 <div className="relative h-full">
                   {/* Header Icon */}
-                  <div className="absolute top-0 left-0 z-10">
+                  <div className="absolute top-0 left-0 scale-105 z-10">
                     <svg
                       className="w-20 h-16 sm:w-24 sm:h-20 md:w-28 md:h-24 lg:w-[119px] lg:h-[99px] group-hover:scale-105 transition-transform duration-300"
                       viewBox="0 0 119 99"
@@ -406,7 +406,7 @@ const AboutPage = () => {
               <div className="process-card rounded-xl lg:rounded-2xl border border-gray-200 hover:shadow-xl hover:border-cyan-200 transition-all duration-300 group relative overflow-hidden bg-white">
                 <div className="relative h-full">
                   {/* Header Icon */}
-                  <div className="absolute top-0 left-0 z-10">
+                  <div className="absolute top-0 left-0 scale-105 z-10">
                     <svg
                       className="w-20 h-16 sm:w-24 sm:h-20 md:w-28 md:h-24 lg:w-[118px] lg:h-[99px] group-hover:scale-105 transition-transform duration-300"
                       viewBox="0 0 118 99"
@@ -455,7 +455,7 @@ const AboutPage = () => {
               <div className="process-card rounded-xl lg:rounded-2xl border border-gray-200 hover:shadow-xl hover:border-purple-200 transition-all duration-300 group relative overflow-hidden bg-white">
                 <div className="relative h-full">
                   {/* Header Icon */}
-                  <div className="absolute top-0 left-0 z-10">
+                  <div className="absolute top-0 left-0 scale-105 z-10">
                     <svg
                       className="w-20 h-16 sm:w-24 sm:h-20 md:w-28 md:h-24 lg:w-[118px] lg:h-[99px] group-hover:scale-105 transition-transform duration-300"
                       viewBox="0 0 118 99"
@@ -913,9 +913,9 @@ const AboutPage = () => {
               <div className="w-full lg:w-2/3">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-6 xl:gap-8">
                   {/* Value Card 1 - Innovate Boldly */}
-                  <div className="group feature-box1 p-4 sm:p-6 md:p-8 lg:p-6 xl:p-8 rounded-xl lg:rounded-2xl bg-gray-50 hover:bg-white border border-transparent hover:border-[#F2AB3C]/20 hover:shadow-xl transition-all duration-300">
+                  <div className="group feature-box1 p-4 sm:p-6 md:p-8 lg:p-6 xl:p-8 rounded-xl lg:rounded-2xl bg-white border border-transparent border-[#F2AB3C]/20 hover:shadow-xl transition-all duration-300">
                     <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
-                      <div className="relative">
+                      <div className="relative bg-white">
                         <svg
                           width="48"
                           height="48"
@@ -924,7 +924,7 @@ const AboutPage = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <rect width="64" height="64" rx="16" fill="#F9F9F9" />
+                          <rect width="64" height="64" rx="16" />
                           <path
                             opacity="0.3"
                             d="M31.1581 39.095C31.6231 38.6301 32.3768 38.6301 32.8417 39.095C33.3063 39.56 33.3065 40.3138 32.8417 40.7786L31.6992 41.9202H39.539V44.3011H31.6992L32.8417 45.4437C33.3065 45.9085 33.3063 46.6624 32.8417 47.1273C32.3769 47.5921 31.6231 47.5921 31.1581 47.1273L27.9833 43.9525C27.5185 43.4875 27.5185 42.7337 27.9833 42.2689L31.1581 39.095ZM20.0468 27.9837C20.5117 27.5188 21.2655 27.5188 21.7304 27.9837L24.9052 31.1585C25.3698 31.6235 25.37 32.3773 24.9052 32.8421C24.4404 33.3069 23.6866 33.3067 23.2216 32.8421L22.079 31.6995V39.5394H19.6982V31.6995L18.5556 32.8421C18.0907 33.3068 17.3369 33.3068 16.872 32.8421C16.4072 32.3773 16.4073 31.6234 16.872 31.1585L20.0468 27.9837ZM44.3007 32.3001L45.4433 31.1585C45.9082 30.6936 46.662 30.6936 47.1269 31.1585C47.5917 31.6234 47.5918 32.3772 47.1269 32.8421L43.9521 36.0159C43.7196 36.2484 43.415 36.3646 43.1103 36.3646C42.8058 36.3645 42.5009 36.2483 42.2685 36.0159L39.0947 32.8421C38.6298 32.3772 38.6298 31.6234 39.0947 31.1585C39.5596 30.6936 40.3134 30.6936 40.7783 31.1585L41.9199 32.3001V24.4603H44.3007V32.3001ZM31.1581 16.8724C31.6231 16.4077 32.3769 16.4075 32.8417 16.8724L36.0156 20.0472C36.4805 20.5121 36.4805 21.2659 36.0156 21.7308L32.8417 24.9056C32.377 25.3704 31.6231 25.3701 31.1581 24.9056C30.6932 24.4407 30.6932 23.6869 31.1581 23.222L32.2997 22.0794H24.4599V19.6986H32.2997L31.1581 18.556C30.6932 18.0911 30.6932 17.3373 31.1581 16.8724Z"
@@ -948,7 +948,7 @@ const AboutPage = () => {
                   </div>
 
                   {/* Value Card 2 - Collaborate with Purpose */}
-                  <div className="group feature-box1 p-4 sm:p-6 md:p-8 lg:p-6 xl:p-8 rounded-xl lg:rounded-2xl bg-gray-50 hover:bg-white border border-transparent hover:border-green-500/20 hover:shadow-xl transition-all duration-300">
+                  <div className="group feature-box1 p-4 sm:p-6 md:p-8 lg:p-6 xl:p-8 rounded-xl lg:rounded-2xl bg-white border border-transparent border-green-500/20 hover:shadow-xl transition-all duration-300">
                     <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
                       <div className="relative">
                         <svg
@@ -959,7 +959,7 @@ const AboutPage = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <rect width="64" height="64" rx="16" fill="#F9F9F9" />
+                          <rect width="64" height="64" rx="16" />
                           <path
                             fillRule="evenodd"
                             clipRule="evenodd"
@@ -985,7 +985,7 @@ const AboutPage = () => {
                   </div>
 
                   {/* Value Card 3 - Empower People */}
-                  <div className="group feature-box1 p-4 sm:p-6 md:p-8 lg:p-6 xl:p-8 rounded-xl lg:rounded-2xl bg-gray-50 hover:bg-white border border-transparent hover:border-cyan-400/20 hover:shadow-xl transition-all duration-300">
+                  <div className="group feature-box1 p-4 sm:p-6 md:p-8 lg:p-6 xl:p-8 rounded-xl lg:rounded-2xl bg-white border border-transparent border-cyan-400/20 hover:shadow-xl transition-all duration-300">
                     <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
                       <div className="relative">
                         <svg
@@ -996,7 +996,7 @@ const AboutPage = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <rect width="64" height="64" rx="16" fill="#F9F9F9" />
+                          <rect width="64" height="64" rx="16" />
                           <path
                             fillRule="evenodd"
                             clipRule="evenodd"
@@ -1022,7 +1022,7 @@ const AboutPage = () => {
                   </div>
 
                   {/* Value Card 4 - Act with Integrity */}
-                  <div className="group feature-box1 p-4 sm:p-6 md:p-8 lg:p-6 xl:p-8 rounded-xl lg:rounded-2xl bg-gray-50 hover:bg-white border border-transparent hover:border-purple-400/20 hover:shadow-xl transition-all duration-300">
+                  <div className="group feature-box1 p-4 sm:p-6 md:p-8 lg:p-6 xl:p-8 rounded-xl lg:rounded-2xl bg-white border border-transparent border-purple-400/20 hover:shadow-xl transition-all duration-300">
                     <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
                       <div className="relative">
                         <svg
@@ -1033,7 +1033,7 @@ const AboutPage = () => {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <rect width="64" height="64" rx="16" fill="#F9F9F9" />
+                          <rect width="64" height="64" rx="16" />
                           <path
                             opacity="0.3"
                             d="M37.5562 39.1429V46.2857C37.5562 47.6007 36.4902 48.6667 35.1753 48.6667H17.7149C16.4 48.6667 15.334 47.6007 15.334 46.2857V28.8254C15.334 27.5104 16.4 26.4445 17.7149 26.4445H24.8578V35.1746C24.8578 37.3662 26.6344 39.1429 28.826 39.1429H37.5562Z"
@@ -1068,7 +1068,7 @@ const AboutPage = () => {
       <div className="animate-on-scroll pb-12 sm:pb-16 md:pb-20 lg:pb-24 xl:pb-28">
         <section className="py-8 sm:py-10 md:py-12 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
           <div className="container mx-auto max-w-7xl">
-            <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl lg:rounded-[2rem] xl:rounded-[3rem] p-6 sm:p-8 md:p-10 lg:p-12 text-center overflow-hidden">
+            <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-[2rem] xl:rounded-[3rem] p-6 sm:p-8 md:p-10 lg:p-12 text-center overflow-hidden">
               {/* Background Decorative Elements */}
               <div className="absolute top-0 right-0 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 bg-gradient-to-bl from-[#F2AB3C]/10 to-transparent rounded-full -translate-y-1/2 translate-x-1/2"></div>
               <div className="absolute bottom-0 left-0 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-56 lg:h-56 bg-gradient-to-tr from-[#F2AB3C]/5 to-transparent rounded-full translate-y-1/2 -translate-x-1/2"></div>

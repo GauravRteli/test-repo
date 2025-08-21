@@ -122,7 +122,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20">
+    <div className="py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20">
       <div className="max-w-full mx-auto">
         {/* FAQ Items Container */}
         <div className="space-y-3 sm:space-y-4 md:space-y-5 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0 max-w-5xl mx-auto mb-12 sm:mb-16 md:mb-20 lg:mb-24">
