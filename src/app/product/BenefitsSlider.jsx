@@ -539,7 +539,7 @@ const BenefitsSlider = () => {
         {/* Header */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16">
           <div className="w-full lg:flex-1 mb-6 lg:mb-0 lg:pr-6 xl:pr-8">
-            <h3 className="text-orange-400 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider font-medium mb-2 sm:mb-3 md:mb-4">
+            <h3 className="text-orange-400 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider mb-2 sm:mb-3 md:mb-4">
               BENEFITS
             </h3>
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6 leading-tight">

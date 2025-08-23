@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="bg-black text-white py-10 px-4">
+    <section className="bg-[#222222] text-white py-10 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="flex justify-center">
           <div className="w-full">

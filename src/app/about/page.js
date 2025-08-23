@@ -5,6 +5,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const AboutPage = () => {
   useEffect(() => {
@@ -109,7 +110,7 @@ const AboutPage = () => {
 
       {/* Vision Section */}
       <div className="animate-on-scroll">
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
+        <section className="py-12 sm:pt-16 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
           <div className="container mx-auto max-w-7xl">
             {/* Vision Header Section */}
             <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
@@ -597,7 +598,6 @@ const AboutPage = () => {
                   <span className="block">Salary support that works</span>
                   <span className="block">both ways</span>
                 </h2>
-
                 {/* Description */}
                 <div className="max-w-3xl mx-auto px-2 sm:px-4">
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
@@ -605,18 +605,17 @@ const AboutPage = () => {
                     salary solutions, AGI Moneey is here to support you
                   </p>
                 </div>
-
                 {/* CTA Button */}
                 <div className="pt-2 sm:pt-4 md:pt-6">
                   <div className="flex justify-center">
-                    <a
-                      href="#"
+                    <Link
+                      href="/contact"
                       className="group inline-flex items-center gap-2 sm:gap-3 hover:bg-[#F2AB3C] border-2 text-[#F2AB3C] border-[#F2AB3C] hover:text-black px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-2 sm:py-3 rounded-full font-semibold text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#F2AB3C]/20"
                       aria-label="Get in touch with AGI Moneey"
                     >
                       <span>Get In Touch</span>
                       <i className="fa fa-arrow-right text-xs sm:text-sm md:text-base lg:text-lg transition-transform duration-300 group-hover:translate-x-1"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -630,7 +629,7 @@ const AboutPage = () => {
 
       {/* Team Section */}
       <div className="animate-on-scroll">
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
+        <section className="py-12 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
           <div className="container mx-auto max-w-7xl">
             {/* Header Section */}
             <div className="text-center">
@@ -1079,7 +1078,6 @@ const AboutPage = () => {
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8 xl:mb-10 text-gray-900 leading-tight">
                   <span className="block sm:inline">Join Our Team</span>
                 </h2>
-
                 {/* Description */}
                 <div className="mb-6 sm:mb-8 lg:mb-10 xl:mb-12">
                   <p className="text-sm sm:text-base md:text-lg text-[#606060] leading-relaxed max-w-4xl mx-auto px-2 sm:px-4">
@@ -1098,17 +1096,18 @@ const AboutPage = () => {
                     </span>
                   </p>
                 </div>
-
                 {/* CTA Button */}
-                <div className="flex justify-center">
-                  <a
-                    href="mailto:contact@agimoneey.com"
-                    className="group inline-flex items-center gap-2 sm:gap-3 border-2 border-[#F2AB3C] text-[#F2AB3C] hover:bg-[#F2AB3C] hover:text-black px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-2 sm:py-3 rounded-full font-semibold text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#F2AB3C]/20 active:scale-95"
-                    aria-label="Contact AGI Moneey team via email"
-                  >
-                    <span>Get In Touch</span>
-                    <i className="fa fa-arrow-right text-xs sm:text-sm md:text-base lg:text-lg transition-transform duration-300 group-hover:translate-x-1"></i>
-                  </a>
+                <div className="pt-2 sm:pt-4 md:pt-6">
+                  <div className="flex justify-center">
+                    <Link
+                      href="/contact"
+                      className="group inline-flex items-center gap-2 sm:gap-3 hover:bg-[#F2AB3C] border-2 text-[#F2AB3C] border-[#F2AB3C] hover:text-black px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-2 sm:py-3 rounded-full font-semibold text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#F2AB3C]/20"
+                      aria-label="Get in touch with AGI Moneey"
+                    >
+                      <span>Get In Touch</span>
+                      <i className="fa fa-arrow-right text-xs sm:text-sm md:text-base lg:text-lg transition-transform duration-300 group-hover:translate-x-1"></i>
+                    </Link>
+                  </div>
                 </div>
               </div>
 
