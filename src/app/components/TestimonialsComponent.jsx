@@ -81,7 +81,7 @@ const TestimonialsComponent = () => {
           >
             {testimonials.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="rounded-3xl md:pt-32 max-w-xl w-full mx-auto flex flex-col items-center">
+                <div className="rounded-3xl p-8 md:pt-32 max-w-xl w-full mx-auto flex flex-col items-center">
                   {/* Avatar/Logo */}
                   <div className="mb-6 flex justify-center w-16 h-16 p-2 border-2 border-[#f2ab3c] rounded-full bg-white shadow">
                     <Image
