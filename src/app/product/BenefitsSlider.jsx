@@ -422,11 +422,12 @@ const BenefitsSlider = () => {
           box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.04);
           padding: 1.4em 1em 1.2em 1em;
           transition: all 0.3s ease;
+          will-change: transform, box-shadow;
         }
 
         .card-grid:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+          transform: translateY(-2px) scale(1.03);
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
           border-color: #e5e7eb;
         }
 
@@ -515,12 +516,6 @@ const BenefitsSlider = () => {
           }
         }
 
-        /* Focus accessibility */
-        .card-grid:focus-within {
-          outline: 2px solid #f97316;
-          outline-offset: 4px;
-        }
-
         /* Reduced motion support */
         @media (prefers-reduced-motion: reduce) {
           .card-grid {
@@ -552,7 +547,7 @@ const BenefitsSlider = () => {
               From earned wage access to HRMS tools, AGI Moneey does it all.
             </p>
           </div>
-          <div className="flex gap-2 sm:gap-3 md:gap-4 self-end lg:self-auto flex-shrink-0">
+          <div className="flex gap-2 sm:gap-3 md:gap-4 self-end lg:self-auto flex-shrink-0 hidden md:flex">
             <PrevArrow onClick={prevSlide} disabled={currentIndex === 0} />
             <NextArrow
               onClick={nextSlide}
@@ -570,7 +565,7 @@ const BenefitsSlider = () => {
           >
             <div
               ref={trackRef}
-              className="slider-track"
+              className="slider-track my-8"
               style={{
                 "--slides-to-show": slidesToShow,
                 transform: `translateX(-${
@@ -604,6 +599,13 @@ const BenefitsSlider = () => {
                 </div>
               ))}
             </div>
+          </div>
+          <div className="flex gap-2 sm:gap-3 md:gap-4 items-center justify-center flex-shrink-0 flex md:hidden">
+            <PrevArrow onClick={prevSlide} disabled={currentIndex === 0} />
+            <NextArrow
+              onClick={nextSlide}
+              disabled={currentIndex >= maxIndex}
+            />
           </div>
         </div>
       </div>

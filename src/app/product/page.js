@@ -9,10 +9,12 @@ import HRMSBenefitsSection from "./HRMSBenefitsSection";
 import HeroSection from "./HeroSection";
 import FAQSection from "./FAQSection";
 import Banner from "./Banner";
+import ScrollProgressBar from "../components/ScrollProgressBar";
 
 export default function page() {
   return (
     <div>
+      <ScrollProgressBar />
       <BannerComponent />
       <BenefitsSlider />
       <SimplifiedWorkforceSolutions />

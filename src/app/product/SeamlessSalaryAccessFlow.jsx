@@ -38,7 +38,7 @@ const SeamlessSalaryAccessFlow = () => {
                     </svg>
                   </div>
                 </div>
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-32 sm:max-w-40 md:max-w-48 lg:max-w-52 px-1 sm:px-2">
+                <p className="text-sm sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-48 lg:max-w-52 px-1 sm:px-2">
                   Employer Signs up <br /> with Agi Moneey
                 </p>
               </div>
@@ -77,7 +77,7 @@ const SeamlessSalaryAccessFlow = () => {
                     </svg>
                   </div>
                 </div>
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-32 sm:max-w-40 md:max-w-48 lg:max-w-52 px-1 sm:px-2">
+                <p className="text-sm sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-48 lg:max-w-52 px-1 sm:px-2">
                   Employee Completes <br />
                   KYC Request Advance
                 </p>
@@ -123,7 +123,7 @@ const SeamlessSalaryAccessFlow = () => {
                     </svg>
                   </div>
                 </div>
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-32 sm:max-w-40 md:max-w-48 lg:max-w-52 px-1 sm:px-2">
+                <p className="text-sm sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-48 lg:max-w-52 px-1 sm:px-2">
                   Instant amount credited to
                   <br />
                   employee's verified bank account
@@ -168,7 +168,7 @@ const SeamlessSalaryAccessFlow = () => {
                     </svg>
                   </div>
                 </div>
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-32 sm:max-w-40 md:max-w-48 lg:max-w-52 px-1 sm:px-2">
+                <p className="text-sm sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-48 md:max-w-48 lg:max-w-52 px-1 sm:px-2">
                   Repayment is settled by the
                   <br />
                   employer when salaries are paid

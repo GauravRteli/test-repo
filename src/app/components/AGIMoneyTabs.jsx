@@ -451,10 +451,8 @@ export default function AGIMoneyTabs() {
     setCurrentSlide((p) => ({ ...p, [activeTab]: index }));
     animateToVirt(viNext).finally(() => setIsAnimating(false));
   };
-
-  // --------- render ---------
   return (
-    <section className="px-4 md:min-h-[80vh]">
+    <section className="px-4 py-10 md:min-h-[80vh]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8">

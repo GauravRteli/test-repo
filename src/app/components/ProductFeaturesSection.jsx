@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 const ProductFeaturesSection = () => {
   return (
@@ -81,10 +82,12 @@ const ProductFeaturesSection = () => {
               <br />
               product features
             </h4>
-            <button className="px-8 py-4 bg-[#ffb74d] hover:bg-[#ffa726] text-black font-semibold rounded-full text-lg transition-all duration-300 flex items-center gap-2">
-              View More
-              <span className="text-xl">→</span>
-            </button>
+            <Link href="/product" passHref>
+              <button className="px-8 py-4 bg-[#ffb74d] hover:bg-[#ffa726] text-black font-semibold rounded-full text-lg transition-all duration-300 flex items-center gap-2">
+                View More
+                <span className="text-xl">→</span>
+              </button>
+            </Link>
           </div>
         </div>
       </div>

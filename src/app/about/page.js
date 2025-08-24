@@ -6,6 +6,7 @@ import "swiper/css";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import ScrollProgressBar from "../components/ScrollProgressBar";
 
 const AboutPage = () => {
   useEffect(() => {
@@ -32,6 +33,7 @@ const AboutPage = () => {
 
   return (
     <>
+      <ScrollProgressBar />
       {/* Link for Font Awesome */}
       <link
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -891,7 +893,7 @@ const AboutPage = () => {
 
       {/* Culture Section */}
       <div className="animate-on-scroll">
-        <section className="py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
+        <section className="py-8 lg:py-16 xl:py-20 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
           <div className="container mx-auto max-w-7xl">
             <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16">
               {/* Header Section */}
@@ -1064,14 +1066,10 @@ const AboutPage = () => {
       </div>
 
       {/* Join Team Section */}
-      <div className="animate-on-scroll pb-12 sm:pb-16 md:pb-20 lg:pb-24 xl:pb-28">
-        <section className="py-8 sm:py-10 md:py-12 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
+      <div className="animate-on-scroll pb-12">
+        <section className="py-8 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
           <div className="container mx-auto max-w-7xl">
-            <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-[2rem] xl:rounded-[3rem] p-6 sm:p-8 md:p-10 lg:p-12 text-center overflow-hidden">
-              {/* Background Decorative Elements */}
-              <div className="absolute top-0 right-0 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 bg-gradient-to-bl from-[#F2AB3C]/10 to-transparent rounded-full -translate-y-1/2 translate-x-1/2"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-56 lg:h-56 bg-gradient-to-tr from-[#F2AB3C]/5 to-transparent rounded-full translate-y-1/2 -translate-x-1/2"></div>
-
+            <div className="relative bg-gray-50 rounded-2xl sm:rounded-3xl lg:rounded-[2rem] xl:rounded-[3rem] p-6 sm:p-8 md:p-10 lg:p-12 text-center overflow-hidden">
               {/* Content Container */}
               <div className="relative z-10 max-w-5xl mx-auto">
                 {/* Main Heading */}
@@ -1110,9 +1108,6 @@ const AboutPage = () => {
                   </div>
                 </div>
               </div>
-
-              {/* Optional Bottom Border Accent */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 sm:w-24 md:w-32 lg:w-40 h-1 bg-gradient-to-r from-transparent via-[#F2AB3C] to-transparent rounded-full"></div>
             </div>
           </div>
         </section>

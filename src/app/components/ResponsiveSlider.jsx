@@ -70,7 +70,7 @@ const ResponsiveSlider = () => {
         </div>
 
         {/* Left Navigation Button */}
-        <div className="absolute top-1/2 -translate-y-1/2 left-2 sm:left-4 lg:left-6 xl:left-10 z-20">
+        {/* <div className="absolute top-1/2 -translate-y-1/2 left-2 sm:left-4 lg:left-6 xl:left-10 z-20">
           <button
             onClick={handlePrev}
             disabled={isTransitioning}
@@ -93,10 +93,10 @@ const ResponsiveSlider = () => {
               />
             </svg>
           </button>
-        </div>
+        </div> */}
 
         {/* Right Navigation Button */}
-        <div className="absolute top-1/2 -translate-y-1/2 right-2 sm:right-4 lg:right-6 xl:right-10 z-20">
+        {/* <div className="absolute top-1/2 -translate-y-1/2 right-2 sm:right-4 lg:right-6 xl:right-10 z-20">
           <button
             onClick={handleNext}
             disabled={isTransitioning}
@@ -119,7 +119,7 @@ const ResponsiveSlider = () => {
               />
             </svg>
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -10,6 +10,7 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import ScrollProgressBar from "../components/ScrollProgressBar";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -29,6 +30,7 @@ export default function ContactPage() {
 
   return (
     <>
+      <ScrollProgressBar />
       <Head>
         <title>Contact - AGI Moneey</title>
         <meta

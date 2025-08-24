@@ -14,7 +14,7 @@ const SimplifiedWorkforceSolutions = () => {
         <div className="max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 items-start">
             {/* Left Side - Image */}
-            <div className="flex justify-center items-start order-2 lg:order-1 relative min-h-[300px] sm:min-h-[350px] md:min-h-[400px] lg:min-h-[450px] xl:min-h-[500px]">
+            <div className="flex justify-center items-start relative min-h-[300px] sm:min-h-[350px] md:min-h-[400px] lg:min-h-[450px] xl:min-h-[500px]">
               <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl flex items-center justify-center">
                 <Image
                   src="/assets/images/pro/Frame 1171276628.png"
@@ -29,7 +29,7 @@ const SimplifiedWorkforceSolutions = () => {
             </div>
 
             {/* Right Side - Content */}
-            <div className="flex flex-col justify-center order-1 lg:order-2 text-center lg:text-left">
+            <div className="flex flex-col justify-center text-left -mt-20 md:mt-0">
               {/* Subheading */}
               <h4 className="text-orange-400 uppercase tracking-wider font-semibold mb-2 sm:mb-3 md:mb-4 text-xs sm:text-sm md:text-base lg:text-lg">
                 Simplified Workforce Solutions
@@ -37,7 +37,7 @@ const SimplifiedWorkforceSolutions = () => {
 
               {/* Main Heading */}
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 lg:mb-8 leading-tight text-gray-900">
-                What We <span className="text-orange-400">Offer</span>?
+                What We <span className="text-[#F2AB3C]">Offer</span>?
               </h2>
 
               {/* Description */}
@@ -49,7 +49,7 @@ const SimplifiedWorkforceSolutions = () => {
               {/* Feature List */}
               <div className="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8 xl:space-y-10">
                 {/* Feature 1 */}
-                <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 group hover:transform hover:scale-105 transition-all duration-300">
+                <div className="flex flex-row items-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 group hover:transform hover:scale-105 transition-all duration-300">
                   <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 rounded-full bg-orange-50 flex items-center justify-center">
                     <svg
                       width="90"
@@ -164,7 +164,7 @@ const SimplifiedWorkforceSolutions = () => {
                     </svg>
                   </div>
 
-                  <div className="flex-1 min-w-0 text-center sm:text-left">
+                  <div className="flex-1 min-w-0 text-left">
                     <h5 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold text-gray-900 mb-1 sm:mb-2 leading-tight">
                       Earning on Demand Platform
                     </h5>
@@ -176,7 +176,7 @@ const SimplifiedWorkforceSolutions = () => {
                 </div>
 
                 {/* Feature 2 */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 group hover:transform hover:scale-105 transition-all duration-300">
+                <div className="flex flex-row items-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 group hover:transform hover:scale-105 transition-all duration-300">
                   <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 rounded-full flex items-center justify-center">
                     <svg
                       width="90"
@@ -291,7 +291,7 @@ const SimplifiedWorkforceSolutions = () => {
                     </svg>
                   </div>
 
-                  <div className="flex-1 min-w-0 text-center sm:text-left">
+                  <div className="flex-1 min-w-0 text-left">
                     <h5 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold text-gray-900 mb-1 sm:mb-2 leading-tight">
                       Fully Automated Payroll Module
                     </h5>
