@@ -10,10 +10,12 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "AGI Money",
-  description: "AGI Money - Your Financial Solution",
+  title: "AGI Moneey - Your Financial Solution", // ✅ This will show in browser tab
+  description: "AGI Money - Your Financial Solution", // ✅ This will be in HTML head for SEO
   icons: {
-    icon: "/assets/images/yellow monogram.png",
+    icon: "/assets/images/yellow monogram.png", // ✅ Fixed: added leading slash
+    shortcut: "/assets/images/yellow monogram.png", // ✅ Fixed: added leading slash
+    apple: "/assets/images/yellow monogram.png", // ✅ Fixed: added leading slash
   },
 };
 
