@@ -34,7 +34,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <div className="px-8 bg-[#f9f9f9]">
+    <div className="px-6 bg-[#f9f9f9]">
       <div
         className="py-12 lg:py-32 w-full"
         style={{
@@ -125,7 +125,7 @@ const FAQSection = () => {
                         : "max-h-0 opacity-0"
                     } overflow-hidden`}
                   >
-                    <div className="px-6 pt-4 pb-4 text-gray-600">
+                    <div className="px-6 pt-4 pb-4 text-sm text-gray-600">
                       {faq.answer}
                     </div>
                   </div>
