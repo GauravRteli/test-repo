@@ -34,7 +34,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <div className="px-10 bg-[#f9f9f9]">
+    <div className="px-8 bg-[#f9f9f9]">
       <div
         className="py-12 lg:py-32 w-full"
         style={{
@@ -44,8 +44,8 @@ const FAQSection = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 min-h-[50vh] lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 min-h-[40vh] lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left Column - Content */}
             <div className="space-y-6">
               <div className="space-y-2">
@@ -125,7 +125,9 @@ const FAQSection = () => {
                         : "max-h-0 opacity-0"
                     } overflow-hidden`}
                   >
-                    <div className="px-6 pb-4 text-gray-600">{faq.answer}</div>
+                    <div className="px-6 pt-4 pb-4 text-gray-600">
+                      {faq.answer}
+                    </div>
                   </div>
                 </div>
               ))}
