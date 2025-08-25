@@ -15,9 +15,9 @@ const SeamlessSalaryAccessFlow = () => {
             </div>
 
             {/* Steps Container */}
-            <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-7 gap-4 px-2 sm:px-4 md:px-6">
+            <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-11 gap-4 px-2 sm:px-4 md:px-6">
               {/* Step 1 */}
-              <div className="flex flex-col items-center justify-between text-center group">
+              <div className="flex flex-col lg:col-span-2 items-center justify-center text-center group">
                 <div className="relative mb-3 sm:mb-4 md:mb-5">
                   <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 p-3 sm:p-4 md:p-5  rounded-full flex items-center justify-center group-hover:scale-105 transition-transform duration-300 icon-pulse">
                     <svg
@@ -38,7 +38,7 @@ const SeamlessSalaryAccessFlow = () => {
                     </svg>
                   </div>
                 </div>
-                <p className="text-sm sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-48 lg:max-w-52 px-1 sm:px-2">
+                <p className="text-sm sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-64 lg:max-w-72 px-1 sm:px-2">
                   Employer Signs up <br /> with Agi Moneey
                 </p>
               </div>
@@ -56,7 +56,7 @@ const SeamlessSalaryAccessFlow = () => {
               </div>
 
               {/* Step 2 */}
-              <div className="flex flex-col items-center justify-between text-center group">
+              <div className="flex flex-col lg:col-span-2 items-center justify-center text-center group">
                 <div className="relative mb-3 sm:mb-4 md:mb-5">
                   <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 p-3 sm:p-4 md:p-5  rounded-full flex items-center justify-center group-hover:scale-105 transition-transform duration-300 icon-pulse">
                     <svg
@@ -77,7 +77,7 @@ const SeamlessSalaryAccessFlow = () => {
                     </svg>
                   </div>
                 </div>
-                <p className="text-sm sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-48 lg:max-w-52 px-1 sm:px-2">
+                <p className="text-sm sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-64 lg:max-w-72 px-1 sm:px-2">
                   Employee Completes <br />
                   KYC Request Advance
                 </p>
@@ -96,7 +96,7 @@ const SeamlessSalaryAccessFlow = () => {
               </div>
 
               {/* Step 3 */}
-              <div className="flex flex-col items-center justify-between text-center group">
+              <div className="flex flex-col lg:col-span-2 items-center justify-center text-center group">
                 <div className="relative mb-3 sm:mb-4 md:mb-5">
                   <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 p-3 sm:p-4 md:p-5  rounded-full flex items-center justify-center group-hover:scale-105 transition-transform duration-300 icon-pulse">
                     <svg
@@ -123,10 +123,10 @@ const SeamlessSalaryAccessFlow = () => {
                     </svg>
                   </div>
                 </div>
-                <p className="text-sm sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-48 lg:max-w-52 px-1 sm:px-2">
-                  Instant amount credited to
+                <p className="text-sm sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-64 lg:max-w-72 px-1 sm:px-2">
+                  Instant amount credited
                   <br />
-                  employee's verified bank account
+                  to employee's verified bank account
                 </p>
               </div>
 
@@ -143,7 +143,7 @@ const SeamlessSalaryAccessFlow = () => {
               </div>
 
               {/* Step 4 */}
-              <div className="flex flex-col items-center justify-between text-center group">
+              <div className="flex flex-col lg:col-span-2 items-center justify-center text-center group">
                 <div className="relative mb-3 sm:mb-4 md:mb-5">
                   <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 p-3 sm:p-4 md:p-5  rounded-full flex items-center justify-center group-hover:scale-105 transition-transform duration-300 icon-pulse">
                     <svg
@@ -168,10 +168,10 @@ const SeamlessSalaryAccessFlow = () => {
                     </svg>
                   </div>
                 </div>
-                <p className="text-sm sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-48 md:max-w-48 lg:max-w-52 px-1 sm:px-2">
-                  Repayment is settled by the
+                <p className="text-sm sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-64 lg:max-w-72 px-1 sm:px-2">
+                  Repayment is settled by
                   <br />
-                  employer when salaries are paid
+                  the employer when salaries are paid
                 </p>
               </div>
             </div>
