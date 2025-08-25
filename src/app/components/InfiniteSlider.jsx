@@ -72,7 +72,8 @@ const FirstSlide = ({ isActive }) => {
                       d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"
                     />
                   </defs>
-                  <text className="text-xs font-medium tracking-wide">
+                  {/* i want more letter spacing */}
+                  <text className="text-sm font-medium">
                     <textPath
                       href="#circlePath-1"
                       startOffset="0%"
@@ -230,7 +231,7 @@ const SecondSlide = ({ isActive }) => {
                       d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"
                     />
                   </defs>
-                  <text className="text-xs font-medium tracking-wide">
+                  <text className="text-sm font-medium tracking-wide">
                     <textPath
                       href="#circlePath-2"
                       startOffset="0%"

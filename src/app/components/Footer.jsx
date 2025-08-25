@@ -39,18 +39,18 @@ export default function Footer() {
       </Head>
 
       {/* Start Hero Section */}
-      <section className="relative z-20">
+      <section className="relative z-20 ">
         <div
           className="max-w-7xl bg-[#f2ab3c] mx-auto px-4 sm:px-6 lg:px-8 rounded-lg relative overflow-visible"
           style={{ transform: "translateY(10.33%)" }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-7 py-6 sm:py-8 lg:py-10 text-white text-left">
+            <div className="lg:col-span-7 py-6 sm:py-8 lg:py-10 text-black text-left">
               <h3 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-3 sm:mb-4 lg:mb-6 leading-tight">
                 Making any day <br />
                 <span className="text-black">a pay day</span>
               </h3>
-              <p className="text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 font-thin">
+              <p className="text-sm sm:text-base lg:text-md mb-4 sm:mb-6 lg:mb-8">
                 AGI Money - India's integrated Earnings on Demand platform.
                 <br />
                 Download the mobile app and access your earnings, today.
