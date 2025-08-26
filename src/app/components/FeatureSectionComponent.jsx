@@ -4,9 +4,9 @@ import Image from "next/image";
 const FeatureSectionComponent = () => {
   return (
     <div className="container mx-auto px-4 max-w-[1400px]">
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
+      <div className="flex flex-col lg:flex-row gap-8 items-stretch">
         {/* Left Box - Instant Salary Access */}
-        <div className="flex-1 rounded-2xl bg-white min-h-[600px] border border-gray-100 transition-all duration-400 ease-out">
+        <div className="flex-1 rounded-2xl min-h-[600px] shadow bg-[#f9f9f9] border border-gray-100 transition-all duration-400 ease-out">
           <div className="h-full flex flex-col pt-8 px-8 lg:pt-10">
             {/* Icon Circle */}
             <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center mb-5 lg:mb-6 hover:scale-110 transition-transform duration-300 ease-out">

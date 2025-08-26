@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const AGIMoneyPlatform = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 md:max-w-[1380px]">
       <div className="flex flex-wrap">
         <div
           className="w-full text-center wow fadeInUp"
@@ -22,17 +22,12 @@ const AGIMoneyPlatform = () => {
       </div>
 
       {/* Product Feature Row */}
-      <div className="flex flex-col lg:flex-row items-center rounded-3xl p-4 sm:p-6 lg:p-8">
+      <div className="flex flex-col my-5 mx-auto lg:flex-row items-center shadow bg-[#f9f9f9] border border-gray-100 rounded-3xl pt-5 pb-5 lg:pb-0 px-4 sm:px-6 lg:px-8">
         {/* Image Column */}
         <div className="w-full lg:w-1/2 relative flex justify-center items-center mb-8 lg:mb-0">
           <div className="relative w-full max-h-[50vh] max-w-lg flex justify-center items-center overflow-hidden">
             {/* Main Image with animation */}
             <div className="relative z-10 transform phone-main">
-              {/* 
-                For one-time animation, use '.scroll-once'.
-                For infinite smooth up-down, use '.scroll-infinite'.
-                Comment/uncomment as needed.
-              */}
               <div className="relative phone-container-main overflow-hidden rounded-3xl scroll-once">
                 {/* For infinite: scroll-infinite */}
                 <Image
