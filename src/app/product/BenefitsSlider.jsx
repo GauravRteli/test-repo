@@ -543,7 +543,7 @@ const BenefitsSlider = () => {
                 Support Your Team Efficiently
               </span>
             </h2>
-            <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed max-w-2xl">
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-2xl">
               From earned wage access to HRMS tools, AGI Moneey does it all.
             </p>
           </div>

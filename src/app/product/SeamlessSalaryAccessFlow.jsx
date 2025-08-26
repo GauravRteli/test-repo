@@ -8,8 +8,8 @@ const SeamlessSalaryAccessFlow = () => {
         <section className="py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 px-3 sm:px-4 md:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Section Heading */}
-            <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800 pt-2 sm:pt-3 md:pt-4 lg:pt-5 pb-4 sm:pb-6 md:pb-8 lg:pb-10 px-2 sm:px-4">
+            <div className="text-center mb-6 sm:mb-8 md:mb-10">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 pt-2 sm:pt-3 md:pt-4 lg:pt-5 pb-4 sm:pb-6 md:pb-8 lg:pb-10 px-2 sm:px-4">
                 Seamless Salary Access Flow
               </h2>
             </div>

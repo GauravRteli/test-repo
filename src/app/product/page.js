@@ -14,7 +14,7 @@ import ScrollProgressBar from "../components/ScrollProgressBar";
 export const metadata = {
   title: "AGI Moneey - Our Products",
   description:
-    "Transform your financial management with AGI Money. Access simplified workforce solutions, seamless salary access, and comprehensive HRMS benefits.",
+    "Transform your financial management with AGI Moneey. Access simplified workforce solutions, seamless salary access, and comprehensive HRMS benefits.",
 };
 
 export default function page() {

@@ -110,7 +110,7 @@ const FirstSlide = ({ isActive }) => {
 
             {/* Main Heading */}
             <motion.h1
-              className="text-4xl lg:text-6xl font-bold mb-4 text-white"
+              className="text-2xl uppercase font-bold mb-4 text-white"
               initial={{ opacity: 0, y: 50 }}
               animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -268,7 +268,7 @@ const SecondSlide = ({ isActive }) => {
 
             {/* Main Heading */}
             <motion.h1
-              className="text-4xl lg:text-6xl font-bold mb-4 text-black"
+              className="text-2xl uppercase font-bold mb-4 text-white"
               initial={{ opacity: 0, y: 50 }}
               animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, delay: 0.6 }}

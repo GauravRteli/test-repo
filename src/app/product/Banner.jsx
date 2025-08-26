@@ -17,7 +17,7 @@ const Banner = () => {
 
               <div className="text-black text-sm space-y-1">
                 <p>
-                  AGI Money - India's integrated Earnings on Demand platform.
+                  AGI Moneey - India's integrated Earnings on Demand platform.
                 </p>
                 <p>Download the mobile app and access your earnings, today.</p>
                 <p>Now on iOS and Android.</p>

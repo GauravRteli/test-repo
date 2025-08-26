@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   font-family: Arial, sans-serif;
-}
+} */
 
 /* Custom Scrollbar for Webkit browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {

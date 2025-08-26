@@ -33,7 +33,7 @@ export default function Footer() {
   return (
     <>
       <Head>
-        <title>AGI Money</title>
+        <title>AGI Moneey</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
       </Head>
@@ -51,7 +51,7 @@ export default function Footer() {
                 <span className="text-black">a pay day</span>
               </h3>
               <p className="text-sm sm:text-base lg:text-md mb-4 sm:mb-6 lg:mb-8">
-                AGI Money - India's integrated Earnings on Demand platform.
+                AGI Moneey - India's integrated Earnings on Demand platform.
                 <br />
                 Download the mobile app and access your earnings, today.
                 <br />
@@ -124,7 +124,7 @@ export default function Footer() {
               <div className="mb-4 sm:mb-5">
                 <Image
                   src="/assets/images/Frame 6.png"
-                  alt="AGI Money"
+                  alt="AGI Moneey"
                   width={150}
                   height={50}
                   className="w-32 sm:w-36 h-auto mx-auto sm:mx-0"
@@ -230,7 +230,7 @@ export default function Footer() {
               <ul className="space-y-2 sm:space-y-3">
                 <li>
                   <Link
-                    href="/Grievance"
+                    href="/grievance"
                     className="text-white text-xs sm:text-sm hover:text-orange-400 transition-colors duration-300"
                   >
                     Grievance Redressal
@@ -273,7 +273,7 @@ export default function Footer() {
 
           {/* Footer Bottom */}
           <div className="border-t border-gray-700 pt-4 sm:pt-5 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-2 text-center sm:text-left">
-            <p>© 2025 AGI Money. All Rights Reserved.</p>
+            <p>© 2025 AGI Moneey. All Rights Reserved.</p>
             <p>CIN: U64990DL1996PTC079056</p>
           </div>
         </div>

@@ -25,7 +25,7 @@ const Footer = () => {
             <div className="mb-5">
               <Image
                 src="/assets/images/Frame 6.png"
-                alt="AGI Money"
+                alt="AGI Moneey"
                 className="w-38 h-auto"
               />
             </div>
@@ -176,7 +176,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="border-t border-gray-700 pt-5 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-          <p>© 2025 AGI Money. All Rights Reserved.</p>
+          <p>© 2025 AGI Moneey. All Rights Reserved.</p>
           <p className="mt-2 md:mt-0">CIN: U64990DL1996PTC079056</p>
         </div>
       </div>

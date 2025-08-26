@@ -1066,19 +1066,19 @@ const AboutPage = () => {
       </div>
 
       {/* Join Team Section */}
-      <div className="animate-on-scroll pb-12">
+      <div className="animate-on-scroll pb-24">
         <section className="py-8 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
-          <div className="container mx-auto max-w-7xl">
+          <div className="container mx-auto">
             <div className="relative bg-gray-50 rounded-2xl sm:rounded-3xl lg:rounded-[2rem] xl:rounded-[3rem] p-6 sm:p-8 md:p-10 lg:p-12 text-center overflow-hidden">
               {/* Content Container */}
-              <div className="relative z-10 max-w-5xl mx-auto">
+              <div className="relative z-10 mx-auto">
                 {/* Main Heading */}
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8 xl:mb-10 text-gray-900 leading-tight">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-gray-900 leading-tight">
                   <span className="block sm:inline">Join Our Team</span>
                 </h2>
                 {/* Description */}
-                <div className="mb-6 sm:mb-8 lg:mb-10 xl:mb-12">
-                  <p className="text-sm sm:text-base md:text-lg text-[#606060] leading-relaxed max-w-4xl mx-auto px-2 sm:px-4">
+                <div className="mb-6">
+                  <p className="text-sm sm:text-base md:text-xl text-[#606060] leading-relaxed mx-auto px-2 sm:px-4">
                     <span className="block sm:inline">
                       Join the AGI Moneey team and be part of a mission
                       that&apos;s
@@ -1095,7 +1095,7 @@ const AboutPage = () => {
                   </p>
                 </div>
                 {/* CTA Button */}
-                <div className="pt-2 sm:pt-4 md:pt-6">
+                <div className="pt-2 sm:pt-4">
                   <div className="flex justify-center">
                     <Link
                       href="/contact"

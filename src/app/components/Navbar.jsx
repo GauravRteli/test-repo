@@ -46,7 +46,7 @@ const Navbar = () => {
               <Link href="/" className="flex-shrink-0" onClick={closeMenu}>
                 <Image
                   src="/assets/images/Frame 4.png"
-                  alt="AGI Money Logo"
+                  alt="AGI Moneey Logo"
                   width={150}
                   height={40}
                   className="h-8 md:h-10 w-auto"
@@ -55,10 +55,10 @@ const Navbar = () => {
               </Link>
 
               {/* Desktop Menu */}
-              <div className="hidden lg:flex items-center space-x-8">
+              <div className="hidden lg:flex items-center space-x-10">
                 <Link
                   href="/"
-                  className={`transition-all duration-800 hover:text-black hover:font-bold ${
+                  className={`transition-all text-lg duration-1000 tracking-wide hover:text-black hover:font-bold ${
                     isActive("/") ? "text-black font-bold" : "text-gray-800"
                   }`}
                 >
@@ -66,7 +66,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   href="/product"
-                  className={`transition-all duration-800 hover:text-black hover:font-bold ${
+                  className={`transition-all text-lg duration-1000 tracking-wide hover:text-black hover:font-bold ${
                     isActive("/product")
                       ? "text-black font-bold"
                       : "text-gray-800"
@@ -76,7 +76,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   href="/about"
-                  className={`transition-all duration-800 hover:text-black hover:font-bold ${
+                  className={`transition-all text-lg duration-1000 tracking-wide hover:text-black hover:font-bold ${
                     isActive("/about")
                       ? "text-black font-bold"
                       : "text-gray-800"
@@ -86,7 +86,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   href="/faq"
-                  className={`transition-all duration-800 hover:text-black hover:font-bold ${
+                  className={`transition-all text-lg duration-1000 tracking-wide hover:text-black hover:font-bold ${
                     isActive("/faq") ? "text-black font-bold" : "text-gray-800"
                   }`}
                 >
@@ -94,7 +94,9 @@ const Navbar = () => {
                 </Link>
                 <Link
                   href="/contact"
-                  className="bg-[#f2ab3c] text-black font-semibold px-4 py-2 rounded-full transition-all duration-800 transform hover:font-bold"
+                  className={`bg-[#f2ab3c] text-lg text-black font-semibold tracking-wide px-4 ${
+                    isScrolled ? "py-1" : "py-2"
+                  } rounded-full transition-all duration-800 transform hover:font-bold`}
                 >
                   Get In Touch
                 </Link>
@@ -143,7 +145,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between p-4 border-b">
             <Image
               src="/assets/images/Frame 4.png"
-              alt="AGI Money Logo"
+              alt="AGI Moneey Logo"
               width={120}
               height={32}
               className="h-8 w-auto"

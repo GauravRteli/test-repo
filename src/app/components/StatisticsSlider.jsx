@@ -43,7 +43,7 @@ const StatisticsSlider = () => {
       <div className="max-w-[90vw] mx-auto px-3 sm:px-4 lg:px-6">
         {/* Header Section */}
         <div className="text-center mb-6 md:mb-10 lg:mb-12">
-          <h2 className="text-sm sm:text-base text-gray-800 leading-relaxed mx-auto max-w-4xl px-2">
+          <h2 className="text-sm sm:text-xl text-[#141414] leading-relaxed mx-auto px-2">
             THE YOUNG POPULATION ASPIRATION HAS CHANGED THEIR SPENDING PATTERN.
             FINANCIAL PRESSURE LEADING TO STRESS AND ANXIETY HAS BECOME A COMMON
             PHENOMENON.
@@ -70,11 +70,11 @@ const StatisticsSlider = () => {
         >
           {statisticsData.map((stat, index) => (
             <SwiperSlide key={index}>
-              <div className="text-center p-4 sm:p-5 md:p-6 lg:p-7 h-full flex flex-col justify-center items-center rounded-xl bg-white transition-transform duration-500 hover:scale-105 hover:bg-orange-50/40">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-orange-400 mb-2 sm:mb-3 md:mb-4 leading-none">
+              <div className="text-center p-4 sm:p-5 md:p-6 lg:p-7 h-full flex flex-col justify-center items-center rounded-xl bg-white transition-transform duration-500 hover:scale-105">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#f2ab3c] mb-2 sm:mb-3 md:mb-4 leading-none">
                   {stat.percentage}
                 </h3>
-                <p className="text-gray-700 text-xs sm:text-sm md:text-base max-w-xs sm:max-w-sm md:max-w-md">
+                <p className="text-[#141414] text-xs sm:text-sm md:text-xl max-w-xs">
                   {stat.text}
                 </p>
               </div>

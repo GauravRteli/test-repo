@@ -6,7 +6,7 @@ const FeatureSectionComponent = () => {
     <div className="container mx-auto px-4 max-w-[1400px]">
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
         {/* Left Box - Instant Salary Access */}
-        <div className="flex-1 rounded-2xl bg-white min-h-[480px] border border-gray-100 transition-all duration-400 ease-out">
+        <div className="flex-1 rounded-2xl bg-white min-h-[600px] border border-gray-100 transition-all duration-400 ease-out">
           <div className="h-full flex flex-col pt-8 px-8 lg:pt-10">
             {/* Icon Circle */}
             <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center mb-5 lg:mb-6 hover:scale-110 transition-transform duration-300 ease-out">
@@ -33,7 +33,7 @@ const FeatureSectionComponent = () => {
             </div>
 
             {/* Title */}
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 lg:mb-5 leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 mb-4 lg:mb-5 leading-tight">
               Instant Salary
               <span className="block text-[#F2AB3C] mt-1">Access</span>
             </h2>
@@ -45,13 +45,14 @@ const FeatureSectionComponent = () => {
             </p>
 
             {/* Image Container - Reduced */}
-            <div className="flex-1 flex items-center justify-center overflow-hidden rounded-xl lg:rounded-2xl animate-float">
-              <div className="relative w-full h-full min-h-[220px] lg:min-h-[280px]">
+            <div className="flex-1 flex items-center justify-center overflow-hidden rounded-xl lg:rounded-2xl">
+              <div className="relative w-full h-full min-h-[280px] lg:min-h-[450px]">
                 <Image
                   src="/assets/images/3. third section 2.1.png"
                   alt="Payroll Details UI"
                   fill
-                  className="object-cover object-center rounded-xl lg:rounded-2xl scale-110 transition-transform duration-400 ease-out"
+                  quality={75}
+                  className="object-cover object-top rounded-xl lg:rounded-2xl scale-100 transition-transform duration-400 ease-out"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                   priority
                 />
@@ -61,7 +62,7 @@ const FeatureSectionComponent = () => {
         </div>
 
         {/* Right Box - Smart Attendance */}
-        <div className="flex-1 rounded-2xl bg-gradient-to-br from-[#141414] to-[#000000] min-h-[480px] transition-all duration-400 ease-out overflow-hidden">
+        <div className="flex-1 rounded-2xl bg-gradient-to-br from-[#141414] to-[#000000] min-h-[600px] transition-all duration-400 ease-out overflow-hidden">
           <div className="h-full flex flex-col pt-8 px-8 lg:pt-10 lg:px-12">
             {/* Icon Circle */}
             <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center mb-5 lg:mb-6 hover:scale-110 transition-transform duration-300 ease-out">
@@ -100,7 +101,7 @@ const FeatureSectionComponent = () => {
             </p>
 
             {/* Feature Image - Reduced container */}
-            <div className="flex-1 flex items-center justify-center">
+            <div className="flex-1 flex items-center justify-center mt-10">
               <div className="relative w-full h-auto max-w-full">
                 <Image
                   src="/assets/images/Component 1134343.png"
