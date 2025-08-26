@@ -7,7 +7,7 @@ const ProductFeaturesSection = () => {
     <div className="container mx-auto px-4 py-8 max-w-[1400px]">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Secure & Compliant */}
-        <div className="bg-gray-50 rounded-3xl p-8 min-h-[400px] relative overflow-hidden">
+        <div className="rounded-3xl p-8 min-h-[400px] relative overflow-hidden border border-gray-100">
           {/* Background circle with image */}
           <div className="absolute bottom-0 right-0 w-[350px] h-[350px] rounded-full">
             <div className="absolute inset-0 flex items-center justify-center">

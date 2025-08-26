@@ -70,10 +70,12 @@ const StatisticsSlider = () => {
         >
           {statisticsData.map((stat, index) => (
             <SwiperSlide key={index}>
-              <div className="text-center p-4 sm:p-5 md:p-6 lg:p-7 h-full flex flex-col justify-center items-center rounded-xl bg-white transition-transform duration-500 hover:scale-105">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#f2ab3c] mb-2 sm:mb-3 md:mb-4 leading-none">
-                  {stat.percentage}
-                </h3>
+              <div className="text-center p-4 sm:p-5 md:p-6 lg:p-7 h-full flex flex-col justify-between items-center bg-white transition-transform duration-500 hover:scale-105 border-l border-[#f2ab3c]/50  min-h-[200px]">
+                <div className="flex-grow flex flex-col justify-center items-center">
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#f2ab3c] mb-2 sm:mb-3 md:mb-4 leading-none">
+                    {stat.percentage}
+                  </h3>
+                </div>
                 <p className="text-[#141414] text-xs sm:text-sm md:text-xl max-w-xs">
                   {stat.text}
                 </p>
