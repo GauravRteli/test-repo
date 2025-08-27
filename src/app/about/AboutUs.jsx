@@ -1070,10 +1070,10 @@ const AboutUs = () => {
       </div>
 
       {/* Join Team Section */}
-      <div className="animate-on-scroll pb-24">
-        <section className="py-8 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
+      <div className="animate-on-scroll mx-8 md:mx-auto md:w-[90vw] lg:w-[85vw] shadow-md bg-[#f9f9f9] border border-gray-100 rounded-3xl md:mb-20">
+        <section className="py-8 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
           <div className="container mx-auto">
-            <div className="relative bg-gray-50 rounded-2xl sm:rounded-3xl lg:rounded-[2rem] xl:rounded-[3rem] p-6 sm:p-8 md:p-10 lg:p-12 text-center overflow-hidden">
+            <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-[2rem] xl:rounded-[3rem] p-6 sm:p-8 md:p-10 lg:p-12 text-center overflow-hidden">
               {/* Content Container */}
               <div className="relative z-10 mx-auto">
                 {/* Main Heading */}
