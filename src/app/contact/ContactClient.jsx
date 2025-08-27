@@ -50,7 +50,7 @@ export default function ContactPage() {
         />
       </Head>
 
-      <section className="bg-white py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
+      <section className="bg-white py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col xl:flex-row gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20">
             {/* Left: User Support Section */}
@@ -132,31 +132,31 @@ export default function ContactPage() {
                   {[
                     {
                       icon: faFacebookF,
-                      href: "#",
+                      href: "https://www.facebook.com/profile.php?id=61576157237828",
                       label: "Facebook",
                       color: "hover:bg-blue-600",
                     },
                     {
                       icon: faInstagram,
-                      href: "#",
+                      href: "https://www.instagram.com/agimoneey/",
                       label: "Instagram",
                       color: "hover:bg-pink-600",
                     },
                     {
                       icon: faTwitter,
-                      href: "#",
+                      href: "https://x.com/AGIMoneey",
                       label: "Twitter",
                       color: "hover:bg-blue-500",
                     },
                     {
                       icon: faYoutube,
-                      href: "#",
+                      href: "https://www.youtube.com/@AGIMoneey",
                       label: "YouTube",
                       color: "hover:bg-red-600",
                     },
                     {
                       icon: faLinkedinIn,
-                      href: "#",
+                      href: "https://www.linkedin.com/company/agi-moneey?originalSubdomain=in",
                       label: "LinkedIn",
                       color: "hover:bg-blue-700",
                     },
@@ -165,6 +165,7 @@ export default function ContactPage() {
                       key={index}
                       href={social.href}
                       aria-label={social.label}
+                      target="_blank"
                       className={`group flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 border-2 border-gray-200 rounded-full text-[#f2ab3c] hover:border-transparent hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg ${social.color}`}
                     >
                       <FontAwesomeIcon
@@ -179,7 +180,7 @@ export default function ContactPage() {
 
             {/* Right: Demo Form Section */}
             <div className="w-full xl:w-1/2 flex flex-col justify-center xl:pl-8 lg:pl-10 xl:pl-12 animate__animated animate__fadeInLeft">
-              <div className="mb-6 sm:mb-8 md:mb-10">
+              <div className="mb-6">
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6 leading-tight">
                   Let&apos;s Schedule A Demo
                 </h2>
@@ -209,10 +210,7 @@ export default function ContactPage() {
                   </p>
                 </div>
               ) : (
-                <form
-                  className="space-y-6 sm:space-y-8"
-                  onSubmit={handleSubmit}
-                >
+                <form className="space-y-4" onSubmit={handleSubmit}>
                   {/* Form Fields */}
                   {[
                     {
@@ -267,8 +265,29 @@ export default function ContactPage() {
                     </div>
                   ))}
 
+                  {/* Privacy Note */}
+                  <div className="pt-6">
+                    <p className="text-xs sm:text-sm text-gray-500 text-center sm:text-left leading-relaxed">
+                      By submitting this form, you agree to our
+                      <a
+                        href="/privacypolicy"
+                        className="text-[#f2ab3c] hover:underline ml-1"
+                      >
+                        Privacy Policy
+                      </a>{" "}
+                      and
+                      <a
+                        href="/terms"
+                        className="text-[#f2ab3c] hover:underline ml-1"
+                      >
+                        Terms of Service
+                      </a>
+                      .
+                    </p>
+                  </div>
+
                   {/* Submit Button */}
-                  <div className="pt-4 sm:pt-6 md:pt-8">
+                  <div className="pb-6 md:pb-8">
                     <button
                       type="submit"
                       disabled={loading}
@@ -295,27 +314,6 @@ export default function ContactPage() {
                         </svg>
                       )}
                     </button>
-                  </div>
-
-                  {/* Privacy Note */}
-                  <div className="pt-2 sm:pt-4">
-                    <p className="text-xs sm:text-sm text-gray-500 text-center sm:text-left leading-relaxed">
-                      By submitting this form, you agree to our
-                      <a
-                        href="/privacy"
-                        className="text-[#f2ab3c] hover:underline ml-1"
-                      >
-                        Privacy Policy
-                      </a>{" "}
-                      and
-                      <a
-                        href="/terms"
-                        className="text-[#f2ab3c] hover:underline ml-1"
-                      >
-                        Terms of Service
-                      </a>
-                      .
-                    </p>
                   </div>
                 </form>
               )}

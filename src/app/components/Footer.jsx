@@ -59,8 +59,9 @@ export default function Footer() {
               </p>
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-4 items-start">
                 <Link
-                  href="#!"
+                  href="https://apps.apple.com/in/app/agi-moneey/id6747022528"
                   className="transition-transform hover:scale-105"
+                  target="_blank"
                 >
                   <Image
                     src="/assets/images/home1/banner/applestore.png"
@@ -71,8 +72,9 @@ export default function Footer() {
                   />
                 </Link>
                 <Link
-                  href="#!"
+                  href="https://play.google.com/store/apps/details?id=com.agimoneey.app&pcampaignid=web_share"
                   className="transition-transform hover:scale-105"
+                  target="_blank"
                 >
                   <Image
                     src="/assets/images/home1/banner/playstore.png"
@@ -122,13 +124,15 @@ export default function Footer() {
             {/* Logo + Partner Info */}
             <div className="lg:col-span-1 text-center sm:text-left">
               <div className="mb-4 sm:mb-5">
-                <Image
-                  src="/assets/images/Frame 6.png"
-                  alt="AGI Moneey"
-                  width={150}
-                  height={50}
-                  className="w-32 sm:w-36 h-auto mx-auto sm:mx-0"
-                />
+                <Link href="/" className="transition-transform hover:scale-105">
+                  <Image
+                    src="/assets/images/Frame 6.png"
+                    alt="AGI Moneey"
+                    width={150}
+                    height={50}
+                    className="w-32 sm:w-36 h-auto mx-auto sm:mx-0"
+                  />
+                </Link>
               </div>
               <div className="bg-gray-800 rounded-xl p-3 sm:p-4 mb-4 sm:mb-6 border border-gray-700">
                 <div className="text-xs sm:text-sm text-gray-200">
@@ -141,31 +145,36 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 sm:gap-3 justify-center sm:justify-start">
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://www.facebook.com/profile.php?id=61576157237828"
                   className="flex items-center justify-center w-7 sm:w-8 h-7 sm:h-8 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 hover:scale-110"
                 >
                   <FaFacebookF className="text-xs sm:text-sm" />
                 </a>
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://www.instagram.com/agimoneey/"
                   className="flex items-center justify-center w-7 sm:w-8 h-7 sm:h-8 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 hover:scale-110"
                 >
                   <FaInstagram className="text-xs sm:text-sm" />
                 </a>
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://x.com/AGIMoneey"
                   className="flex items-center justify-center w-7 sm:w-8 h-7 sm:h-8 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 hover:scale-110"
                 >
                   <FaTwitter className="text-xs sm:text-sm" />
                 </a>
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://www.youtube.com/@AGIMoneey"
                   className="flex items-center justify-center w-7 sm:w-8 h-7 sm:h-8 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 hover:scale-110"
                 >
                   <FaYoutube className="text-xs sm:text-sm" />
                 </a>
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://www.linkedin.com/company/agi-moneey/?originalSubdomain=in"
                   className="flex items-center justify-center w-7 sm:w-8 h-7 sm:h-8 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 hover:scale-110"
                 >
                   <FaLinkedinIn className="text-xs sm:text-sm" />

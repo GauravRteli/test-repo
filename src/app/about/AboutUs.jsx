@@ -728,9 +728,10 @@ const AboutUs = () => {
 
                       <div className="flex justify-center mt-auto">
                         <a
-                          href="#"
+                          href="https://www.linkedin.com/in/sharadaagiwal/"
                           className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 hover:bg-[#F2AB3C] text-gray-600 hover:text-white rounded-full transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-[#F2AB3C]/20"
                           aria-label="Connect with Sharad Agiwal on LinkedIn"
+                          target="_blank"
                         >
                           <i className="fab fa-linkedin-in text-sm sm:text-base md:text-lg"></i>
                         </a>
@@ -777,9 +778,10 @@ const AboutUs = () => {
 
                       <div className="flex justify-center mt-auto">
                         <a
-                          href="#"
+                          href="https://www.linkedin.com/in/sangeetaagiwal"
                           className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 hover:bg-[#F2AB3C] text-gray-600 hover:text-white rounded-full transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-[#F2AB3C]/20"
                           aria-label="Connect with Sangeeta Agiwal on LinkedIn"
+                          target="_blank"
                         >
                           <i className="fab fa-linkedin-in text-sm sm:text-base md:text-lg"></i>
                         </a>
@@ -826,9 +828,10 @@ const AboutUs = () => {
 
                       <div className="flex justify-center mt-auto">
                         <a
-                          href="#"
+                          href="https://www.linkedin.com/in/ssumitpareek/"
                           className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 hover:bg-[#F2AB3C] text-gray-600 hover:text-white rounded-full transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-[#F2AB3C]/20"
                           aria-label="Connect with Sumit Pareek on LinkedIn"
+                          target="_blank"
                         >
                           <i className="fab fa-linkedin-in text-sm sm:text-base md:text-lg"></i>
                         </a>
@@ -875,9 +878,10 @@ const AboutUs = () => {
 
                       <div className="flex justify-center mt-auto">
                         <a
-                          href="#"
+                          href="https://www.linkedin.com/in/deepakrawat/"
                           className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 hover:bg-[#F2AB3C] text-gray-600 hover:text-white rounded-full transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-[#F2AB3C]/20"
                           aria-label="Connect with Deepak Rawat on LinkedIn"
+                          target="_blank"
                         >
                           <i className="fab fa-linkedin-in text-sm sm:text-base md:text-lg"></i>
                         </a>

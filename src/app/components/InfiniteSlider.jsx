@@ -146,7 +146,7 @@ const FirstSlide = ({ isActive }) => {
               transition={{ duration: 0.8, delay: 1.2 }}
             >
               <motion.a
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.agimoneey.app&pcampaignid=web_share"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -160,7 +160,7 @@ const FirstSlide = ({ isActive }) => {
               </motion.a>
 
               <motion.a
-                href="#"
+                href="https://apps.apple.com/in/app/agi-moneey/id6747022528"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -246,8 +246,7 @@ const SecondSlide = ({ isActive }) => {
               {/* Static Play Button */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.a
-                  href="https://www.youtube.com/"
-                  target="_blank"
+                  href="#"
                   className="w-8 h-8 flex items-center justify-center"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
@@ -304,7 +303,7 @@ const SecondSlide = ({ isActive }) => {
               transition={{ duration: 0.8, delay: 1.2 }}
             >
               <motion.a
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.agimoneey.app&pcampaignid=web_share"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -318,7 +317,7 @@ const SecondSlide = ({ isActive }) => {
               </motion.a>
 
               <motion.a
-                href="#"
+                href="https://apps.apple.com/in/app/agi-moneey/id6747022528"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

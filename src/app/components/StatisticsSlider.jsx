@@ -69,18 +69,46 @@ const StatisticsSlider = () => {
           className="statistics-swiper"
         >
           {statisticsData.map((stat, index) => (
-            <SwiperSlide key={index}>
-              <div className="text-center p-4 sm:p-5 md:p-6 lg:p-7 h-full flex flex-col justify-between items-center bg-white transition-transform duration-500 hover:scale-105 border-l border-[#f2ab3c]/50  min-h-[200px]">
-                <div className="flex-grow flex flex-col justify-center items-center">
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#f2ab3c] mb-2 sm:mb-3 md:mb-4 leading-none">
-                    {stat.percentage}
-                  </h3>
-                </div>
-                <p className="text-[#141414] text-xs sm:text-sm md:text-xl max-w-xs">
-                  {stat.text}
-                </p>
-              </div>
-            </SwiperSlide>
+            <Swiper
+              modules={[Autoplay]}
+              spaceBetween={16}
+              slidesPerView={1}
+              breakpoints={{
+                640: { slidesPerView: 2, spaceBetween: 20 },
+                1024: { slidesPerView: 3, spaceBetween: 24 },
+              }}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false,
+              }}
+              loop={true}
+              speed={1000}
+              className="statistics-swiper"
+            >
+              {statisticsData.map((stat, index) => (
+                <SwiperSlide key={`${index}-${Math.random()}`}>
+                  {({ isActive, isPrev, isNext }) => (
+                    <div
+                      className={`text-center p-4 sm:p-5 md:p-6 lg:p-7 h-full flex flex-col justify-between items-center bg-white transition-transform duration-500 hover:scale-105 min-h-[200px] ${
+                        !isActive && (isPrev || isNext)
+                          ? "sm:border-l md:border-r border-[#f2ab3c]/50"
+                          : ""
+                      }`}
+                    >
+                      <div className="flex-grow flex flex-col justify-center items-center">
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#f2ab3c] mb-2 sm:mb-3 md:mb-4 leading-none">
+                          {stat.percentage}
+                        </h3>
+                      </div>
+                      <p className="text-[#141414] text-xs sm:text-sm md:text-xl max-w-xs">
+                        {stat.text}
+                      </p>
+                    </div>
+                  )}
+                </SwiperSlide>
+              ))}
+            </Swiper>
           ))}
         </Swiper>
       </div>

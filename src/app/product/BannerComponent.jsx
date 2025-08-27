@@ -70,7 +70,11 @@ const HeroBanner = () => {
               style={{ listStyle: "none", padding: 0, margin: 0 }}
             >
               <li>
-                <Link href="#" className="block group">
+                <Link
+                  href="https://play.google.com/store/apps/details?id=com.agimoneey.app&pcampaignid=web_share"
+                  className="block group"
+                  target="_blank"
+                >
                   <Image
                     src="/assets/images/home1/banner/playstore.png"
                     alt="Download from Play Store"
@@ -81,7 +85,11 @@ const HeroBanner = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="block group">
+                <Link
+                  href="https://apps.apple.com/in/app/agi-moneey/id6747022528"
+                  className="block group"
+                  target="_blank"
+                >
                   <Image
                     src="/assets/images/home1/banner/applestore.png"
                     alt="Download from App Store"
