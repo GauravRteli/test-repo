@@ -1070,19 +1070,20 @@ const AboutUs = () => {
       </div>
 
       {/* Join Team Section */}
-      <div className="animate-on-scroll mx-8 md:mx-auto md:w-[90vw] lg:w-[85vw] shadow-md bg-[#f9f9f9] border border-gray-100 rounded-3xl md:mb-20">
-        <section className="py-8 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
+      <div className="animate-on-scroll max-w-7xl md:mx-auto shadow-md bg-[#f9f9f9] border border-gray-100 rounded-3xl mb-8 md:mb-20 mx-4 sm:mx-6">
+        <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
           <div className="container mx-auto">
-            <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-[2rem] xl:rounded-[3rem] p-6 sm:p-8 md:p-10 lg:p-12 text-center overflow-hidden">
+            <div className="relative rounded-2xl sm:rounded-3xl lg:rounded-[2rem] xl:rounded-[3rem] p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 text-center overflow-hidden">
               {/* Content Container */}
-              <div className="relative z-10 mx-auto">
+              <div className="relative z-10 mx-auto max-w-4xl">
                 {/* Main Heading */}
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-gray-900 leading-tight">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-gray-900 leading-tight px-2">
                   <span className="block sm:inline">Join Our Team</span>
                 </h2>
+
                 {/* Description */}
-                <div className="mb-6">
-                  <p className="text-sm sm:text-base md:text-xl text-[#606060] leading-relaxed mx-auto px-2 sm:px-4">
+                <div className="mb-6 sm:mb-8">
+                  <p className="text-sm sm:text-base md:text-xl text-[#606060] leading-relaxed mx-auto px-2 sm:px-4 max-w-3xl">
                     <span className="block sm:inline">
                       Join the AGI Moneey team and be part of a mission
                       that&apos;s
@@ -1098,12 +1099,13 @@ const AboutUs = () => {
                     </span>
                   </p>
                 </div>
+
                 {/* CTA Button */}
-                <div className="pt-2 sm:pt-4">
+                <div className="pt-2 sm:pt-4 px-2">
                   <div className="flex justify-center">
                     <Link
                       href="/contact"
-                      className="group inline-flex items-center gap-2 sm:gap-3 hover:bg-[#F2AB3C] border-2 text-[#F2AB3C] border-[#F2AB3C] hover:text-black px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-2 sm:py-3 rounded-full font-semibold text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#F2AB3C]/20"
+                      className="group inline-flex items-center gap-2 sm:gap-3 hover:bg-[#F2AB3C] border-2 text-[#F2AB3C] border-[#F2AB3C] hover:text-black px-6 sm:px-8 md:px-10 lg:px-12 xl:px-14 py-3 sm:py-3 md:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-300 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#F2AB3C]/20 w-full sm:w-auto justify-center max-w-xs sm:max-w-none"
                       aria-label="Get in touch with AGI Moneey"
                     >
                       <span>Get In Touch</span>
