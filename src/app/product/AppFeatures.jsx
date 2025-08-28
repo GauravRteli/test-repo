@@ -138,11 +138,12 @@ const AppFeatures = () => {
               <div className="lg:col-span-4 flex flex-col items-center justify-center order-1 lg:order-3">
                 <div className="w-52 h-96 pb-10 lg:pb-0 lg:w-96 lg:h-[200px] xl:w-[350px] xl:h-[450px] flex items-center justify-center transform hover:scale-105 transition-transform duration-300 animate-float">
                   <Image
-                    src="/assets/images/pro/5.2. without shadow.png"
+                    // src="/assets/images/pro/5.2. without shadow.png"
+                    src="/assets/images/features1.jpg"
                     alt="App Features"
                     width={420}
                     height={550}
-                    className="h-auto drop-shadow-xl"
+                    className="h-auto rounded-3xl drop-shadow-xl"
                     priority
                   />
                 </div>

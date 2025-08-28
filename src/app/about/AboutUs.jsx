@@ -1,14 +1,21 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollProgressBar from "../components/ScrollProgressBar";
 
 const AboutUs = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "-10%",
+  });
+
   useEffect(() => {
     // Animation on scroll observer
     const observerOptions = {
@@ -514,12 +521,23 @@ const AboutUs = () => {
       </div>
 
       {/* Mission Section */}
-      <div className="animate-on-scroll">
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
+      <motion.div ref={ref} className="animate-on-scroll">
+        <motion.section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
           <div className="container mx-auto max-w-7xl">
             <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 items-center">
-              {/* Image Section */}
-              <div className="w-full lg:w-1/2 order-2 lg:order-1">
+              {/* Image Section - Animate from LEFT */}
+              <motion.div
+                className="w-full lg:w-1/2 order-2 lg:order-1"
+                initial={{ opacity: 0, x: -100 }} // Changed from +100 to -100 (comes from left)
+                animate={
+                  isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }
+                }
+                transition={{
+                  duration: 0.8,
+                  delay: 0.2,
+                  ease: "easeOut",
+                }}
+              >
                 <div className="relative w-full flex justify-center lg:justify-start">
                   <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl">
                     <Image
@@ -533,58 +551,148 @@ const AboutUs = () => {
                     />
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              {/* Content Section */}
-              <div className="w-full lg:w-1/2 order-1 lg:order-2 flex flex-col justify-center text-center lg:text-left">
+              {/* Content Section - Animate from RIGHT */}
+              <motion.div
+                className="w-full lg:w-1/2 order-1 lg:order-2 flex flex-col justify-center text-center lg:text-left"
+                initial={{ opacity: 0, x: 100 }} // Changed from -100 to +100 (comes from right)
+                animate={
+                  isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }
+                }
+                transition={{
+                  duration: 0.8,
+                  ease: "easeOut",
+                }}
+              >
                 {/* Mission Tag */}
-                <h2 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 lg:mb-6 font-medium">
+                <motion.h2
+                  className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 lg:mb-6 font-medium"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={
+                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                  }
+                  transition={{
+                    duration: 0.6,
+                    delay: 0.3,
+                    ease: "easeOut",
+                  }}
+                >
                   our mission
-                </h2>
+                </motion.h2>
 
                 {/* Main Heading */}
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8 xl:mb-10 text-gray-900 leading-tight">
+                <motion.h2
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8 xl:mb-10 text-gray-900 leading-tight"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={
+                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+                  }
+                  transition={{
+                    duration: 0.7,
+                    delay: 0.4,
+                    ease: "easeOut",
+                  }}
+                >
                   Making Any Day A Pay Day
-                </h2>
+                </motion.h2>
 
                 {/* Mission Description */}
-                <div className="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-7 xl:space-y-8 text-[#606060] leading-relaxed max-w-none lg:max-w-2xl xl:max-w-3xl">
-                  <p className="text-sm sm:text-base md:text-lg leading-relaxed">
+                <motion.div
+                  className="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-7 xl:space-y-8 text-[#606060] leading-relaxed max-w-none lg:max-w-2xl xl:max-w-3xl"
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={
+                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
+                  }
+                  transition={{
+                    duration: 0.8,
+                    delay: 0.5,
+                    ease: "easeOut",
+                  }}
+                >
+                  <motion.p
+                    className="text-sm sm:text-base md:text-lg leading-relaxed"
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.6,
+                    }}
+                  >
                     At AGI Moneey, our mission is to empower India&apos;s
                     workforce by transforming how salaries are accessed and
                     managed—through trusted partnerships with employers.
-                  </p>
+                  </motion.p>
 
-                  <p className="text-sm sm:text-base md:text-lg leading-relaxed">
+                  <motion.p
+                    className="text-sm sm:text-base md:text-lg leading-relaxed"
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.7,
+                    }}
+                  >
                     We work hand-in-hand with organizations to provide their
                     employees with instant, responsible access to earned salary,
                     without waiting for payday. By disbursing salary advances on
                     behalf of the employer, we eliminate the need for costly
                     loans, reduce financial stress, and foster a more stable,
                     productive workforce.
-                  </p>
+                  </motion.p>
 
-                  <p className="text-sm sm:text-base md:text-lg leading-relaxed">
+                  <motion.p
+                    className="text-sm sm:text-base md:text-lg leading-relaxed"
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.8,
+                    }}
+                  >
                     Through our transparent, tech-driven platform, we are not
                     just solving a financial problem—we are creating a new
                     standard of flexibility, dignity, and control for every
                     worker. Our goal is a future where financial freedom starts
                     the moment you earn it, and no employee has to choose
                     between urgent needs and long-term well-being.
-                  </p>
-                </div>
+                  </motion.p>
+                </motion.div>
 
                 {/* Optional CTA Section */}
-                <div className="mt-6 sm:mt-8 lg:mt-10 xl:mt-12">
+                <motion.div
+                  className="mt-6 sm:mt-8 lg:mt-10 xl:mt-12"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={
+                    isInView
+                      ? { opacity: 1, scale: 1 }
+                      : { opacity: 0, scale: 0.8 }
+                  }
+                  transition={{
+                    duration: 0.6,
+                    delay: 0.9,
+                    ease: "easeOut",
+                  }}
+                >
                   <div className="inline-flex items-center justify-center lg:justify-start">
-                    <div className="w-12 sm:w-16 md:w-20 lg:w-24 xl:w-32 h-1 bg-gradient-to-r from-[#F2AB3C] to-orange-400 rounded-full"></div>
+                    <motion.div
+                      className="w-12 sm:w-16 md:w-20 lg:w-24 xl:w-32 h-1 bg-gradient-to-r from-[#F2AB3C] to-orange-400 rounded-full"
+                      initial={{ scaleX: 0 }}
+                      animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+                      transition={{
+                        duration: 0.8,
+                        delay: 1,
+                        ease: "easeOut",
+                      }}
+                      style={{ transformOrigin: "left" }}
+                    />
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
-        </section>
-      </div>
+        </motion.section>
+      </motion.div>
 
       {/* CTA Section */}
       <div className="animate-on-scroll">
@@ -1123,6 +1231,49 @@ const AboutUs = () => {
       <style jsx>{`
         .floating {
           animation: floating 5s ease-in-out infinite;
+        }
+
+        /* Animation keyframes */
+        @keyframes slideInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-100px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slideInRight {
+          from {
+            opacity: 0;
+            transform: translateX(100px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        /* Animation classes */
+        .animate-slide-in-left {
+          opacity: 0;
+          animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .animate-slide-in-right {
+          opacity: 0;
+          animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        /* Add delays for staggered effect (optional) */
+        .animate-slide-in-left {
+          animation-delay: 0.2s;
+        }
+
+        .animate-slide-in-right {
+          animation-delay: 0.4s;
         }
 
         @keyframes floating {

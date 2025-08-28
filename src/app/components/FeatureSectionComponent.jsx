@@ -1,7 +1,14 @@
 "use client";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
+const MotionImage = motion(Image);
 
 const FeatureSectionComponent = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <div className="container mx-auto px-4 max-w-[1400px]">
       <div className="flex flex-col lg:flex-row gap-8 items-stretch">
@@ -45,19 +52,34 @@ const FeatureSectionComponent = () => {
             </p>
 
             {/* Image Container - Reduced */}
-            <div className="flex-1 flex items-center justify-center overflow-hidden rounded-xl lg:rounded-2xl">
-              <div className="relative w-full h-full min-h-[280px] lg:min-h-[450px]">
-                <Image
-                  src="/assets/images/3. third section 2.1.png"
+            <motion.div
+              ref={ref}
+              className="flex-1 flex items-center justify-center overflow-hidden rounded-xl lg:rounded-2xl"
+              animate={isInView ? { opacity: 1 } : { opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+            >
+              <div className="relative w-full h-full min-h-[280px] max-h-[280px] lg:min-h-[450px] lg:max-h-[450px] overflow-hidden rounded-xl lg:rounded-2xl">
+                <MotionImage
+                  src="/assets/images/payroll.jpg"
                   alt="Payroll Details UI"
-                  fill
-                  quality={75}
-                  className="object-cover object-top rounded-xl lg:rounded-2xl scale-100 transition-transform duration-400 ease-out"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+                  width={650} // required when not using "fill"
+                  height={450} // bigger height than container
+                  className="object-cover shadow border border-gray-100 mx-auto object-top scale-110 rounded-xl lg:rounded-2xl"
                   priority
+                  initial={{ y: 0 }}
+                  animate={
+                    isInView
+                      ? { y: ["0%", "-80%", "0%"], opacity: 1 } // move up then back
+                      : { y: "0%", opacity: 1 }
+                  }
+                  transition={{
+                    duration: 6,
+                    ease: "easeInOut",
+                    times: [0, 0.5, 1],
+                  }}
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 
