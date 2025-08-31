@@ -88,7 +88,7 @@ const FAQSection = () => {
                     onClick={() => toggleAccordion(index)}
                     className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                   >
-                    <span className="font-medium text-gray-900 group-hover:text-[#f2ab3c] pr-4 transition-colors duration-300">
+                    <span className="font-semibold text-gray-900 group-hover:text-[#f2ab3c] pr-4 transition-colors duration-300">
                       {faq.question}
                     </span>
                     <div className="flex-shrink-0">

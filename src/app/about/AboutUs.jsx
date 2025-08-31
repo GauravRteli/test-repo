@@ -40,6 +40,35 @@ const AboutUs = () => {
 
   return (
     <>
+      <style jsx>{`
+        .ring-pulse-wrapper::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 9999px;
+          border: 1.5px solid gray;
+          box-sizing: border-box;
+          animation: gray-ring-pulse 3s infinite;
+          opacity: 0.5;
+          z-index: 0;
+        }
+
+        @keyframes gray-ring-pulse {
+          0% {
+            transform: scale(1);
+            opacity: 0.5;
+          }
+          70%,
+          100% {
+            transform: scale(1.6);
+            opacity: 0;
+          }
+        }
+      `}</style>
+
       <ScrollProgressBar />
       {/* Link for Font Awesome */}
       <link
@@ -48,28 +77,49 @@ const AboutUs = () => {
       />
 
       {/* About Section */}
-      <section
+      <motion.section
         className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0 bg-cover bg-center bg-no-repeat min-h-screen flex items-center"
         style={{
           backgroundImage: "url('/assets/images/pro/Component 127.png')",
         }}
+        initial={{ y: 200, opacity: 0 }} // small offset, not full viewport height
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 3, // slower duration
+          ease: "easeOut",
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+          duration: 1.2,
+        }}
       >
-        <div className="w-full max-w-7xl mx-auto">
+        <div className="w-full max-w-[90vw] mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 xl:gap-16">
-            {/* Image Section */}
-            <div className="w-full lg:w-1/2 flex items-center justify-center">
-              <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+            {/* Image Section with floating animation */}
+            <motion.div
+              className="w-full lg:w-1/2 flex items-center justify-center"
+              animate={{
+                y: [0, -10, 0],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut",
+              }}
+            >
+              <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-lg xl:max-w-xl">
                 <Image
                   src="/assets/images/pro/16.png"
                   alt="Floating"
                   className="floating object-contain w-full h-auto"
-                  width={530}
-                  height={600}
+                  width={600} /* Set to 600 */
+                  height={600} /* Set to 600 */
                   priority
-                  sizes="(max-width: 640px) 300px, (max-width: 768px) 400px, (max-width: 1024px) 500px, 530px"
+                  sizes="(max-width: 640px) 300px, (max-width: 768px) 400px, (max-width: 1024px) 500px, 600px"
                 />
               </div>
-            </div>
+            </motion.div>
 
             {/* Content Section */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left space-y-4 sm:space-y-5 md:space-y-6">
@@ -79,7 +129,7 @@ const AboutUs = () => {
               </h1>
 
               {/* Main Headings */}
-              <div className="space-y-2 sm:space-y-3">
+              <div className="space-y-1 sm:space-y-3">
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-black">
                   Empowering Financial
                 </h2>
@@ -115,7 +165,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Vision Section */}
       <div className="animate-on-scroll">
@@ -124,11 +174,11 @@ const AboutUs = () => {
             {/* Vision Header Section */}
             <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
               <div className="w-full text-center lg:text-left lg:w-2/3">
-                <h2 className="text-sm sm:text-base md:text-lg lg:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 font-medium">
+                <h2 className="text-sm sm:text-base md:text-lg lg:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 font-semibold">
                   our vision
                 </h2>
                 <motion.h2
-                  className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-4 sm:mb-6 text-gray-900"
+                  className="text-2xl sm:text-3xl md:text-4xl text-left font-bold leading-tight mb-4 sm:mb-6 text-gray-900"
                   initial={{ opacity: 0, x: -100 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
@@ -158,7 +208,7 @@ const AboutUs = () => {
 
             {/* Description Section */}
             <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-              <p className="text-sm sm:text-base md:text-lg text-[#606060] leading-relaxed mx-auto text-center lg:text-left">
+              <p className="text-sm sm:text-base md:text-lg text-[#606060] text-left leading-relaxed mx-auto">
                 We are committed to transforming the way employees manage their
                 finances by providing a flexible, transparent, and ethical
                 Salary on Demand solution. Our vision goes beyond traditional
@@ -269,17 +319,17 @@ const AboutUs = () => {
 
       {/* Our Story Section */}
       <div className="animate-on-scroll">
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
           <div className="container mx-auto max-w-7xl">
             {/* Header Section */}
             <div className="text-center mb-10 sm:mb-12 md:mb-14 lg:mb-16 xl:mb-20">
-              <h2 className="text-sm sm:text-base md:text-lg lg:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 font-medium">
+              <h2 className="text-sm sm:text-base md:text-lg lg:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 font-semibold">
                 agi moneey
               </h2>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 lg:mb-8 text-gray-900">
+              <h2 className="text-2xl text-left md:text-center sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8 text-gray-900">
                 Our Story
               </h2>
-              <div className="text-sm sm:text-base md:text-lg lg:text-xl text-[#606060] max-w-5xl mx-auto leading-relaxed px-2 sm:px-4">
+              <div className="text-sm text-left md:text-center sm:text-base md:text-lg lg:text-xl text-[#606060] max-w-5xl mx-auto leading-relaxed px-2 sm:px-4">
                 <p className="hidden lg:block">
                   AGI Moneey was founded on a simple truth: employees
                   shouldn&apos;t wait weeks to access their hard-earned
@@ -292,7 +342,7 @@ const AboutUs = () => {
                   <br />
                   and breaks debt cycles
                 </p>
-                <p className="lg:hidden text-center">
+                <p className="lg:hidden">
                   AGI Moneey was founded on a simple truth: employees
                   shouldn&apos;t wait weeks to access their hard-earned moneey.
                   We reinvented India&apos;s payroll system with instant,
@@ -555,7 +605,7 @@ const AboutUs = () => {
 
               {/* Content Section - Animate from RIGHT */}
               <motion.div
-                className="w-full lg:w-1/2 order-1 lg:order-2 flex flex-col justify-center text-center lg:text-left"
+                className="w-full lg:w-1/2 order-1 lg:order-2 flex flex-col justify-center text-left"
                 initial={{ opacity: 0, x: 100 }} // Changed from -100 to +100 (comes from right)
                 animate={
                   isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }
@@ -567,7 +617,7 @@ const AboutUs = () => {
               >
                 {/* Mission Tag */}
                 <motion.h2
-                  className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 lg:mb-6 font-medium"
+                  className="text-s text-center md:text-left sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 lg:mb-6 font-semibold"
                   initial={{ opacity: 0, y: 20 }}
                   animate={
                     isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
@@ -583,7 +633,7 @@ const AboutUs = () => {
 
                 {/* Main Heading */}
                 <motion.h2
-                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8 xl:mb-10 text-gray-900 leading-tight"
+                  className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8 xl:mb-10 text-gray-900 leading-tight"
                   initial={{ opacity: 0, y: 30 }}
                   animate={
                     isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
@@ -743,10 +793,10 @@ const AboutUs = () => {
           <div className="container mx-auto max-w-7xl">
             {/* Header Section */}
             <div className="text-center">
-              <h2 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 font-medium">
+              <h2 className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 font-semibold">
                 Our Team
               </h2>
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900 leading-tight">
+              <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900 leading-tight">
                 Meet The Team Behind AGI Moneey
               </h2>
               <p className="text-sm sm:text-base md:text-lg text-[#606060] max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
@@ -1010,10 +1060,10 @@ const AboutUs = () => {
             <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16">
               {/* Header Section */}
               <div className="w-full lg:w-1/3 mb-6 lg:mb-0">
-                <h2 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 lg:mb-6 font-medium text-center lg:text-left">
+                <h2 className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 lg:mb-6 font-semibold text-center lg:text-left">
                   Our culture
                 </h2>
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8 text-gray-900 leading-tight text-center lg:text-left">
+                <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8 text-gray-900 leading-tight text-center lg:text-left">
                   Work Environment
                 </h2>
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#606060] leading-relaxed text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
@@ -1028,11 +1078,11 @@ const AboutUs = () => {
                   {/* Value Card 1 - Innovate Boldly */}
                   <div className="group feature-box1 p-4 sm:p-6 md:p-8 lg:p-6 xl:p-8 rounded-xl lg:rounded-2xl bg-white border border-transparent border-[#F2AB3C]/20 hover:shadow-xl transition-all duration-300">
                     <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
-                      <div className="relative bg-white">
+                      <div className="relative bg-white ring-pulse-wrapper">
                         <svg
                           width="48"
                           height="48"
-                          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-14 lg:h-14 xl:w-16 xl:h-16 pulse group-hover:scale-110 transition-transform duration-300"
+                          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-14 lg:h-14 xl:w-16 xl:h-16 pulse group-hover:scale-110 transition-transform duration-300 relative z-10"
                           viewBox="0 0 64 64"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
@@ -1063,11 +1113,11 @@ const AboutUs = () => {
                   {/* Value Card 2 - Collaborate with Purpose */}
                   <div className="group feature-box1 p-4 sm:p-6 md:p-8 lg:p-6 xl:p-8 rounded-xl lg:rounded-2xl bg-white border border-transparent border-green-500/20 hover:shadow-xl transition-all duration-300">
                     <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
-                      <div className="relative">
+                      <div className="relative bg-white ring-pulse-wrapper">
                         <svg
                           width="48"
                           height="48"
-                          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-14 lg:h-14 xl:w-16 xl:h-16 pulse group-hover:scale-110 transition-transform duration-300"
+                          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-14 lg:h-14 xl:w-16 xl:h-16 pulse group-hover:scale-110 transition-transform duration-300 relative z-10"
                           viewBox="0 0 64 64"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
@@ -1100,11 +1150,11 @@ const AboutUs = () => {
                   {/* Value Card 3 - Empower People */}
                   <div className="group feature-box1 p-4 sm:p-6 md:p-8 lg:p-6 xl:p-8 rounded-xl lg:rounded-2xl bg-white border border-transparent border-cyan-400/20 hover:shadow-xl transition-all duration-300">
                     <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
-                      <div className="relative">
+                      <div className="relative bg-white ring-pulse-wrapper">
                         <svg
                           width="48"
                           height="48"
-                          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-14 lg:h-14 xl:w-16 xl:h-16 pulse group-hover:scale-110 transition-transform duration-300"
+                          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-14 lg:h-14 xl:w-16 xl:h-16 pulse group-hover:scale-110 transition-transform duration-300 relative z-10"
                           viewBox="0 0 64 64"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
@@ -1137,11 +1187,11 @@ const AboutUs = () => {
                   {/* Value Card 4 - Act with Integrity */}
                   <div className="group feature-box1 p-4 sm:p-6 md:p-8 lg:p-6 xl:p-8 rounded-xl lg:rounded-2xl bg-white border border-transparent border-purple-400/20 hover:shadow-xl transition-all duration-300">
                     <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
-                      <div className="relative">
+                      <div className="relative bg-white ring-pulse-wrapper">
                         <svg
                           width="48"
                           height="48"
-                          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-14 lg:h-14 xl:w-16 xl:h-16 pulse group-hover:scale-110 transition-transform duration-300"
+                          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-14 lg:h-14 xl:w-16 xl:h-16 pulse group-hover:scale-110 transition-transform duration-300 relative z-10"
                           viewBox="0 0 64 64"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"

@@ -80,7 +80,7 @@ const HeroBanner = () => {
                     alt="Download from Play Store"
                     width={160}
                     height={60}
-                    className="w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-36 h-auto hover:scale-105 group-hover:shadow-lg transition-all duration-300"
+                    className="w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-40 h-auto hover:scale-105 group-hover:shadow-lg transition-all duration-300"
                   />
                 </Link>
               </li>
@@ -95,7 +95,7 @@ const HeroBanner = () => {
                     alt="Download from App Store"
                     width={160}
                     height={60}
-                    className="w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-36 h-auto hover:scale-105 group-hover:shadow-lg transition-all duration-300"
+                    className="w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32 2xl:w-40 h-auto hover:scale-105 group-hover:shadow-lg transition-all duration-300"
                   />
                 </Link>
               </li>

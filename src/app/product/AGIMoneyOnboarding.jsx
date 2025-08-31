@@ -203,8 +203,8 @@ const AGIMoneyOnboarding = () => {
             </h2>
 
             {/* Responsive description */}
-            <div className="max-w-xs sm:max-w-md md:max-w-lg lg:max-w-3xl mx-auto">
-              <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
+            <div className=" md:max-w-lg lg:max-w-3xl mx-auto">
+              <p className="text-gray-600 text-left md:text-center text-xs sm:text-sm md:text-base leading-relaxed">
                 AGI Moneey's Earned Wage Access platform integrates seamlessly
                 with your payroll, HRMS, and attendance systems— eliminating
                 extra work for your team. Prefer simplicity? We also offer a

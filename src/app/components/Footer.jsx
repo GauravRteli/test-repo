@@ -41,7 +41,7 @@ export default function Footer() {
       {/* Start Hero Section */}
       <section className="relative z-20 ">
         <div
-          className="max-w-7xl bg-[#f2ab3c] mx-auto px-4 sm:px-6 lg:px-8 rounded-lg relative overflow-visible"
+          className="max-w-7xl bg-[#f2ab3c] mx-auto px-4 sm:px-6 lg:px-8 md:rounded-lg relative overflow-visible"
           style={{ transform: "translateY(10.33%)" }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -50,7 +50,7 @@ export default function Footer() {
                 Making any day <br />
                 <span className="text-black">a pay day</span>
               </h3>
-              <p className="text-sm sm:text-base lg:text-md mb-4 sm:mb-6 lg:mb-8">
+              <p className="text-sm sm:text-base lg:text-md mb-8 sm:mb-6 lg:mb-8">
                 AGI Moneey - India's integrated Earnings on Demand platform.
                 <br />
                 Download the mobile app and access your earnings, today.

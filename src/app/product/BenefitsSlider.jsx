@@ -403,19 +403,22 @@ const BenefitsSlider = () => {
         .slider-track {
           display: flex;
           transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          align-items: stretch; /* Ensures slider-slide fills height if needed */
         }
         .slider-slide {
           flex-shrink: 0;
           width: calc(100% / var(--slides-to-show));
           padding: 0 6px;
           box-sizing: border-box;
+          display: flex;
+          align-items: stretch;
+          height: auto; /* Remove fixed height, let content define it */
         }
         .card-grid {
           display: grid;
           grid-template-rows: auto auto 1fr;
           grid-gap: 0.75em;
-          height: 100%;
-          min-height: 220px;
+          min-height: 260px; /* Minimum height for stability */
           background: #fff;
           border-radius: 1.25rem;
           border: 1px solid #f3f4f6;
@@ -423,18 +426,18 @@ const BenefitsSlider = () => {
           padding: 1.4em 1em 1.2em 1em;
           transition: all 0.3s ease;
           will-change: transform, box-shadow;
+          height: auto; /* Let the card expand based on content */
         }
-
         .card-grid:hover {
           transform: translateY(-2px) scale(1.03);
           box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
           border-color: #e5e7eb;
         }
 
-        /* Responsive grid spacings and card min-heights */
+        /* Responsive grid spacings and min heights */
         @media (min-width: 640px) {
           .card-grid {
-            min-height: 260px;
+            min-height: 300px;
             padding: 1.6em 1.2em 1.4em 1.2em;
           }
         }
@@ -457,21 +460,52 @@ const BenefitsSlider = () => {
           align-items: center;
         }
         .icon-container {
-          width: 48px;
-          height: 48px;
+          position: relative;
+          width: 60px;
+          height: 60px;
           border-radius: 9999px;
           background: rgba(249, 249, 249, 0.8);
           display: flex;
           align-items: center;
           justify-content: center;
           transition: transform 0.3s ease;
+          z-index: 0;
+        }
+
+        /* Animated gray ring line starting from border and expanding outwards */
+        .icon-container::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 9999px;
+          border: 1.5px solid gray; /* Thin gray border line */
+          box-sizing: border-box;
+          animation: gray-line-expand 3s infinite;
+          opacity: 0.6;
+          z-index: -1;
         }
 
         .card-grid:hover .icon-container {
           transform: scale(1.1);
         }
 
-        /* Title and description alignment */
+        /* Animation: line expands outward from border and fades */
+        @keyframes gray-line-expand {
+          0% {
+            transform: scale(1);
+            opacity: 0.6;
+          }
+          70%,
+          100% {
+            transform: scale(1.6);
+            opacity: 0;
+          }
+        }
+
+        /* Title and description alignment with fixed title height */
         .card-title {
           font-weight: 600;
           font-size: 1.15rem;
@@ -480,24 +514,31 @@ const BenefitsSlider = () => {
           margin-bottom: 0.1em;
           word-break: break-word;
           color: #1f2937;
+          height: 2.8em; /* Fixed height */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
         }
         .card-description {
           display: flex;
           align-items: flex-start;
           justify-content: center;
-          font-size: 1em;
+          font-size: 0.8rem;
           line-height: 1.6;
           color: #475569;
           text-align: center;
           min-height: 2.8em;
         }
+
         @media (min-width: 768px) {
           .card-title {
             font-size: 1.25rem;
             text-align: left;
+            height: 2.4em; /* Adjusted for desktop */
+            justify-content: flex-start;
           }
           .card-description {
-            font-size: 1.01rem;
             text-align: left;
             justify-content: flex-start;
           }
@@ -510,6 +551,7 @@ const BenefitsSlider = () => {
         @media (max-width: 480px) {
           .card-title {
             font-size: 1rem;
+            height: 2.6em; /* Slight fix for smaller screens */
           }
           .card-description {
             font-size: 0.89em;
