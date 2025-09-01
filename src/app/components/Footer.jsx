@@ -9,6 +9,8 @@ import {
   FaTwitter,
   FaYoutube,
   FaLinkedinIn,
+  FaEnvelope,
+  FaPhoneAlt,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -184,7 +186,7 @@ export default function Footer() {
 
             {/* Company Links */}
             <div className="text-center sm:text-left">
-              <h5 className="text-white font-semibold mb-3 sm:mb-4 text-base sm:text-lg">
+              <h5 className="text-white font-semibold mb-3 sm:mb-4 text-base sm:text-2xl">
                 Company
               </h5>
               <ul className="space-y-2 sm:space-y-3">
@@ -233,7 +235,7 @@ export default function Footer() {
 
             {/* Policies */}
             <div className="text-center sm:text-left">
-              <h5 className="text-white font-semibold mb-3 sm:mb-4 text-base sm:text-lg">
+              <h5 className="text-white font-semibold mb-3 sm:mb-4 text-base sm:text-2xl">
                 Policies
               </h5>
               <ul className="space-y-2 sm:space-y-3">
@@ -265,16 +267,29 @@ export default function Footer() {
             </div>
 
             {/* Contact Info */}
+            {/* Contact Us */}
             <div className="text-center sm:text-left">
-              <h5 className="text-white font-semibold mb-3 sm:mb-4 text-base sm:text-lg">
+              <h5 className="text-white font-semibold mb-3 sm:mb-4 text-base sm:text-lg lg:text-2xl">
                 Contact Us
               </h5>
               <div className="space-y-2 sm:space-y-3">
-                <p className="text-white text-xs sm:text-sm flex items-center gap-2 justify-center sm:justify-start">
-                  <i className="fas fa-envelope"></i> contact@agimoneey.com
+                <p className="flex items-center gap-2 text-gray-300 text-sm sm:text-base justify-center sm:justify-start">
+                  <FaEnvelope className="text-lg" aria-label="email" />
+                  <a
+                    href="mailto:contact@agimoneey.com"
+                    className="underline decoration-dotted hover:text-orange-400 transition-colors duration-300"
+                  >
+                    contact@agimoneey.com
+                  </a>
                 </p>
-                <p className="text-white text-xs sm:text-sm flex items-center gap-2 justify-center sm:justify-start">
-                  <i className="fas fa-phone-alt"></i> +91 9953616633
+                <p className="flex items-center gap-2 text-gray-300 text-sm sm:text-base justify-center sm:justify-start">
+                  <FaPhoneAlt className="text-lg" aria-label="phone" />
+                  <a
+                    href="tel:+919953616633"
+                    className="underline decoration-dotted hover:text-orange-400 transition-colors duration-300"
+                  >
+                    +91 9953616633
+                  </a>
                 </p>
               </div>
             </div>
