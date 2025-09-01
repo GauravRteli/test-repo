@@ -26,7 +26,7 @@ const PrivacyPolicy = () => {
                 1. Introduction
               </h2>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 Agiwal Fintech Private Limited ("AGI Moneey," "we," "our," or
@@ -38,7 +38,7 @@ const PrivacyPolicy = () => {
                 ("Website") — collectively referred to as the "Platform."
               </p>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 Our website is an informational platform that provides details
@@ -47,7 +47,7 @@ const PrivacyPolicy = () => {
                 analytics tools are used on the Website for user identification.
               </p>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 Our Mobile App is a financial wellness and workforce management
@@ -61,7 +61,7 @@ const PrivacyPolicy = () => {
                 punch-out.
               </p>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 To provide these services, we collect and process personal,
@@ -69,7 +69,7 @@ const PrivacyPolicy = () => {
                 as described in this Policy.
               </p>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 By using the AGI Moneey Platform, you acknowledge and agree to
@@ -79,7 +79,7 @@ const PrivacyPolicy = () => {
                 your consent in the manner described herein.
               </p>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 This Policy is an electronic record in the form of an electronic
@@ -90,7 +90,7 @@ const PrivacyPolicy = () => {
                 collection and processing of your data in accordance with:
               </p>
               <ul
-                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-md md:text-base"
+                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-sm"
                 style={{ color: "#606060" }}
               >
                 <li>
@@ -102,7 +102,7 @@ const PrivacyPolicy = () => {
                 </li>
               </ul>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 If you do not agree with our practices or do not wish to share
@@ -122,14 +122,14 @@ const PrivacyPolicy = () => {
                 2. Consent
               </h2>
               <p
-                className="text-md md:text-base leading-relaxed mb-3 text-justify"
+                className="text-sm leading-relaxed mb-3 text-justify"
                 style={{ color: "#606060" }}
               >
                 By using or accessing the AGI Moneey Platform, you hereby
                 freely, expressly, and voluntarily consent to the following:
               </p>
               <ul
-                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-md md:text-base"
+                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-sm"
                 style={{ color: "#606060" }}
               >
                 <li>
@@ -154,13 +154,13 @@ const PrivacyPolicy = () => {
                 </li>
               </ul>
               <p
-                className="text-md md:text-base leading-relaxed mb-3 text-justify"
+                className="text-sm leading-relaxed mb-3 text-justify"
                 style={{ color: "#606060" }}
               >
                 You may withdraw your consent at any time by:
               </p>
               <ul
-                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-md md:text-base"
+                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-sm"
                 style={{ color: "#606060" }}
               >
                 <li>Deleting your account from the AGI Moneey App, or</li>
@@ -176,7 +176,7 @@ const PrivacyPolicy = () => {
                 </li>
               </ul>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 Please note that withdrawal of consent may impact your ability
@@ -197,13 +197,13 @@ const PrivacyPolicy = () => {
                 3. Information We Collect
               </h2>
               <p
-                className="text-md md:text-base leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 AGI Moneey may collect the following information:
               </p>
               <ul
-                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-md md:text-base"
+                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-sm"
                 style={{ color: "#606060" }}
               >
                 <li>
@@ -237,14 +237,14 @@ const PrivacyPolicy = () => {
                 </li>
               </ul>
               <p
-                className="text-md md:text-base leading-relaxed mb-3 text-justify"
+                className="text-sm leading-relaxed mb-3 text-justify"
                 style={{ color: "#606060" }}
               >
                 We do not collect location data continuously or in the
                 background, and we do not collect location at any other time.
               </p>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 Location permissions are requested solely for attendance
@@ -262,14 +262,14 @@ const PrivacyPolicy = () => {
                 4. How We Use Your Information
               </h2>
               <p
-                className="text-md md:text-base leading-relaxed mb-3 text-justify"
+                className="text-sm leading-relaxed mb-3 text-justify"
                 style={{ color: "#606060" }}
               >
                 We use the information collected through the AGI Moneey Platform
                 for the following purposes:
               </p>
               <ul
-                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-md md:text-base"
+                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-sm"
                 style={{ color: "#606060" }}
               >
                 <li>To register, verify, and manage your user account</li>
@@ -294,7 +294,7 @@ const PrivacyPolicy = () => {
                   messages)
                 </li>
                 <li
-                  className="text-md md:text-base leading-relaxed mb-3 text-justify"
+                  className="text-sm leading-relaxed mb-3 text-justify"
                   style={{ color: "#606060" }}
                 >
                   We use your precise location data only when you attempt to
@@ -305,7 +305,7 @@ const PrivacyPolicy = () => {
                 </li>
               </ul>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 Your location data is not used for any other purpose, is not
@@ -313,7 +313,7 @@ const PrivacyPolicy = () => {
                 parties except:
               </p>
               <ul
-                className="list-disc ml-8 md:ml-10 lg:ml-12 space-y-2 mb-5 text-md md:text-base"
+                className="list-disc ml-8 md:ml-10 lg:ml-12 space-y-2 mb-5 text-sm"
                 style={{ color: "#606060" }}
               >
                 <li>With your employer for attendance validation;</li>
@@ -332,7 +332,7 @@ const PrivacyPolicy = () => {
                 5. Data Sharing & Disclosure
               </h2>
               <p
-                className="text-md md:text-base leading-relaxed mb-3 text-justify"
+                className="text-sm leading-relaxed mb-3 text-justify"
                 style={{ color: "#606060" }}
               >
                 We may share your information with third parties only as
@@ -340,7 +340,7 @@ const PrivacyPolicy = () => {
                 law. This includes:
               </p>
               <ul
-                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-md md:text-base"
+                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-sm"
                 style={{ color: "#606060" }}
               >
                 <li>
@@ -372,7 +372,7 @@ const PrivacyPolicy = () => {
                 </li>
               </ul>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 We ensure all third parties follow strict data protection
@@ -390,7 +390,7 @@ const PrivacyPolicy = () => {
                 6. Data Security
               </h2>
               <p
-                className="text-md md:text-base leading-relaxed mb-3 text-justify"
+                className="text-sm leading-relaxed mb-3 text-justify"
                 style={{ color: "#606060" }}
               >
                 We take reasonable and industry-aligned precautions to protect
@@ -398,7 +398,7 @@ const PrivacyPolicy = () => {
                 practices in line with industry standards.
               </p>
               <ul
-                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-md md:text-base"
+                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-sm"
                 style={{ color: "#606060" }}
               >
                 <li>
@@ -415,7 +415,7 @@ const PrivacyPolicy = () => {
                 </li>
               </ul>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 While we strive to safeguard your data, we urge you to protect
@@ -434,14 +434,14 @@ const PrivacyPolicy = () => {
                 7. Your Rights
               </h2>
               <p
-                className="text-md md:text-base leading-relaxed mb-3 text-justify"
+                className="text-sm leading-relaxed mb-3 text-justify"
                 style={{ color: "#606060" }}
               >
                 As a user of the AGI Moneey Platform, you have the following
                 rights under applicable data protection laws:
               </p>
               <ul
-                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-md md:text-base"
+                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-sm"
                 style={{ color: "#606060" }}
               >
                 <li>
@@ -458,7 +458,7 @@ const PrivacyPolicy = () => {
                 </li>
               </ul>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 To exercise these rights or raise any data privacy concerns,
@@ -471,7 +471,7 @@ const PrivacyPolicy = () => {
                 </a>
               </p>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 We will respond to your request within a reasonable time in
@@ -488,13 +488,13 @@ const PrivacyPolicy = () => {
                 8. Data Retention
               </h2>
               <p
-                className="text-md md:text-base leading-relaxed mb-3 text-justify"
+                className="text-sm leading-relaxed mb-3 text-justify"
                 style={{ color: "#606060" }}
               >
                 We retain your personal data for as long as:
               </p>
               <ul
-                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-md md:text-base"
+                className="list-disc ml-6 md:ml-8 lg:ml-10 space-y-2 mb-5 text-sm"
                 style={{ color: "#606060" }}
               >
                 <li>Your account remains active, or</li>
@@ -505,7 +505,7 @@ const PrivacyPolicy = () => {
                 </li>
               </ul>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 We may retain anonymized or aggregated data—stripped of personal
@@ -523,7 +523,7 @@ const PrivacyPolicy = () => {
                 9. Grievance Officer
               </h2>
               <p
-                className="text-md md:text-base leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 In accordance with the Information Technology Act, 2000, and the
@@ -532,7 +532,7 @@ const PrivacyPolicy = () => {
                 or concerns regarding the processing of your personal data:
               </p>
               <div
-                className="text-md md:text-base leading-relaxed mb-5"
+                className="text-sm leading-relaxed mb-5"
                 style={{ color: "#606060" }}
               >
                 <p className="mb-2">
@@ -571,7 +571,7 @@ const PrivacyPolicy = () => {
                 10. Policy Updates & Changes
               </h2>
               <p
-                className="text-md md:text-base leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 We may update or modify this Privacy Policy from time to time to
@@ -579,7 +579,7 @@ const PrivacyPolicy = () => {
                 our services.
               </p>
               <p
-                className="text-md md:text-base leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 When we do, we will revise the "Last Updated" date at the top of
@@ -587,7 +587,7 @@ const PrivacyPolicy = () => {
                 to stay informed.
               </p>
               <p
-                className="text-md md:text-base leading-relaxed mb-5 text-justify"
+                className="text-sm leading-relaxed mb-5 text-justify"
                 style={{ color: "#606060" }}
               >
                 Your continued use of the AGI Moneey Platform after any changes
@@ -605,7 +605,7 @@ const PrivacyPolicy = () => {
                 AGI Moneey By Agiwal Fintech Private Limited
               </h5>
               <div
-                className="text-md md:text-base leading-relaxed mb-5"
+                className="text-sm leading-relaxed mb-5"
                 style={{ color: "#606060" }}
               >
                 <p className="mb-2">

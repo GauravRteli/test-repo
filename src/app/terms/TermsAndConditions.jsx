@@ -26,7 +26,7 @@ const TermsAndConditions = () => {
                 1. INTRODUCTION
               </h2>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 Agiwal Fintech Private Limited, having its registered office at
@@ -41,7 +41,7 @@ const TermsAndConditions = () => {
                 herein ("Terms").
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 The Company also operates a website at https://www.agimoneey.com
@@ -51,7 +51,7 @@ const TermsAndConditions = () => {
                 as the "Platform."
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 By accessing, downloading, or using the Platform, You agree to
@@ -62,7 +62,7 @@ const TermsAndConditions = () => {
                 time.
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 By using the AGI Moneey Platform, You agree to abide by these
@@ -72,7 +72,7 @@ const TermsAndConditions = () => {
                 stores Your personal information.
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 You acknowledge that You have read and understood these Terms &
@@ -80,7 +80,7 @@ const TermsAndConditions = () => {
                 bound by them.
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 AGI Moneey reserves the right, at its sole discretion, to
@@ -92,7 +92,7 @@ const TermsAndConditions = () => {
                 revised Terms.
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 AGI Moneey also reserves the right to suspend or terminate Your
@@ -101,7 +101,7 @@ const TermsAndConditions = () => {
                 eligible or have violated any provision of these Terms.
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 These Terms & Conditions constitute an electronic record in
@@ -119,7 +119,7 @@ const TermsAndConditions = () => {
                 2. DEFINITIONS
               </h2>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 For the purpose of these Terms & Conditions, unless the context
@@ -128,7 +128,7 @@ const TermsAndConditions = () => {
               <div className="space-y-1">
                 <div>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">a)</span>{" "}
@@ -140,7 +140,7 @@ const TermsAndConditions = () => {
                 </div>
                 <div>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">b)</span>{" "}
@@ -154,7 +154,7 @@ const TermsAndConditions = () => {
                 </div>
                 <div>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">c)</span>{" "}
@@ -169,7 +169,7 @@ const TermsAndConditions = () => {
                 </div>
                 <div>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">d)</span>{" "}
@@ -183,7 +183,7 @@ const TermsAndConditions = () => {
                 </div>
                 <div>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">e)</span>{" "}
@@ -194,7 +194,7 @@ const TermsAndConditions = () => {
                 </div>
                 <div>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">f)</span>{" "}
@@ -206,7 +206,7 @@ const TermsAndConditions = () => {
                 </div>
                 <div>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">g)</span>{" "}
@@ -219,7 +219,7 @@ const TermsAndConditions = () => {
                 </div>
                 <div>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">h)</span>{" "}
@@ -241,7 +241,7 @@ const TermsAndConditions = () => {
                 3. Acceptance of Terms of Use
               </h2>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 The AGI Moneey Platform, including all associated products,
@@ -250,7 +250,7 @@ const TermsAndConditions = () => {
                 accordance with these Terms and Conditions ("Terms").
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 By accessing or using the Platform, you agree to be bound by
@@ -261,7 +261,7 @@ const TermsAndConditions = () => {
                 Delhi – 110001 ("AGI Moneey", "we", "our", or "us").
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 This Platform is licensed, not sold, to you for personal and
@@ -269,7 +269,7 @@ const TermsAndConditions = () => {
                 and limited to the scope of access granted herein.
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 If you do not agree with any part of these Terms, you must
@@ -286,7 +286,7 @@ const TermsAndConditions = () => {
                 4. Account Creation
               </h2>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 To access and use the AGI Moneey Platform, you are required to
@@ -296,7 +296,7 @@ const TermsAndConditions = () => {
                 agreement.
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 When you first log in, you will be prompted to verify your
@@ -306,33 +306,33 @@ const TermsAndConditions = () => {
                 Employer.
               </p>
               <p
-                className="text-md leading-relaxed mb-2 text-justify"
+                className="text-sm leading-relaxed mb-2 text-justify"
                 style={{ color: "#606060" }}
               >
                 These may include:
               </p>
               <ul className="list-disc ml-6 mb-4 space-y-1">
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   Full Name
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   PAN
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   Aadhaar Number
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   Bank Account Details
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   Official Email Address
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   Mobile Number
                 </li>
               </ul>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 These details are already available with AGI Moneey through your
@@ -343,7 +343,7 @@ const TermsAndConditions = () => {
                 Moneey for rectification.
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 You are solely responsible for maintaining the confidentiality
@@ -353,7 +353,7 @@ const TermsAndConditions = () => {
                 misuse of your mobile device.
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 AGI Moneey reserves the right to suspend or terminate any
@@ -372,7 +372,7 @@ const TermsAndConditions = () => {
                 5. User Eligibility and condition of use:
               </h2>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 By accessing or using the AGI Moneey Platform, you explicitly
@@ -380,7 +380,7 @@ const TermsAndConditions = () => {
               </p>
               <div className="space-y-1">
                 <p
-                  className="text-md leading-relaxed text-justify"
+                  className="text-sm leading-relaxed text-justify"
                   style={{ color: "#606060" }}
                 >
                   <span className="font-bold">a)</span> You are at least 18
@@ -389,14 +389,14 @@ const TermsAndConditions = () => {
                   otherwise disqualified from contracting under applicable laws.
                 </p>
                 <p
-                  className="text-md leading-relaxed text-justify"
+                  className="text-sm leading-relaxed text-justify"
                   style={{ color: "#606060" }}
                 >
                   <span className="font-bold">b)</span> You are a resident of
                   India and hold a valid Indian bank account.
                 </p>
                 <p
-                  className="text-md leading-relaxed text-justify"
+                  className="text-sm leading-relaxed text-justify"
                   style={{ color: "#606060" }}
                 >
                   <span className="font-bold">c)</span> You are currently
@@ -405,7 +405,7 @@ const TermsAndConditions = () => {
                   HRMS services to its employees.
                 </p>
                 <p
-                  className="text-md leading-relaxed text-justify"
+                  className="text-sm leading-relaxed text-justify"
                   style={{ color: "#606060" }}
                 >
                   <span className="font-bold">d)</span> You have successfully
@@ -413,7 +413,7 @@ const TermsAndConditions = () => {
                   mandated by applicable laws.
                 </p>
                 <p
-                  className="text-md leading-relaxed text-justify"
+                  className="text-sm leading-relaxed text-justify"
                   style={{ color: "#606060" }}
                 >
                   <span className="font-bold">e)</span> You shall not give
@@ -421,7 +421,7 @@ const TermsAndConditions = () => {
                   any third party, nor transfer your account to another person.
                 </p>
                 <p
-                  className="text-md leading-relaxed text-justify"
+                  className="text-sm leading-relaxed text-justify"
                   style={{ color: "#606060" }}
                 >
                   <span className="font-bold">f)</span> You shall only use the
@@ -429,7 +429,7 @@ const TermsAndConditions = () => {
                   applicable laws, regulations, and court orders.
                 </p>
                 <p
-                  className="text-md leading-relaxed text-justify"
+                  className="text-sm leading-relaxed text-justify"
                   style={{ color: "#606060" }}
                 >
                   <span className="font-bold">g)</span> You have not been
@@ -438,38 +438,38 @@ const TermsAndConditions = () => {
                 </p>
               </div>
               <p
-                className="text-md leading-relaxed text-justify"
+                className="text-sm leading-relaxed text-justify"
                 style={{ color: "#606060" }}
               >
                 <span className="font-bold">h)</span> You further agree,
                 undertake, and covenant that while using the Platform:
               </p>
               <ul className="list-disc ml-8 mb-4 space-y-1">
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   You shall not engage in any unlawful, misleading,
                   discriminatory, or fraudulent activity.
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   You shall not upload or transmit viruses, malware, or any
                   other harmful code or content.
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   You shall not access or collect data from the Platform using
                   automated means, or attempt to access content or information
                   you do not have permission to access.
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   You shall not interfere with, disrupt, disable, or impair the
                   proper working of the Platform or its security features.
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   You shall not engage in activities such as spamming, phishing,
                   unsolicited communications, or unauthorized advertising or
                   promotion.
                 </li>
               </ul>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 You are solely responsible for maintaining the confidentiality
@@ -491,7 +491,7 @@ const TermsAndConditions = () => {
                 6. Availing the Products and Services
               </h2>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 To avail the Earned Wage Access (EWA) facility offered via the
@@ -509,7 +509,7 @@ const TermsAndConditions = () => {
                 </h3>
                 <div className="space-y-1 pl-2">
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">a)</span> Upon being onboarded
@@ -518,7 +518,7 @@ const TermsAndConditions = () => {
                     number (as provided by the Employer).
                   </p>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">b)</span> After verifying your
@@ -527,7 +527,7 @@ const TermsAndConditions = () => {
                     future logins and authorizations on the AGI Moneey platform.
                   </p>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">c)</span> You are solely
@@ -548,7 +548,7 @@ const TermsAndConditions = () => {
                   Two-Level Employer Authorization Mechanism
                 </h3>
                 <p
-                  className="text-md leading-relaxed mb-3 pl-2 text-justify"
+                  className="text-sm leading-relaxed mb-3 pl-2 text-justify"
                   style={{ color: "#606060" }}
                 >
                   <span className="font-bold">a)</span> AGI Moneey enables
@@ -567,7 +567,7 @@ const TermsAndConditions = () => {
                 </h4>
                 <div className="space-y-1 pl-2">
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">a)</span> The Employer may
@@ -575,7 +575,7 @@ const TermsAndConditions = () => {
                     wages/salary available for withdrawal by each employee.
                   </p>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">b)</span> This pre-approved EWA
@@ -596,7 +596,7 @@ const TermsAndConditions = () => {
                 </h4>
                 <div className="space-y-1 pl-2">
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">a)</span> Alternatively, the
@@ -604,7 +604,7 @@ const TermsAndConditions = () => {
                     employee be individually reviewed and approved.
                   </p>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">b)</span> In such cases, every
@@ -625,7 +625,7 @@ const TermsAndConditions = () => {
                 </h4>
                 <div className="space-y-1 pl-2">
                   <p
-                    className="text-md text-justify"
+                    className="text-sm text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">a)</span> Once approved by the
@@ -634,7 +634,7 @@ const TermsAndConditions = () => {
                     account.
                   </p>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">b)</span> All disbursals are
@@ -642,7 +642,7 @@ const TermsAndConditions = () => {
                     due diligence procedures.
                   </p>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">c)</span> You irrevocably
@@ -652,7 +652,7 @@ const TermsAndConditions = () => {
                     disbursement.
                   </p>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">d)</span> You are not required
@@ -671,7 +671,7 @@ const TermsAndConditions = () => {
                 </h4>
                 <div className="space-y-1 pl-2">
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">a)</span> The EWA amount
@@ -679,7 +679,7 @@ const TermsAndConditions = () => {
                     wages as confirmed by the Employer.
                   </p>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">b)</span> The balance available
@@ -688,7 +688,7 @@ const TermsAndConditions = () => {
                     Employer-approved systems.
                   </p>
                   <p
-                    className="text-md leading-relaxed text-justify"
+                    className="text-sm leading-relaxed text-justify"
                     style={{ color: "#606060" }}
                   >
                     <span className="font-bold">c)</span> All services are
@@ -709,7 +709,7 @@ const TermsAndConditions = () => {
                 7. Platform Fee
               </h2>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 AGI Moneey may charge a platform fee for enabling and processing
@@ -732,18 +732,18 @@ const TermsAndConditions = () => {
                 8. HRMS Services
               </h2>
               <p
-                className="text-md leading-relaxed mb-2 text-justify"
+                className="text-sm leading-relaxed mb-2 text-justify"
                 style={{ color: "#606060" }}
               >
                 AGI Moneey may also offer limited Human Resource Management
                 System (HRMS) features, such as:
               </p>
               <ul className="list-disc ml-6 mb-4 space-y-1">
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   Attendance tracking with geo-location captured only during
                   punch-in and punch-out events.
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   Salary tracking and history, based on Employer-provided data.
                 </li>
               </ul>
@@ -758,7 +758,7 @@ const TermsAndConditions = () => {
                 9. Privacy and Data Protection
               </h2>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 AGI Moneey values your privacy and is committed to protecting
@@ -768,7 +768,7 @@ const TermsAndConditions = () => {
                 handled in accordance with our Privacy Policy.
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 By using the Platform, you consent to the collection, storage,
@@ -776,7 +776,7 @@ const TermsAndConditions = () => {
                 Policy.
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 Your information may be shared with Employers, NBFCs, and
@@ -795,7 +795,7 @@ const TermsAndConditions = () => {
                 10. Intellectual Property
               </h2>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 All content, trademarks, service marks, logos, and intellectual
@@ -804,7 +804,7 @@ const TermsAndConditions = () => {
                 Limited.
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 Users are not permitted to copy, reproduce, republish, upload,
@@ -823,7 +823,7 @@ const TermsAndConditions = () => {
                 11. Limitation of Liability
               </h2>
               <p
-                className="text-md leading-relaxed mb-2 text-justify"
+                className="text-sm leading-relaxed mb-2 text-justify"
                 style={{ color: "#606060" }}
               >
                 To the maximum extent permitted under applicable law, AGI
@@ -834,16 +834,16 @@ const TermsAndConditions = () => {
                 including but not limited to:
               </p>
               <ul className="list-disc ml-6 mb-4 space-y-1">
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   Service disruptions or delays;
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   Inaccuracies in Employer-submitted data;
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   Denial of EWA requests by Employers or NBFC;
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   Unauthorized use of your Account due to your negligence.
                 </li>
               </ul>
@@ -858,7 +858,7 @@ const TermsAndConditions = () => {
                 12. Termination and Suspension
               </h2>
               <p
-                className="text-md leading-relaxed mb-2 text-justify"
+                className="text-sm leading-relaxed mb-2 text-justify"
                 style={{ color: "#606060" }}
               >
                 AGI Moneey reserves the right to suspend, disable, or terminate
@@ -867,21 +867,21 @@ const TermsAndConditions = () => {
                 limited to cases of:
               </p>
               <ul className="list-disc ml-6 mb-4 space-y-1">
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   Violation of these Terms;
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   Fraudulent or suspicious activity;
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   Failure to comply with KYC or regulatory obligations;
                 </li>
-                <li className="text-md" style={{ color: "#606060" }}>
+                <li className="text-sm" style={{ color: "#606060" }}>
                   Termination of agreement between Employer and AGI Moneey.
                 </li>
               </ul>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 Upon termination, your rights to use the Platform will cease
@@ -899,7 +899,7 @@ const TermsAndConditions = () => {
                 13. Dispute Resolution
               </h2>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 In the event of any disputes, differences, or claims arising out
@@ -908,7 +908,7 @@ const TermsAndConditions = () => {
                 through written communications.
               </p>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 If not resolved within 30 days, the dispute shall be referred to
@@ -928,7 +928,7 @@ const TermsAndConditions = () => {
                 14. Governing Law
               </h2>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 These Terms and any disputes arising out of or in relation to
@@ -947,14 +947,14 @@ const TermsAndConditions = () => {
                 15. Grievance Redressal
               </h2>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 If you have any grievances regarding the services, transactions,
                 or these Terms, you may contact our Grievance Officer at:
               </p>
               <div
-                className="text-md leading-relaxed mb-4"
+                className="text-sm leading-relaxed mb-4"
                 style={{ color: "#606060" }}
               >
                 <p className="mb-2">
@@ -979,7 +979,7 @@ const TermsAndConditions = () => {
                 <p className="mb-1">Phone: +91-9953616633</p>
               </div>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 You may file Your complaint or raise any queries/requests by
@@ -992,7 +992,7 @@ const TermsAndConditions = () => {
             {/* Effective Date */}
             <div>
               <p
-                className="text-md leading-relaxed mb-4 text-justify"
+                className="text-sm leading-relaxed mb-4 text-justify"
                 style={{ color: "#606060" }}
               >
                 Effective Date: 01.07.2025
