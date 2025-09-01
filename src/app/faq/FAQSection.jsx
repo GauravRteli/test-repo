@@ -125,7 +125,7 @@ const FAQSection = () => {
     <div className="py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20">
       <div className="max-w-full mx-auto">
         {/* FAQ Items Container */}
-        <div className="space-y-3 sm:space-y-4 md:space-y-5 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0 max-w-5xl mx-auto mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+        <div className="space-y-3 sm:space-y-4 md:space-y-5 px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0 max-w-7xl mx-auto mb-12 sm:mb-16 md:mb-20 lg:mb-24">
           <FAQHeader />
           {faqData.map((item, index) => (
             <FAQItem
@@ -148,13 +148,13 @@ const FAQSection = () => {
 // Header Component
 const FAQHeader = () => (
   <div className="mb-6 sm:mb-8 md:mb-10 lg:mb-12 text-center sm:text-left">
-    <p className="text-[#f2ab3c] text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider font-medium mb-2 sm:mb-3">
+    <p className="text-[#f2ab3c] text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl tracking-wider mb-2 sm:mb-3">
       Frequently Asked Questions
     </p>
-    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6 leading-tight">
+    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-gray-900 mb-3 sm:mb-4 lg:mb-6 leading-tight">
       Do You Have Questions?
     </h2>
-    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto sm:mx-0">
+    <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto sm:mx-0">
       We have answers (well most of the times!)
     </p>
   </div>
@@ -164,14 +164,14 @@ const FAQHeader = () => (
 const FAQItem = ({ question, answer, isOpen, onClick }) => (
   <div className="border border-gray-200 hover:border-[#f2ab3c]/30 rounded-lg sm:rounded-xl lg:rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
     <button
-      className="w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-left flex items-start sm:items-center justify-between hover:bg-gray-50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#f2ab3c]/20 focus:ring-inset"
+      className="w-full px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-left flex items-start sm:items-center justify-between hover:bg-gray-50 transition-all duration-300"
       onClick={onClick}
       aria-expanded={isOpen}
       aria-controls={`faq-answer-${question
         .replace(/\s+/g, "-")
         .toLowerCase()}`}
     >
-      <span className="font-semibold text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 group-hover:text-[#f2ab3c] transition-colors duration-300 pr-4 leading-relaxed flex-1">
+      <span className="font-semibold text-sm sm:text-base md:text-lg text-gray-800 group-hover:text-[#f2ab3c] transition-colors duration-300 pr-4 leading-relaxed flex-1">
         {question}
       </span>
       <div className="ml-4 flex-shrink-0 self-start sm:self-center pt-1 sm:pt-0">
@@ -203,7 +203,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => (
       id={`faq-answer-${question.replace(/\s+/g, "-").toLowerCase()}`}
     >
       <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-5 lg:pb-6 border-t border-gray-100 pt-4 sm:pt-5 lg:pt-6 bg-gray-50/50">
-        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed">
+        <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed">
           {answer}
         </p>
       </div>

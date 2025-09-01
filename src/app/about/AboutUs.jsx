@@ -174,7 +174,7 @@ const AboutUs = () => {
             {/* Vision Header Section */}
             <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
               <div className="w-full text-center lg:text-left lg:w-2/3">
-                <h2 className="text-sm sm:text-base md:text-lg lg:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 font-semibold">
+                <h2 className="text-sm sm:text-base md:text-lg lg:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4">
                   our vision
                 </h2>
                 <motion.h2
@@ -193,7 +193,7 @@ const AboutUs = () => {
 
               <div className="w-full lg:w-1/3 flex items-start lg:items-center">
                 <motion.p
-                  className="text-sm sm:text-base md:text-lg text-[#606060] leading-relaxed"
+                  className="text-sm sm:text-base text-[#606060] leading-relaxed"
                   initial={{ opacity: 0, x: 100 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -208,7 +208,7 @@ const AboutUs = () => {
 
             {/* Description Section */}
             <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-              <p className="text-sm sm:text-base md:text-lg text-[#606060] text-left leading-relaxed mx-auto">
+              <p className="text-sm sm:text-base text-[#606060] text-left leading-relaxed mx-auto">
                 We are committed to transforming the way employees manage their
                 finances by providing a flexible, transparent, and ethical
                 Salary on Demand solution. Our vision goes beyond traditional
@@ -323,24 +323,21 @@ const AboutUs = () => {
           <div className="container mx-auto max-w-7xl">
             {/* Header Section */}
             <div className="text-center mb-10 sm:mb-12 md:mb-14 lg:mb-16 xl:mb-20">
-              <h2 className="text-sm sm:text-base md:text-lg lg:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 font-semibold">
+              <h2 className="text-sm sm:text-base md:text-lg lg:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4">
                 agi moneey
               </h2>
-              <h2 className="text-2xl text-left md:text-center sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8 text-gray-900">
+              <h2 className="text-2xl text-left md:text-center sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8 text-gray-900">
                 Our Story
               </h2>
-              <div className="text-sm text-left md:text-center sm:text-base md:text-lg lg:text-xl text-[#606060] max-w-5xl mx-auto leading-relaxed px-2 sm:px-4">
+              <div className="text-sm text-left md:text-center sm:text-base text-[#606060] max-w-5xl mx-auto leading-relaxed px-2 sm:px-4">
                 <p className="hidden lg:block">
                   AGI Moneey was founded on a simple truth: employees
-                  shouldn&apos;t wait weeks to access their hard-earned
-                  <br />
-                  moneey. We reinvented India&apos;s payroll system with
-                  instant, responsible salary access—because financial needs
-                  <br />
-                  don&apos;t follow a monthly calendar. Today, our Earnings on
-                  Demand solution empowers workers, boosts productivity,
-                  <br />
-                  and breaks debt cycles
+                  shouldn&apos;t wait weeks to access their hard-earned moneey.
+                  We reinvented India&apos;s payroll system with instant,
+                  responsible salary access—because financial needs don&apos;t
+                  follow a monthly calendar. Today, our Earnings on Demand
+                  solution empowers workers, boosts productivity, and breaks
+                  debt cycles
                 </p>
                 <p className="lg:hidden">
                   AGI Moneey was founded on a simple truth: employees
@@ -617,7 +614,7 @@ const AboutUs = () => {
               >
                 {/* Mission Tag */}
                 <motion.h2
-                  className="text-s text-center md:text-left sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 lg:mb-6 font-semibold"
+                  className="text-s text-center md:text-left sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 lg:mb-6"
                   initial={{ opacity: 0, y: 20 }}
                   animate={
                     isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
@@ -633,7 +630,7 @@ const AboutUs = () => {
 
                 {/* Main Heading */}
                 <motion.h2
-                  className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8 xl:mb-10 text-gray-900 leading-tight"
+                  className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8 xl:mb-10 text-gray-900 leading-tight"
                   initial={{ opacity: 0, y: 30 }}
                   animate={
                     isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
@@ -661,7 +658,7 @@ const AboutUs = () => {
                   }}
                 >
                   <motion.p
-                    className="text-sm sm:text-base md:text-lg leading-relaxed"
+                    className="text-sm sm:text-base leading-relaxed"
                     initial={{ opacity: 0 }}
                     animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                     transition={{
@@ -675,7 +672,7 @@ const AboutUs = () => {
                   </motion.p>
 
                   <motion.p
-                    className="text-sm sm:text-base md:text-lg leading-relaxed"
+                    className="text-sm sm:text-base leading-relaxed"
                     initial={{ opacity: 0 }}
                     animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                     transition={{
@@ -692,7 +689,7 @@ const AboutUs = () => {
                   </motion.p>
 
                   <motion.p
-                    className="text-sm sm:text-base md:text-lg leading-relaxed"
+                    className="text-sm sm:text-base leading-relaxed"
                     initial={{ opacity: 0 }}
                     animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                     transition={{
@@ -760,7 +757,7 @@ const AboutUs = () => {
                 </h2>
                 {/* Description */}
                 <div className="max-w-3xl mx-auto px-2 sm:px-4">
-                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-md text-gray-300 leading-relaxed">
                     Whether you&apos;re an employer looking to offer smarter
                     salary solutions, AGI Moneey is here to support you
                   </p>
@@ -793,13 +790,13 @@ const AboutUs = () => {
           <div className="container mx-auto max-w-7xl">
             {/* Header Section */}
             <div className="text-center">
-              <h2 className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 font-semibold">
+              <h2 className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3">
                 Our Team
               </h2>
               <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900 leading-tight">
                 Meet The Team Behind AGI Moneey
               </h2>
-              <p className="text-sm sm:text-base md:text-lg text-[#606060] max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
+              <p className="text-sm sm:text-base text-[#606060] max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
                 From strategy to delivery, our dedicated team combines
                 creativity, expertise, and integrity to excel at every
                 challenge.
@@ -1060,13 +1057,13 @@ const AboutUs = () => {
             <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16">
               {/* Header Section */}
               <div className="w-full lg:w-1/3 mb-6 lg:mb-0">
-                <h2 className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 lg:mb-6 font-semibold text-center lg:text-left">
+                <h2 className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl uppercase tracking-wider text-[#F2AB3C] mb-3 sm:mb-4 lg:mb-6 text-center lg:text-left">
                   Our culture
                 </h2>
                 <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 lg:mb-8 text-gray-900 leading-tight text-center lg:text-left">
                   Work Environment
                 </h2>
-                <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#606060] leading-relaxed text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
+                <p className="text-sm sm:text-base text-[#606060] leading-relaxed text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
                   At AGI Moneey, our culture is the foundation of everything we
                   build. We are guided by these core values
                 </p>
@@ -1241,7 +1238,7 @@ const AboutUs = () => {
 
                 {/* Description */}
                 <div className="mb-6 sm:mb-8">
-                  <p className="text-sm sm:text-base md:text-xl text-[#606060] leading-relaxed mx-auto px-2 sm:px-4 max-w-3xl">
+                  <p className="text-sm sm:text-base md:text-xl text-[#606060] leading-relaxed mx-auto px-2 sm:px-4">
                     <span className="block sm:inline">
                       Join the AGI Moneey team and be part of a mission
                       that&apos;s
@@ -1250,7 +1247,7 @@ const AboutUs = () => {
                       {" "}
                       changing the way people access their earnings.
                     </span>
-                    <br className="hidden lg:block" />
+                    {/* <br className="hidden lg:block" /> */}
                     <span className="block sm:inline lg:inline">
                       {" "}
                       Let&apos;s innovate, grow and make a difference together!

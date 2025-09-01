@@ -31,7 +31,7 @@ const SimplifiedWorkforceSolutions = () => {
             {/* Right Side - Content */}
             <div className="flex flex-col justify-center text-left -mt-20 md:mt-0">
               {/* Subheading */}
-              <h4 className="text-orange-400 uppercase tracking-wider font-semibold mb-2 sm:mb-3 md:mb-4 text-xs sm:text-sm md:text-base lg:text-lg">
+              <h4 className="text-[#F2AB3C] uppercase tracking-wider font-semibold mb-2 sm:mb-3 md:mb-4 text-xs sm:text-sm md:text-base lg:text-lg">
                 Simplified Workforce Solutions
               </h4>
 

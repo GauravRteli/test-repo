@@ -19,21 +19,21 @@ const useOdometer = (targetValue, isActive, duration = 2000) => {
   useEffect(() => {
     if (isActive && !hasAnimatedRef.current) {
       hasAnimatedRef.current = true;
-      
+
       // Extract numeric value from percentage string
-      const numericTarget = parseFloat(targetValue.replace(/[^\d.-]/g, ''));
-      
+      const numericTarget = parseFloat(targetValue.replace(/[^\d.-]/g, ""));
+
       const startTime = Date.now();
       const startValue = 0;
 
       const animate = () => {
         const elapsed = Date.now() - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        
+
         // Easing function for smooth animation
         const easeOutQuad = 1 - (1 - progress) * (1 - progress);
         const current = startValue + (numericTarget - startValue) * easeOutQuad;
-        
+
         setCurrentValue(current);
 
         if (progress < 1) {
@@ -61,11 +61,11 @@ const useOdometer = (targetValue, isActive, duration = 2000) => {
 
   // Format the current value back to percentage or range format
   const formatValue = (value) => {
-    if (targetValue.includes('-')) {
+    if (targetValue.includes("-")) {
       // Handle range values like "11-34%"
-      const [start, end] = targetValue.split('-');
+      const [start, end] = targetValue.split("-");
       const startNum = parseFloat(start);
-      const endNum = parseFloat(end.replace(/[^\d.-]/g, ''));
+      const endNum = parseFloat(end.replace(/[^\d.-]/g, ""));
       const ratio = value / endNum;
       const currentStart = Math.round(startNum * ratio);
       const currentEnd = Math.round(value);
@@ -113,7 +113,7 @@ const StatisticsSlider = () => {
 
   // Get current slides per view based on window width
   const getSlidesPerView = () => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       if (window.innerWidth >= 1024) {
         return 3;
       } else if (window.innerWidth >= 640) {
@@ -127,7 +127,7 @@ const StatisticsSlider = () => {
     const newActiveSlides = new Set();
     const activeIndex = swiper.realIndex;
     const slidesPerView = getSlidesPerView();
-    
+
     // Add currently visible slides to active set
     for (let i = 0; i < slidesPerView; i++) {
       const slideIndex = (activeIndex + i) % statisticsData.length;
@@ -150,10 +150,10 @@ const StatisticsSlider = () => {
 
   useEffect(() => {
     // Add resize listener
-    window.addEventListener('resize', handleResize);
-    
+    window.addEventListener("resize", handleResize);
+
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -161,11 +161,11 @@ const StatisticsSlider = () => {
     // Initialize active slides based on current viewport
     const initialSlidesCount = getSlidesPerView();
     const initialActiveSlides = new Set();
-    
+
     for (let i = 0; i < initialSlidesCount; i++) {
       initialActiveSlides.add(i);
     }
-    
+
     setActiveSlides(initialActiveSlides);
     setCurrentSlidesPerView(initialSlidesCount);
   }, []);
@@ -175,9 +175,10 @@ const StatisticsSlider = () => {
       <div className="max-w-[90vw] mx-auto px-3 sm:px-4 lg:px-6">
         {/* Header Section */}
         <div className="text-center mb-6 md:mb-10 lg:mb-12">
-          <p className="text-sm sm:text-xl text-[#141414] leading-relaxed mx-auto px-2">
-            The young population's aspirations have changed their spending pattern. 
-            Financial pressure leading to stress and anxiety has become a common phenomenon.
+          <p className="text-sm uppercase sm:text-xl text-[#141414] leading-relaxed mx-auto px-2">
+            The young population's aspirations have changed their spending
+            pattern. Financial pressure leading to stress and anxiety has become
+            a common phenomenon.
           </p>
         </div>
 
@@ -214,7 +215,7 @@ const StatisticsSlider = () => {
             <SwiperSlide key={index}>
               {({ isActive, isPrev, isNext }) => {
                 const isSlideActive = activeSlides.has(index);
-                
+
                 return (
                   <div
                     className={`text-center p-4 sm:p-5 md:p-6 lg:p-7 h-full flex flex-col justify-between items-center bg-white transition-transform duration-500 hover:scale-105 min-h-[200px] ${
@@ -224,9 +225,9 @@ const StatisticsSlider = () => {
                     }`}
                   >
                     <div className="flex-grow flex flex-col justify-center items-center">
-                      <StatisticNumber 
-                        percentage={stat.percentage} 
-                        isActive={isSlideActive} 
+                      <StatisticNumber
+                        percentage={stat.percentage}
+                        isActive={isSlideActive}
                       />
                     </div>
                     <p className="text-[#141414] text-xs sm:text-sm md:text-xl max-w-xs">
@@ -256,7 +257,7 @@ const StatisticsSlider = () => {
 // Separate component for the animated number
 const StatisticNumber = ({ percentage, isActive }) => {
   const animatedValue = useOdometer(percentage, isActive, 2000);
-  
+
   return (
     <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#f2ab3c] mb-2 sm:mb-3 md:mb-4 leading-none">
       {animatedValue}

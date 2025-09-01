@@ -136,13 +136,13 @@ export default function Footer() {
                   />
                 </Link>
               </div>
-              <div className="bg-gray-800 rounded-xl p-3 sm:p-4 mb-4 sm:mb-6 border border-gray-700">
-                <div className="text-xs sm:text-sm text-gray-200">
+              <div className="bg-[#1a1a1a] rounded-xl p-3 sm:p-4 mb-4 sm:mb-6 border border-[#2a2a2a]">
+                <div className="text-xs sm:text-sm font-medium text-gray-200">
                   <strong>NBFC Partner</strong>
                   <br />
                   SURMIT INVESTMENT PRIVATE LIMITED
                   <br />
-                  RBI COR: B-06.00615
+                  RBI COR: B-14.02076
                 </div>
               </div>
               <div className="flex items-center gap-2 sm:gap-3 justify-center sm:justify-start">
@@ -151,49 +151,49 @@ export default function Footer() {
                   href="https://www.facebook.com/profile.php?id=61576157237828"
                   className="flex items-center justify-center w-7 sm:w-8 h-7 sm:h-8 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 hover:scale-110"
                 >
-                  <FaFacebookF className="text-xs sm:text-sm" />
+                  <FaFacebookF className="font-semibold" />
                 </a>
                 <a
                   target="_blank"
                   href="https://www.instagram.com/agimoneey/"
                   className="flex items-center justify-center w-7 sm:w-8 h-7 sm:h-8 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 hover:scale-110"
                 >
-                  <FaInstagram className="text-xs sm:text-sm" />
+                  <FaInstagram className="font-semibold" />
                 </a>
                 <a
                   target="_blank"
                   href="https://x.com/AGIMoneey"
                   className="flex items-center justify-center w-7 sm:w-8 h-7 sm:h-8 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 hover:scale-110"
                 >
-                  <FaTwitter className="text-xs sm:text-sm" />
+                  <FaTwitter className="font-semibold" />
                 </a>
                 <a
                   target="_blank"
                   href="https://www.youtube.com/@AGIMoneey"
                   className="flex items-center justify-center w-7 sm:w-8 h-7 sm:h-8 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 hover:scale-110"
                 >
-                  <FaYoutube className="text-xs sm:text-sm" />
+                  <FaYoutube className="font-semibold" />
                 </a>
                 <a
                   target="_blank"
                   href="https://www.linkedin.com/company/agi-moneey/?originalSubdomain=in"
                   className="flex items-center justify-center w-7 sm:w-8 h-7 sm:h-8 bg-green-600 text-white rounded-full hover:bg-green-700 transition-all duration-300 hover:scale-110"
                 >
-                  <FaLinkedinIn className="text-xs sm:text-sm" />
+                  <FaLinkedinIn className="font-semibold" />
                 </a>
               </div>
             </div>
 
             {/* Company Links */}
             <div className="text-center sm:text-left">
-              <h5 className="text-white font-semibold mb-3 sm:mb-4 text-base sm:text-2xl">
+              <h5 className="text-white font-semibold mb-3 sm:mb-4 text-lg sm:text-2xl">
                 Company
               </h5>
               <ul className="space-y-2 sm:space-y-3">
                 <li>
                   <Link
                     href="/"
-                    className="text-white text-xs sm:text-sm hover:text-orange-400 transition-colors duration-300"
+                    className="text-white font-semibold hover:text-orange-400 transition-colors duration-300"
                   >
                     Home
                   </Link>
@@ -201,7 +201,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/product"
-                    className="text-white text-xs sm:text-sm hover:text-orange-400 transition-colors duration-300"
+                    className="text-white font-semibold hover:text-orange-400 transition-colors duration-300"
                   >
                     Our Product
                   </Link>
@@ -209,7 +209,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/about"
-                    className="text-white text-xs sm:text-sm hover:text-orange-400 transition-colors duration-300"
+                    className="text-white font-semibold hover:text-orange-400 transition-colors duration-300"
                   >
                     About Us
                   </Link>
@@ -217,7 +217,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/faq"
-                    className="text-white text-xs sm:text-sm hover:text-orange-400 transition-colors duration-300"
+                    className="text-white font-semibold hover:text-orange-400 transition-colors duration-300"
                   >
                     FAQ
                   </Link>
@@ -225,7 +225,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/contact"
-                    className="text-white text-xs sm:text-sm hover:text-orange-400 transition-colors duration-300"
+                    className="text-white font-semibold hover:text-orange-400 transition-colors duration-300"
                   >
                     Get In Touch
                   </Link>
@@ -235,14 +235,14 @@ export default function Footer() {
 
             {/* Policies */}
             <div className="text-center sm:text-left">
-              <h5 className="text-white font-semibold mb-3 sm:mb-4 text-base sm:text-2xl">
+              <h5 className="text-white font-semibold mb-3 sm:mb-4 text-lg sm:text-2xl">
                 Policies
               </h5>
               <ul className="space-y-2 sm:space-y-3">
                 <li>
                   <Link
                     href="/grievance"
-                    className="text-white text-xs sm:text-sm hover:text-orange-400 transition-colors duration-300"
+                    className="text-white font-semibold hover:text-orange-400 transition-colors duration-300"
                   >
                     Grievance Redressal
                   </Link>
@@ -250,7 +250,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/terms"
-                    className="text-white text-xs sm:text-sm hover:text-orange-400 transition-colors duration-300"
+                    className="text-white font-semibold hover:text-orange-400 transition-colors duration-300"
                   >
                     Terms & Condition
                   </Link>
@@ -258,7 +258,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/privacypolicy"
-                    className="text-white text-xs sm:text-sm hover:text-orange-400 transition-colors duration-300"
+                    className="text-white font-semibold hover:text-orange-400 transition-colors duration-300"
                   >
                     Privacy Policy
                   </Link>
@@ -269,34 +269,34 @@ export default function Footer() {
             {/* Contact Info */}
             {/* Contact Us */}
             <div className="text-center sm:text-left">
-              <h5 className="text-white font-semibold mb-3 sm:mb-4 text-base sm:text-lg lg:text-2xl">
+              <h5 className="text-white font-semibold mb-3 sm:mb-4 text-lg lg:text-2xl">
                 Contact Us
               </h5>
               <div className="space-y-2 sm:space-y-3">
-                <p className="flex items-center gap-2 text-gray-300 text-sm sm:text-base justify-center sm:justify-start">
+                <p className="flex items-center gap-2 text-gray-300 text-md font-semibold justify-center sm:justify-start">
                   <FaEnvelope className="text-lg" aria-label="email" />
-                  <a
+                  {/* <a
                     href="mailto:contact@agimoneey.com"
                     className="underline decoration-dotted hover:text-orange-400 transition-colors duration-300"
-                  >
-                    contact@agimoneey.com
-                  </a>
+                  > */}
+                  contact@agimoneey.com
+                  {/* </a> */}
                 </p>
-                <p className="flex items-center gap-2 text-gray-300 text-sm sm:text-base justify-center sm:justify-start">
+                <p className="flex items-center gap-2 text-gray-300 text-md font-semibold justify-center sm:justify-start">
                   <FaPhoneAlt className="text-lg" aria-label="phone" />
-                  <a
+                  {/* <a
                     href="tel:+919953616633"
                     className="underline decoration-dotted hover:text-orange-400 transition-colors duration-300"
-                  >
-                    +91 9953616633
-                  </a>
+                  > */}
+                  +91 9953616633
+                  {/* </a> */}
                 </p>
               </div>
             </div>
           </div>
 
           {/* Footer Bottom */}
-          <div className="border-t border-gray-700 pt-4 sm:pt-5 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-2 text-center sm:text-left">
+          <div className="border-t border-[#606060] pt-4 sm:pt-5 flex flex-col sm:flex-row justify-between items-center text-sm md:text-md text-[#606060] gap-2 text-center sm:text-left">
             <p>© 2025 AGI Moneey. All Rights Reserved.</p>
             <p>CIN: U64990DL1996PTC079056</p>
           </div>

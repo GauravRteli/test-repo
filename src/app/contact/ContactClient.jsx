@@ -11,6 +11,7 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import ScrollProgressBar from "../components/ScrollProgressBar";
+import { motion } from "framer-motion";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -98,17 +99,21 @@ export default function ContactPage() {
           <div className="flex flex-col xl:flex-row gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20">
             {/* left content unchanged */}
             <div className="w-full xl:w-1/2 border-b xl:border-b-0 xl:border-r border-gray-200 pb-8 sm:pb-10 md:pb-12 xl:pb-0 xl:pr-8 lg:pr-10 xl:pr-12">
-              <div className="mb-6 sm:mb-8 md:mb-10 lg:mb-12 animate__animated animate__fadeInUp">
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6 leading-tight">
+              <motion.div
+                className="mb-6 sm:mb-8 md:mb-10 lg:mb-12"
+                initial={{ opacity: 0, y: 50 }} // start invisible and 50px below
+                animate={{ opacity: 1, y: 0 }} // animate to fully visible at original position
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                // Animate only on the first mount (default behavior)
+              >
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-gray-900 mb-3 sm:mb-4 lg:mb-6 leading-tight">
                   Existing User Support
                 </h2>
                 <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-lg">
-                  Facing issues or need guidance?
-                  <br className="hidden sm:block" />
-                  <span className="sm:hidden"> </span>
-                  We&apos;re just a message away!
+                  Facing issues or need guidance? We&apos;re just a message
+                  away!
                 </p>
-              </div>
+              </motion.div>
 
               {/* Contact Information */}
               <div className="space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12">
@@ -237,7 +242,7 @@ export default function ContactPage() {
                 // ✅ Show heading + form before submission
                 <>
                   <div className="mb-6">
-                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6 leading-tight">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-gray-900 mb-3 sm:mb-4 lg:mb-6 leading-tight">
                       Let&apos;s Schedule A Demo
                     </h2>
                   </div>
