@@ -242,9 +242,22 @@ export default function ContactPage() {
                 // ✅ Show heading + form before submission
                 <>
                   <div className="mb-6">
-                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-gray-900 mb-3 sm:mb-4 lg:mb-6 leading-tight">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-gray-900 mb-3 sm:mb-4 leading-tight">
                       Let&apos;s Schedule A Demo
                     </h2>
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 mb-3 sm:mb-4">
+                      What to expect in a demo:
+                    </p>
+                    <ul className="space-y-2 list-disc pl-4 sm:pl-6 text-xs sm:text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed">
+                      <li>
+                        Learn how AGI Moneey can improve employee retention,
+                        productivity, and more.
+                      </li>
+                      <li>
+                        Get your &ldquo;Earnings on Demand&rdquo; questions
+                        answered 1-on-1.
+                      </li>
+                    </ul>
                   </div>
 
                   <form className="space-y-4" onSubmit={handleSubmit}>
